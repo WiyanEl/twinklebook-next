@@ -103,7 +103,7 @@ export default function Wishes({ isOpen, isMobile }: Props) {
                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="block w-[263px] md:w-[691px] h-[33px] md:h-[40px] rounded-[6px] md:rounded-[64px] border-[1px] border-[#CDA96A] bg-transparent px-[13px] md:px-[23px] py-1 text-[14px] md:text-lg leading-[140%] text-[#CDA96A] placeholder:text-[#CDA96A80] mx-auto" placeholder="Desy (Tester)" />
                 <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="block w-[263px] md:w-[691px] h-[60px] md:h-[261px] rounded-[6px] md:rounded-[20px] border-[1px] border-[#CDA96A] bg-transparent px-[13px] md:px-[23px] py-1 text-[14px] md:text-lg leading-[140%] text-[#CDA96A] mx-auto mt-4"></textarea>
                 <button type="submit" className="flex justify-center items-center w-[263px] md:w-[691px] h-[33px] md:h-[40px] bg-[#CDA96A] rounded-[6px] border-[0.49px] border-[#CDA96A] mx-auto mt-4">
-                  <Image src="/images/steven-dan-bella/icon-send.png" alt="Picture of Icon Send" width={15} height={19} className="md:w-[24px] mr-2" />
+                  <Image src="/images/kevin-dan-michelle/icon-send.png" alt="Picture of Icon Send" width={15} height={19} className="md:w-[24px] mr-2" />
                   <span className="text-[14px] md:text-lg text-white font-normal leading-[140%] uppercase">send</span>
                 </button>
               </form>
@@ -131,7 +131,7 @@ export default function Wishes({ isOpen, isMobile }: Props) {
                 </div>
               </div>
               <button type="button" onClick={() => setSeeAllMessages(true)} className="flex justify-center items-center w-[263px] md:w-[691px] h-[33px] md:h-[40px] bg-[#CDA96A] rounded-[6px] border-[0.49px] border-[#CDA96A] mx-auto mt-4 animate zoom-in" data-animate="zoom-in">
-                  <Image src="/images/steven-dan-bella/icon-message.png" alt="Picture of Icon Send" width={17} height={22} className="md:w-[26px] mr-2" />
+                  <Image src="/images/kevin-dan-michelle/icon-message.png" alt="Picture of Icon Send" width={17} height={22} className="md:w-[26px] mr-2" />
                   <span className="text-[14px] md:text-lg text-white font-normal leading-[140%] uppercase">see all message</span>
                 </button>
             </div>

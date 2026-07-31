@@ -49,7 +49,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
         {!open && (
           <div className="flex items-center justify-start text-white">
             <button onClick={() => setOpen(!open)} className="relative top-[21px] left-[22px] md:top-[50px] md:left-[50px]">
-              <Image src="/images/josiah-dan-stevie/icon-menu-toggle.png" alt="Picture of icon menu" width={25} height={17} className="md:w-[45px] md:h-[30px]" />
+              <Image src="/images/kevin-dan-michelle/icon-menu-toggle.png" alt="Picture of icon menu" width={25} height={17} className="md:w-[45px] md:h-[30px]" />
             </button>
           </div>
         )}
@@ -64,7 +64,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
               <div className={`flex flex-col font-noto text-white mt-[36px] md:mt-[55px] mb-[32px] ${isClosing ? 'animate-close-menu-out' : ''}`}>
                 <div className="overflow-hidden min-h-min">
                   <Link href="#hero" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase opacity-0 animate-item-menu-in" onClick={handleScrollDown}>
-                    <img src="/images/josiah-dan-stevie/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
+                    <img src="/images/kevin-dan-michelle/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">home</span>
                   </Link>
                 </div>
