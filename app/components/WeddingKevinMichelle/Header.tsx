@@ -70,43 +70,43 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
                 </div>
                 <div className="overflow-hidden min-h-min mt-2.5">
                   <Link href="#profile" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase opacity-0 animate-item-menu-in" onClick={handleScrollDown} style={{ animationDelay: '0.05s' }}>
-                    <img src="/images/josiah-dan-stevie/arrow-right.png" className="w-[15px]  md:w-[20px]" alt="" />
+                    <img src="/images/kevin-dan-michelle/arrow-right.png" className="w-[15px]  md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">profile</span>
                   </Link>
                 </div>
                 <div className="overflow-hidden min-h-min mt-2.5">
                   <Link href="#counting-down" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase opacity-0 animate-item-menu-in" onClick={handleScrollDown} style={{ animationDelay: '0.25s' }}>
-                    <img src="/images/josiah-dan-stevie/arrow-right.png" className="w-[15px]  md:w-[20px]" alt="" />
+                    <img src="/images/kevin-dan-michelle/arrow-right.png" className="w-[15px]  md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">date</span>
                   </Link>
                 </div>
                 <div className="overflow-hidden min-h-min mt-2.5">
                   <Link href="#location" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase opacity-0 animate-item-menu-in" onClick={handleScrollDown} style={{ animationDelay: '0.45s' }}>
-                    <img src="/images/josiah-dan-stevie/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
+                    <img src="/images/kevin-dan-michelle/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">location</span>
                   </Link>
                 </div>
                 <div className="overflow-hidden min-h-min mt-2.5">
                   <Link href="#gallery" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase opacity-0 animate-item-menu-in" onClick={handleScrollDown} style={{ animationDelay: '0.55s' }}>
-                    <img src="/images/josiah-dan-stevie/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
+                    <img src="/images/kevin-dan-michelle/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">gallery</span>
                   </Link>
                 </div>
                 <div className="overflow-hidden min-h-min mt-2.5">
                   <Link href="#reservation" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase opacity-0 animate-item-menu-in" onClick={handleScrollDown} style={{ animationDelay: '0.45s' }}>
-                    <img src="/images/josiah-dan-stevie/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
+                    <img src="/images/kevin-dan-michelle/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">rsvp</span>
                   </Link>
                 </div>
                 <div className="overflow-hidden min-h-min mt-2.5">
                   <Link href="#wedding-gift" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase opacity-0 animate-item-menu-in" onClick={handleScrollDown} style={{ animationDelay: '0.45s' }}>
-                    <img src="/images/josiah-dan-stevie/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
+                    <img src="/images/kevin-dan-michelle/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">wedding gift</span>
                   </Link>
                 </div>
                 <div className="overflow-hidden min-h-min mt-2.5">
                   <Link href="#wishes" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase opacity-0 animate-item-menu-in" onClick={handleScrollDown} style={{ animationDelay: '0.45s' }}>
-                    <img src="/images/josiah-dan-stevie/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
+                    <img src="/images/kevin-dan-michelle/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">wishes</span>
                   </Link>
                 </div>

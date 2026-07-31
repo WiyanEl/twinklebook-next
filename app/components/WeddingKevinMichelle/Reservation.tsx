@@ -6,11 +6,9 @@ import Image from 'next/image'
 
 type Props = {
   data: any
-  isOpen: boolean
-  isMobile: boolean
 }
 
-export default function Reservation({ data, isOpen, isMobile }: Props) {
+export default function Reservation({ data }: Props) {
   const [attendance, setAttendance] = useState('attend')
   const [showModal, setShowModal] = useState(false)
   const dataGuest = data?.guest
@@ -38,13 +36,13 @@ export default function Reservation({ data, isOpen, isMobile }: Props) {
             <button type="button" onClick={() => {
               setAttendance('attend')
               setShowModal(true)
-              }} className={`w-[121px] md:w-[229px] h-[40px] md:h-[47px] rounded-[6px] md:rounded-[10px] flex justify-center items-center ${attendance == 'attend' ? 'bg-[#081930]' : 'bg-transparent border-[0.5px] border-[#081930]'}`}>
+              }} className={`w-[121px] md:w-[229px] h-[40px] md:h-[47px] rounded-[6px] md:rounded-[10px] flex justify-center items-center ${attendance == 'attend' ? 'bg-[#081930]' : 'bg-transparent border-1 border-[#081930]'}`}>
                 <span className={`text-[14px] md:text-[22px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-white'}`}>attend</span>
             </button>
             <button type="button" onClick={() => {
               setAttendance('not')
               setShowModal(true)
-              }} className={`w-[121px] md:w-[229px] h-[40px] md:h-[47px] rounded-[6px] md:rounded-[10px] flex justify-center items-center ${attendance == 'attend' ? 'bg-transparent border-[0.5px] border-[#081930]' : 'bg-[#081930]'}`}>
+              }} className={`w-[121px] md:w-[229px] h-[40px] md:h-[47px] rounded-[6px] md:rounded-[10px] flex justify-center items-center ${attendance == 'attend' ? 'bg-transparent border-1 border-[#081930]' : 'bg-[#081930]'}`}>
                 {/* {isMobile ? ( */}
                   <span className={`md:hidden text-[14px] md:text-[22px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-white'}`}>unable to <br /> attend</span>
                   <span className={`hidden md:block text-[14px] md:text-[22px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-white'}`}>not attend</span>
