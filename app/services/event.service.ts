@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+const API_URL = 'https://api.twinklebook.com'
 
 export const getCurrentEvent = async (url: string) => {
   const res = await fetch(
