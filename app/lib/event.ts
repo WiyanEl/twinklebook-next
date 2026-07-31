@@ -1,20 +1,50 @@
-import {
-  getCurrentEvent,
-  getEventContent,
-} from '@/app/services/event.service'
+import { getCurrentEvent, getEventContent, getEventTemplate, getGuestEventSessionByPinNew, GetAllPersonalGuestMessages, OpenInvitation, SubmitPersonalGuestMessage } from '@/app/services/event.service'
 
-import { buildEventData } from './parser'
+let eventId = ''
+let templateId = ''
 
 export const getEventData = async (url: string) => {
 
-  const dataEvent = await getCurrentEvent(url)
+  const data = await getCurrentEvent(url)
 
-  const eventId = dataEvent.eventID
+  eventId = data.id
+  templateId = data.templateId
 
-  const dataContent = await getEventContent(eventId)
+  return data
+}
 
-  return buildEventData(
-    dataEvent,
-    dataContent
-  )
+export const getContentData = async () => {
+  const data = await getEventContent(eventId)
+
+  return data
+}
+
+export const getEventTemplateData = async () => {
+  const data = await getEventTemplate(templateId)
+
+  return data
+}
+
+export const getGuestEventSessionByPinNewData = async (id:string) => {
+  const data = await getGuestEventSessionByPinNew(eventId, id)
+
+  return data
+}
+
+export const GetAllPersonalGuestMessagesData = async (id?: string) => {
+  const data = await GetAllPersonalGuestMessages(id ?? eventId)
+
+  return data
+}
+
+export const PostOpenInvitation = async (payload: Record<string, any>) => {
+  const data = await OpenInvitation(payload)
+
+  return data
+}
+
+export const PostPersonalGuestMesage = async (payload: Record<string, any>) => {
+  const data = await SubmitPersonalGuestMessage(payload)
+
+  return data
 }

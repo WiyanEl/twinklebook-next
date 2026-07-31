@@ -17,15 +17,11 @@ export default function Page({
   const router = useRouter()
 
   useEffect(() => {
-
     params.then(({ id, pin }) => {
-
       localStorage.setItem('pin', pin)
-
-      router.replace(`/${id}`)
-
+      document.cookie = `pin=${pin}; path=/`;
+      router.replace(`/${id}`);
     })
-
   }, [params, router])
 
   return (

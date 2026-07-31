@@ -3,13 +3,41 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+import { PostOpenInvitation } from '@/app/lib/event'
+
 type HeroProps = {
+  data: any
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   isMobile: boolean
 }
 
-export default function Hero({ isOpen, setIsOpen, isMobile }: HeroProps) {
+export default function Hero({ data, isOpen, setIsOpen, isMobile }: HeroProps) {
+  const dataGuest = data?.guest
+  const dataEvent = data?.event
+  const [pin, setPin] = useState<string | null>(null)
+
+  useEffect(() => {
+    setPin(localStorage.getItem('pin'))
+  }, [])
+
+  const handleOpen = async () => {
+    const json = {
+      eventId: dataEvent.id,
+      pin: pin
+    }
+
+    try {
+      const res = await PostOpenInvitation(json)
+
+      console.log('Sent Open')
+    } catch (error) {
+      
+    } finally {
+      setIsOpen(true)
+    }
+  }
+
   return (
     <>
       <section id="hero" className="relative overflow-hidden z-20 hero w-full h-screen">
@@ -25,10 +53,10 @@ export default function Hero({ isOpen, setIsOpen, isMobile }: HeroProps) {
                   <h2 className="font-milyuna text-[26px] md:text-[40px] leading-none font-normal mt-2">Kevin & Michelle</h2>
                   <h6 className="md:hidden text-xs md:text-base font-medium leading-[25px] md:leading-[31px] mt-3">Dear,</h6>
                   <h6 className="hidden md:block text-xs md:text-base font-medium leading-[25px] md:leading-[31px] mt-3">Dear Mr. /Mrs. / Ms.</h6>
-                  <h6 className="text-[14px] md:text-xl font-medium leading-[25px] md:leading-[31px] capitalize">{'Sela'}</h6>
+                  <h6 className="text-[14px] md:text-xl font-medium leading-[25px] md:leading-[31px] capitalize">{dataGuest.name ?? '.........'}</h6>
                   <p className="text-[10px] md:text-[14px] font-medium leading-[13px] md:leading-[16px] mt-5">We sincerely apologize</p>
                   <p className="text-[10px] md:text-[14px] font-medium leading-[13px] md:leading-[16px]">for any misspelling of names or titles.</p>
-                  <button onClick={() => setIsOpen(true)} className="mx-auto mt-4 md:mt-[23px] w-[184px] md:w-[220px] h-[33px] md:h-[40px] bg-[#CDA96A] rounded-[6px] md:rounded-[10px] flex items-center justify-center">
+                  <button onClick={() => handleOpen()} className="mx-auto mt-4 md:mt-[23px] w-[184px] md:w-[220px] h-[33px] md:h-[40px] bg-[#CDA96A] rounded-[6px] md:rounded-[10px] flex items-center justify-center">
                     <span className="text-[14px] md:text-lg leading-none font-medium text-[#F6F6F4] uppercase">view invitation</span>
                   </button>
 

@@ -5,13 +5,21 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 type Props = {
+  data: any
   isOpen: boolean
   isMobile: boolean
 }
 
-export default function Reservation({ isOpen, isMobile }: Props) {
+export default function Reservation({ data, isOpen, isMobile }: Props) {
   const [attendance, setAttendance] = useState('attend')
   const [showModal, setShowModal] = useState(false)
+  const dataGuest = data?.guest
+  const dataEvent = data?.event
+  const [pin, setPin] = useState<string | null>(null)
+
+  useEffect(() => {
+    setPin(localStorage.getItem('pin'))
+  }, [])
 
   return (
     <>
@@ -21,7 +29,7 @@ export default function Reservation({ isOpen, isMobile }: Props) {
           <Image src="/images/kevin-dan-michelle/img-garis-judul-putih-mobile.png" alt="Picture of garis judul" width={194} height={35} className="w-[109px] mt-1 md:mt-[25px] md:w-[194px] mx-auto animate" data-animate="zoom-in" />
 
           <p className="text-[14px] md:text-[22px] font-normal leading-[15px] mt-[35px] md:mt-[59px] animate" data-animate="zoom-in">Dear,</p>
-          <p className="text-[14px] md:text-[30px] font-normal leading-[15px] mt-[26px] md:mt-[49px] capitalize animate" data-animate="zoom-in">{'Sela'}</p>
+          <p className="text-[14px] md:text-[30px] font-normal leading-[15px] mt-[26px] md:mt-[49px] capitalize animate" data-animate="zoom-in">{dataGuest.name ?? '.........'}</p>
 
           <p className="text-[14px] md:text-[22px] font-normal leading-[20px] md:leading-[30px] mt-[24px] md:mt-[41px] animate" data-animate="zoom-in">Kindly confirm your attendance before</p>
           <p className="text-[14px] md:text-[22px] font-normal leading-[20px] md:leading-[30px] mt-0.5 animate" data-animate="zoom-in">12 September 2026</p>

@@ -4,7 +4,10 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import { PostPersonalGuestMesage, GetAllPersonalGuestMessagesData } from '@/app/lib/event'
+
 type Props = {
+  data: any
   isOpen: boolean
   isMobile: boolean
 }
@@ -49,7 +52,7 @@ const DEFAULT_WISHES: Wish[] = [
   },
 ]
 
-export default function Wishes({ isOpen, isMobile }: Props) {
+export default function Wishes({ data, isOpen, isMobile }: Props) {
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
   const [wishes, setWishes] = useState<Wish[]>([])
@@ -60,34 +63,66 @@ export default function Wishes({ isOpen, isMobile }: Props) {
     item.message.toLowerCase().includes(search.toLowerCase())
   )
   const [selectedWish, setSelectedWish] = useState<Wish | null>(null)
+  const dataEvent = data?.event
 
   useEffect(() => {
-    const saved = localStorage.getItem('wishes')
+    if (data.messages.length > 0) {
+      let arrMessage = []
+      for (const element of data.messages) {
+        arrMessage.push({
+          name: element.guestName,
+          message: element.message
+        })
+      }
 
-    if (saved) {
-      setWishes(JSON.parse(saved))
-    } else {
-      setWishes(DEFAULT_WISHES)
-    }
+      setWishes(arrMessage)
+    } 
   }, [])
 
-  useEffect(() => {
-    if (wishes.length) {
-      localStorage.setItem('wishes', JSON.stringify(wishes))
-    }
-  }, [wishes])
+  const fetchMessage = async () => {
+    try {
+      const res = await GetAllPersonalGuestMessagesData(dataEvent.id)
+      let arrMessage = []
+      for (const element of res) {
+        arrMessage.push({
+          name: element.guestName,
+          message: element.message
+        })
+      }
 
-  const save = (e: React.FormEvent<HTMLFormElement>) => {
+      setWishes(arrMessage)
+    } catch (error) {
+      
+    }
+  }
+
+  const save = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     if (!name.trim() || !message.trim()) return
 
-    const newWish = { name, message }
+    const json = {
+      eventId: dataEvent.id,
+      mediaFileId: null,
+      name: name,
+      message: message,
+      status: 1,
+      type: 1
+    }
 
-    setWishes(prev => [newWish, ...prev])
+    try {
+      const res = await PostPersonalGuestMesage(json)
 
-    setName('')
-    setMessage('')
+      setName('')
+      setMessage('')
+
+      fetchMessage()
+    } catch (error) {
+      
+    } finally {
+
+    }
+
   }
 
   return (

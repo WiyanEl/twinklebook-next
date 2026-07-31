@@ -8,15 +8,16 @@ import CountingDown from './CountingDown'
 import JourneyLove from './JourneyLove'
 
 type WrapperProps = {
+  data: any
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   isMobile: boolean
 }
 
-export default function WrapperTop({ isOpen, setIsOpen, isMobile }: WrapperProps) {
+export default function WrapperTop({ data, isOpen, setIsOpen, isMobile }: WrapperProps) {
   return (
     <div className="relative w-full overflow-y-hidden">
-      <Hero isOpen={isOpen} setIsOpen={setIsOpen} isMobile={isMobile} />
+      <Hero data={data} isOpen={isOpen} setIsOpen={setIsOpen} isMobile={isMobile} />
       <Profile isOpen={isOpen} isMobile={isMobile} />
       <JourneyLove isOpen={isOpen} isMobile={isMobile} />
       <CountingDown isOpen={isOpen} isMobile={isMobile} />

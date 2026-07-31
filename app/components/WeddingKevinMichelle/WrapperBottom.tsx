@@ -10,19 +10,20 @@ import Wishes from './Wishes'
 import Footer from './Footer'
 
 type WrapperProps = {
+  data: any
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   isMobile: boolean
 }
 
-export default function WrapperBootom({ isOpen, setIsOpen, isMobile }: WrapperProps) {
+export default function WrapperBootom({ data, isOpen, setIsOpen, isMobile }: WrapperProps) {
   return (
     <div className="relative w-full overflow-y-hidden">
       <Location isOpen={isOpen} isMobile={isMobile} />
       <Gallery isOpen={isOpen} isMobile={isMobile} />
-      <Reservation isOpen={isOpen} isMobile={isMobile} />
+      <Reservation data={data} isOpen={isOpen} isMobile={isMobile} />
       <WeddingGift isOpen={isOpen} isMobile={isMobile} />
-      <Wishes isOpen={isOpen} isMobile={isMobile} />
+      <Wishes data={data} isOpen={isOpen} isMobile={isMobile} />
       <Footer isOpen={isOpen} isMobile={isMobile} />
 
 
