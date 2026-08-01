@@ -135,14 +135,11 @@ module.exports = {
       },
       'item-menu-in': {
         '0%': {
-          transform: 'translate(-20px, 30px)',
+          transform: 'translateX(-30px)',
           opacity: '0',
         },
-        '70%': {
-          transform: 'skew(-25deg)'
-        },
         '100%': {
-          transform: 'translate(0, 0) skew(0)',
+          transform: 'translateX(0)',
           opacity: '1',
         },
       },
@@ -187,7 +184,7 @@ module.exports = {
       'menu-in': 'menu-in 0.25s ease-in forwards',
       'menu-out': 'menu-out 0.25s ease-in forwards',
       'close-menu-in': 'close-menu-in 0.5s ease 0s 1 normal forwards',
-      'item-menu-in': 'item-menu-in 0.8s ease-out forwards',
+      'item-menu-in': 'item-menu-in 1s ease-out forwards',
       'item-in': 'item-in 0.25s ease-out 0s 1 normal forwards',
       'close-menu-out': 'close-menu-out 0.5s ease 0s 1 normal forwards',
       'item-menu-out': 'item-menu-out 0.1s ease-out forwards',
