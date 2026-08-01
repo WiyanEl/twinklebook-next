@@ -40,7 +40,7 @@ export default function Hero({ data, isOpen, setIsOpen, isMobile }: HeroProps) {
 
   return (
     <>
-      <section id="hero" className="relative overflow-hidden z-20 hero w-full h-screen">
+      <section id="hero" className="relative z-20 hero w-full min-h-screen overflow-hidden flex flex-col">
 
         {!isOpen && (
           <div className="fixed inset-0 z-50">
@@ -78,7 +78,7 @@ export default function Hero({ data, isOpen, setIsOpen, isMobile }: HeroProps) {
           <h2 className={`font-milyuna text-2xl md:text-[48px] mt-2 ${isOpen ? 'zoom-in' : ''}`}>&</h2>
           <h2 className={`font-milyuna text-[42px] md:text-[96px] mt-2 ${isOpen ? 'zoom-in' : ''}`}>Michelle</h2>
           <h4 className={`text-base md:text-[26px] tracking-[0.09em] mt-2 md:mt-0 ${isOpen ? 'zoom-in' : ''}`}>12  .  09  .  26</h4>
-          <div className="w-full absolute bottom-[100px] text-center">
+          <div className="mt-16">
             <p className={`text-[14px] md:text-[22px] leading-[16px] md:leading-[30px] font-light ${isOpen ? 'zoom-in' : ''}`}>“So they are no longer two, but one flesh. <br /> Therefore what God has joined together, <br className="md:hidden" /> let no one separate.”</p>
             <p className={`text-[14px]  md:text-[22px] leading-[18px] md:leading-[30px] font-light mt-4 ${isOpen ? 'zoom-in' : ''}`}>Matthew 19:6</p>
           </div>

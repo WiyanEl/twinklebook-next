@@ -67,7 +67,7 @@ export default function WeddingKevinMichelle({ data }: Props) {
 
   return (
     <>
-      <div className="bg-top bg-cover bg-no-repeat bg-[url('/images/kevin-dan-michelle/bg-full-mobile.png')] md:bg-[url('/images/kevin-dan-michelle/bg-full.png')]">
+      <div className="relative w-full min-h-screen overflow-x-hidden bg-top bg-cover bg-no-repeat bg-[url('/images/kevin-dan-michelle/bg-full-mobile.png')] md:bg-[url('/images/kevin-dan-michelle/bg-full.png')]">
         <Header isOpen={isOpen} />
         <WrapperTop data={data} isOpen={isOpen} setIsOpen={setIsOpen} isMobile={isMobile} />
         <WrapperBottom data={data} isOpen={isOpen} setIsOpen={setIsOpen} isMobile={isMobile} />
