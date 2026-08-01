@@ -1,0 +1,287 @@
+/* Animate */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpButterfly {
+  from {
+    transform: translateY(1000px);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeLeftButterfly {
+  from {
+    transform: translateX(500px);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRightButterfly {
+  from {
+    transform: translateX(-500px);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRightButterflyWithRotateY {
+  from {
+    transform: translateX(-500px);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0) rotateY(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes butterflyFlap {
+  0% {
+    transform: rotateZ(-20deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateZ(-20deg) rotateY(22deg);
+  }
+  50% {
+    transform: rotateZ(-20deg) rotateY(0deg);
+  }
+  75% {
+    transform: rotateZ(-20deg) rotateY(-22deg);
+  }
+  100% {
+    transform: rotateZ(-20deg) rotateY(0deg);
+  }
+}
+
+@keyframes fadeLeftJek {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+    mix-blend-mode: soft-light;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.89;
+    mix-blend-mode: soft-light;
+  }
+}
+
+@keyframes fadeRightPengantin {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sway-left {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes sway-right {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes sway-bottom {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes sway-stretch {
+  0% {
+    transform: skewX(0deg) scaleX(1);
+  }
+  50% {
+    transform: skewX(4deg) scaleX(1.04);
+  }
+  100% {
+    transform: skewX(0deg) scaleX(1);
+  }
+}
+
+@keyframes sway-stretch-right {
+  0% {
+    transform: skewY(0deg) scaleY(1);
+  }
+  50% {
+    transform: skewY(-4deg) scaleY(1.04);
+  }
+  100% {
+    transform: skewY(0deg) scaleY(1);
+  }
+}
+
+.animate {
+  opacity: 0;
+}
+
+.animate.show {
+  opacity: 1;
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease forwards;
+}
+
+.fade-up {
+  animation: fadeUp 1.3s ease forwards;
+}
+
+.fade-down {
+  animation: fadeDown 1.3s ease forwards;
+}
+
+.fade-right {
+  animation: fadeRight 1.3s ease forwards;
+}
+
+.fade-left {
+  animation: fadeLeft 1.3s ease forwards;
+}
+
+.fade-up-butterfly {
+  animation: fadeUpButterfly 3s ease forwards;
+}
+
+.fade-left-butterfly {
+  animation: fadeLeftButterfly 3s ease forwards;
+}
+
+.fade-right-butterfly {
+  animation: fadeRightButterfly 3s ease forwards;
+}
+
+.fade-right-butterfly-with-rotate-y {
+  animation: fadeRightButterflyWithRotateY 3s ease forwards;
+}
+
+.butterfly-flap {
+  animation: butterflyFlap 1s ease-in-out infinite;
+}
+
+.fade-left-jek {
+  animation: fadeLeftJek 1.3s ease forwards;
+}
+
+.fade-right-pengantin {
+  animation: fadeRightPengantin 1.3s ease forwards;
+}
+
+.sway-left {
+  transform-origin: left center;
+  animation: sway-left 2s ease-in-out infinite;
+}
+
+.sway-right {
+  transform-origin: right center;
+  animation: sway-right 2s ease-in-out infinite;
+}
+
+.sway-bottom {
+  transform-origin: top center;
+  animation: sway-bottom 2s ease-in-out infinite;
+}
+
+.sway-stretch {
+  transform-origin: top center;
+  animation: sway-stretch 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+.sway-stretch-right {
+  transform-origin: left center;
+  animation: sway-stretch-right 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+.swiper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.swiper-pagination {
+  bottom: 25px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 11px !important;
+  height: 11px !important;
+  background: #D9D9D9 !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #D9D9D9 !important;
+  opacity: 1;
+}
