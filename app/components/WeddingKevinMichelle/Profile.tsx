@@ -25,7 +25,7 @@ export default function Profile({ isOpen, isMobile }: Props) {
             The Son of
           </p>
           <p className="text-[14px] md:text-[22px] leading-[24px] md:leading-[30px] font-light mt-3 animate" data-animate="fade-up">
-            Mr. Agus Susanto, SE and <br className="md:hidden" /> Mrs. Cin Mei
+            Mr. Agus Susanto, SE <br className="md:hidden" /> and <br className="md:hidden" /> Mrs. Cin Mei
           </p>
 
           <Image src="/images/kevin-dan-michelle/img-pengantin-wanita-mobile.png" alt="Picture of Pengantin wanita" width={200} height={262} className="md:hidden w-[200px] mt-[55px] mx-auto pointer-events-none animate" data-animate="zoom-in" />
@@ -35,7 +35,7 @@ export default function Profile({ isOpen, isMobile }: Props) {
             The Daughter of
           </p>
           <p className="text-[14px] md:text-[22px] leading-[24px] md:leading-[30px] font-light mt-3 animate" data-animate="fade-up">
-            Mr. Iwan Hendrawan and <br className="md:hidden" /> Mrs. Rosmiati
+            Mr. Iwan Hendrawan <br className="md:hidden" /> and <br className="md:hidden" /> Mrs. Rosmiati
           </p>
 
           <p className="text-[14px] md:text-[22px] leading-[20px] md:leading-[30px] mt-[52px] md:mt-[65px] animate" data-animate="fade-up">
