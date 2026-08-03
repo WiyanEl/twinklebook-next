@@ -44,8 +44,8 @@ export default function Reservation({ data }: Props) {
               setShowModal(true)
               }} className={`w-[121px] md:w-[229px] h-[40px] md:h-[47px] rounded-[6px] md:rounded-[10px] flex justify-center items-center ${attendance == 'attend' ? 'bg-transparent border-[1px] border-[#081930]' : 'bg-[#081930]'}`}>
                 {/* {isMobile ? ( */}
-                  <span className={`md:hidden text-[14px] md:text-[22px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-white'}`}>unable to <br /> attend</span>
-                  <span className={`hidden md:block text-[14px] md:text-[22px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-white'}`}>not attend</span>
+                  <span className={`text-[14px] md:text-[22px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-white'}`}>unable to <br className="md:hidden" /> attend</span>
+                  {/* <span className={`hidden md:block text-[14px] md:text-[22px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-white'}`}>not attend</span> */}
                 {/* ) : (
                   <span className={`text-[14px] font-normal leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-[60564D]' : 'text-white'}`}>not attend</span>
                 )} */}
@@ -63,9 +63,9 @@ export default function Reservation({ data }: Props) {
               <span className="text-[14px] md:text-[22px] md font-light leading-[14.96px] text-white uppercase">confirm not attend</span>
             </button>
           </div>
-          <p className="md:hidden text-xs font-normal leading-[16px] mt-[54px] animate" data-animate="zoom-in">If you need assistance with your RSVP,</p>
-          <p className="md:hidden text-xs font-normal leading-[16px] mt-0.5 animate" data-animate="zoom-in">please contact our support team.</p>
-          <p className="hidden md:block text-[22px] font-normal leading-[14.96px] mt-[81px] animate" data-animate="zoom-in">Having trouble with RSVP?</p>
+          <p className="text-xs md:text-[22px] font-normal leading-[16px] md:leading-[14.96px] mt-[54px] animate" data-animate="zoom-in">If you need assistance with your RSVP,</p>
+          <p className="text-xs md:text-[22px] font-normal leading-[16px] md:leading-[14.96px] mt-0.5 md:mt-2 animate" data-animate="zoom-in">please contact our support team.</p>
+          {/* <p className="hidden md:block text-[22px] font-normal leading-[14.96px] mt-[81px] animate" data-animate="zoom-in">Having trouble with RSVP?</p> */}
 
           <div className="mt-[33px] md:mt-[40px] animate" data-animate="zoom-in">
             <Link href="https://wa.me/6289671650843" target="_blank" className="flex justify-center items-center w-[198px] md:w-[310px] h-[33px] md:h-[47px] rounded-[6px] md:rounded-[10px] bg-[#12877B] mx-auto">
