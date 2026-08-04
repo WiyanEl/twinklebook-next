@@ -38,10 +38,10 @@ export default function WeddingGift({ isOpen, isMobile }: Props) {
           </p>
 
           <p className="hidden md:block text-[22px] leading-[30px] mt-[56px] animate" data-animate="fade-up">
-            Whether celebrating with us in person or from afar, your thoughts and and <br /> prayers are the greatest blessing to us.
+            Your presence and prayers <br /> are the greatest blessing to us.
           </p>
           <p className="hidden md:block text-[22px] leading-[30px] mt-5 animate" data-animate="fade-up">
-            If you would like to kindly give us a gift as we begin married life, our bank <br /> details are below.
+            Should you wish to honor us with a gift, <br /> please find the details below for your convenience.
           </p>
 
           <div className="flex justify-between items-center w-[241px] md:w-[664px] border-b border-[#DFD28F] pb-3 mx-auto mt-[37px] md:mt-[99px] animate" data-animate="zoom-in">
