@@ -39,7 +39,7 @@ export default function WeddingKevinMichelle({ data }: Props) {
       history.scrollRestoration = 'manual'
     }
 
-    window.scrollTo(0, 0)
+    // window.scrollTo(0, 0)
   }, [])
 
   useEffect(() => {
