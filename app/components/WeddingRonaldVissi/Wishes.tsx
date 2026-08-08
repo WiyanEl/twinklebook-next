@@ -9,7 +9,6 @@ import { PostPersonalGuestMesage, GetAllPersonalGuestMessagesData } from '@/app/
 type Props = {
   data: any
   isOpen: boolean
-  isMobile: boolean
 }
 
 type Wish = {
