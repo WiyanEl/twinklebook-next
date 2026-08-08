@@ -35,6 +35,7 @@ module.exports = {
         milyuna: ['var(--font-milyuna)'],
         hello: ['var(--font-hello-bride)'],
         cormorantgaramond: ['var(--font-cormorant-garamond)'],
+        slight: ['var(--font-slight)'],
       }
     },
     keyframes: {

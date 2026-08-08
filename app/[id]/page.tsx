@@ -4,6 +4,7 @@ import { getEventData, getContentData, getEventTemplateData, getGuestEventSessio
 import { getGuestData } from '@/app/lib/guest'
 import { getSmartRSVData } from '@/app/lib/reservation'
 import WeddingKevinMichelle from '@/app/components/WeddingKevinMichelle'
+import WeddingRonaldVissi from '@/app/components/WeddingRonaldVissi'
 
 interface Props {
   params: Promise<{
@@ -37,7 +38,7 @@ export default async function Page({
   }
 
   return (
-    <WeddingKevinMichelle
+    <WeddingRonaldVissi
       data={data}
       isPreview={false}
       dataValidation={null}
