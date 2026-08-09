@@ -28,6 +28,7 @@ export default function Wishes({ data, isOpen }: Props) {
   )
   const [selectedWish, setSelectedWish] = useState<Wish | null>(null)
   const dataEvent = data?.event
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     if (data.messages.length > 0) {
@@ -81,6 +82,7 @@ export default function Wishes({ data, isOpen }: Props) {
       setMessage('')
 
       fetchMessage()
+      setShowModal(true)
     } catch (error) {
       
     } finally {
@@ -96,11 +98,11 @@ export default function Wishes({ data, isOpen }: Props) {
         <div className="absolute inset-0 bg-[url('/images/ronald-dan-vissi/mobile/bg-wishes.png')] bg-cover bg-center bg-no-repeat" />
 
         <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-black py-[85px]">
-          <h2 className="font-slight text-[28px] leading-[25px] animate" data-animate="fade-up">Your Wishes</h2>
+          <h2 className="font-slight text-[28px] md:text-[48px] leading-[25px] animate" data-animate="fade-up">Your Wishes</h2>
 
           {!seeAllMessages ? (
             <div className="relative text-center">
-              <form onSubmit={save} className="mx-auto mt-[32px] md:mt-[35px] animate zoom-in" data-animate="zoom-in">
+              <form onSubmit={save} className="mx-auto mt-[32px] md:mt-[89px] animate zoom-in" data-animate="zoom-in">
                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="block w-[278px] md:w-[691px] h-[33px] md:h-[40px] rounded-[6px] md:rounded-[64px] border-[1px] border-[#473B2F] bg-transparent px-[13px] md:px-[23px] py-1 text-[15px] md:text-lg leading-[140%] text-[#473B2F] placeholder:text-[#473B2F80] mx-auto" placeholder="Desy (Tester)" />
                 <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="block w-[278px] md:w-[691px] h-[60px] md:h-[261px] rounded-[6px] md:rounded-[20px] border-[1px] border-[#473B2F] bg-transparent px-[13px] md:px-[23px] py-1 text-[15px] md:text-lg leading-[140%] text-[#473B2F] mx-auto mt-4"></textarea>
                 <button type="submit" className="flex justify-center items-center w-[278px] md:w-[691px] h-[33px] md:h-[40px] bg-[#473B2F] rounded-[6px] border-[0.49px] border-[#473B2F] mx-auto mt-4">
@@ -201,6 +203,39 @@ export default function Wishes({ data, isOpen }: Props) {
           )}
         </div>
       </div>
+
+      {/* Modal Notification */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          {/* Overlay */}
+          <div
+            className="absolute inset-0 bg-[#E9E9E9A8] backdrop-blur-[6.8px]"
+            onClick={() => setShowModal(false)}
+          />
+
+          {/* Modal */}
+          <div className="relative z-10 w-[330px] rounded-2xl bg-[#FAF8F5] px-8 py-10 shadow-2xl animate-scale-in font-century">
+            <h2 className="text-center text-[14px] md:text-lg leading-none font-semibold text-[#4D3F37]">
+              Pesan Terkirim !
+            </h2>
+
+            <div className="mx-auto mt-4 h-px w-10 bg-[#DDD4CB]" />
+            <p className="mt-4 text-center text-[14px] md:text-lg leading-[16px] text-[#5E554E]">
+              Terima kasih atas doa dan ucapan baik Anda. Kami sangat menghargai
+              pesan yang telah diberikan.
+            </p>
+
+            <div className="mt-5 flex justify-center">
+              <button
+                onClick={() => setShowModal(false)}
+                className="w-[103px] md:w-[223px] h-[33px] md:h-[40px] rounded-full bg-[#E8E5E1] text-[14px] md:text-lg font-medium text-[#666] transition hover:bg-[#dcd8d4]"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

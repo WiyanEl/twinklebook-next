@@ -23,9 +23,9 @@ export default function Reservation({ data }: Props) {
     <>
       <div id="reservation" className="relative z-10 w-full">
         <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-black pt-[30px] pb-[73px]">
-          <h2 className="font-slight text-[28px] leading-[25px] animate" data-animate="fade-up">Rsvp</h2>
+          <h2 className="font-slight text-[28px] md:text-[48px] leading-[25px] animate" data-animate="fade-up">Rsvp</h2>
 
-          <p className="text-[15px] md:text-[22px] font-normal leading-[15px] mt-[40px] md:mt-[59px] animate" data-animate="zoom-in">Dear,</p>
+          <p className="text-[15px] md:text-[22px] font-normal leading-[15px] mt-[40px] md:mt-[69px] animate" data-animate="zoom-in">Dear,</p>
           <p className="text-[15px] md:text-[30px] font-normal leading-[15px] mt-[26px] md:mt-[49px] capitalize animate" data-animate="zoom-in">{dataGuest.name ?? '.........'}</p>
 
           <p className="text-[15px] md:text-[22px] font-normal leading-[20px] md:leading-[30px] mt-[24px] md:mt-[41px] animate" data-animate="zoom-in">Kindly confirm your attendance before</p>
@@ -35,7 +35,7 @@ export default function Reservation({ data }: Props) {
             <button type="button" onClick={() => {
               setAttendance('attend')
               setShowModal(true)
-              }} className={`w-[121px] md:w-[121px] h-[40px] md:h-[47px] rounded-[6px] md:rounded-[10px] flex justify-center items-center ${attendance == 'attend' ? 'bg-[#473B2F]' : 'bg-transparent border-[1px] border-[#473B2F]'}`}>
+              }} className={`w-[121px] md:w-[229px] h-[40px] md:h-[47px] rounded-[6px] md:rounded-[10px] flex justify-center items-center ${attendance == 'attend' ? 'bg-[#473B2F]' : 'bg-transparent border-[1px] border-[#473B2F]'}`}>
                 <span className={`text-[15px] md:text-[22px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-black'}`}>attend</span>
             </button>
             <button type="button" onClick={() => {

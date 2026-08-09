@@ -60,7 +60,7 @@ export default function Gallery({ data, isOpen, isMobile }: Props) {
   return (
     <>
       <section id="gallery" className="gallery bg-[#DFD5CC]">
-        <div className="relative w-full overflow-hidden px-[25px] pb-[80px]">
+        <div className="relative w-full md:w-[701px] overflow-hidden px-[25px] pb-[80px] md:mx-auto">
           <div
             className="h-full"
           >

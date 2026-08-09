@@ -21,10 +21,10 @@ export default function Profile({ data, isOpen }: Props) {
             By the Grace of Our God <br /> We request the honour of your presence <br className="md:hidden" /> of our wedding
           </p>
 
-          <h2 className="font-slight text-2xl text-[#A4753A] mt-[54px] animate" data-animate="fade-up">
+          <h2 className="font-slight text-2xl md:text-[32px] text-[#A4753A] mt-[54px] animate" data-animate="fade-up">
             Ronald Setyadi
           </h2>
-          <Image src="/images/ronald-dan-vissi/mobile/img-pengantin-pria.png" alt="Picture of Pengantin pria" width={200} height={200} className="mx-auto mt-[52px] pointer-events-none animate" data-animate="fade-up" />
+          <Image src="/images/ronald-dan-vissi/mobile/img-pengantin-pria.png" alt="Picture of Pengantin pria" width={200} height={200} className="md:w-[204px] mx-auto mt-[52px] pointer-events-none animate" data-animate="fade-up" />
           <p className="text-[15px] md:text-[22px] leading-[20px] md:leading-[30px] mt-4 animate" data-animate="fade-up">
             The Son of
           </p>
@@ -32,10 +32,10 @@ export default function Profile({ data, isOpen }: Props) {
             Mr. Suhadi (†) & Mrs. Lili Rumsari
           </p>
 
-          <h2 className="font-slight text-2xl text-[#A4753A] mt-[44px] animate" data-animate="fade-up">
+          <h2 className="font-slight text-2xl md:text-[32px] text-[#A4753A] mt-[44px] animate" data-animate="fade-up">
             Vissi El Alexandra
           </h2>
-          <Image src="/images/ronald-dan-vissi/mobile/img-pengantin-wanita.png" alt="Picture of Pengantin wanita" width={200} height={200} className="mx-auto mt-[52px] pointer-events-none animate" data-animate="fade-up" />
+          <Image src="/images/ronald-dan-vissi/mobile/img-pengantin-wanita.png" alt="Picture of Pengantin wanita" width={200} height={200} className="md:w-[204px] mx-auto mt-[52px] pointer-events-none animate" data-animate="fade-up" />
           <p className="text-[15px] md:text-[22px] leading-[20px] md:leading-[30px] mt-4 animate" data-animate="fade-up">
             The Daughter of
           </p>

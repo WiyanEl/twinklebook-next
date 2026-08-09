@@ -49,7 +49,7 @@ export default function CountingDown({ data, isOpen }: Props) {
     <>
       <section id="counting-down" className="counting-down relative w-full min-h-min bg-[url('/images/ronald-dan-vissi/mobile/bg-counting-down.png')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 z-[1] bg-[#0000005C] backdrop-blur-[4px]" />
-        <div className="relative z-20 h-full pt-[68px] md:pt-[49px] pb-[68px] md:pb-[53px] text-center font-cormorantgaramond text-white">
+        <div className="relative z-20 h-full pt-[68px] md:pt-[60px] pb-[68px] md:pb-[60px] text-center font-cormorantgaramond text-white">
           <h2 className="text-[28px] md:text-[38px] font-normal leading-[111.00000000000001%] md:leading-none md:tracking-[0.043em] uppercase animate" data-animate="zoom-in">sunday, 6 september 2026</h2>
           <div className="flex gap-[14px] md:gap-[32px] justify-center mt-[18px] md:mt-[24px]">
             <TimeBox value={timeLeft.days} label="days" />
