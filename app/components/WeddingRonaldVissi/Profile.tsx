@@ -21,7 +21,7 @@ export default function Profile({ data, isOpen }: Props) {
             By the Grace of Our God <br /> We request the honour of your presence <br className="md:hidden" /> of our wedding
           </p>
 
-          <h2 className="font-slight text-2xl text-[#A4753A] mt-[54px] animate" data-animate="fade-up">
+          <h2 className="font-slight font-semibold text-2xl text-[#A4753A] mt-[54px] animate" data-animate="fade-up">
             Ronald Setyadi
           </h2>
           <Image src="/images/ronald-dan-vissi/mobile/img-pengantin-pria.png" alt="Picture of Pengantin pria" width={200} height={200} className="md:w-[204px] mx-auto mt-8 pointer-events-none animate" data-animate="fade-up" />
@@ -32,7 +32,7 @@ export default function Profile({ data, isOpen }: Props) {
             Mr. Suhadi (†) & Mrs. Lili Rumsari
           </p>
 
-          <h2 className="font-slight text-2xl text-[#A4753A] mt-[44px] animate" data-animate="fade-up">
+          <h2 className="font-slight font-semibold text-2xl text-[#A4753A] mt-[44px] animate" data-animate="fade-up">
             Vissi El Alexandra
           </h2>
           <Image src="/images/ronald-dan-vissi/mobile/img-pengantin-wanita.png" alt="Picture of Pengantin wanita" width={200} height={200} className="md:w-[204px] mx-auto mt-8 pointer-events-none animate" data-animate="fade-up" />

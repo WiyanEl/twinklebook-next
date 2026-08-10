@@ -14,9 +14,13 @@ export default function WeddingGift({ data, isOpen }: Props) {
   const [copied, setCopied] = useState(false)
   const [copied2, setCopied2] = useState(false)
 
-  const handleCopy = (norek:string) => {
+  const handleCopy = (norek:string, copyke: number) => {
     navigator.clipboard.writeText(norek);
-    setCopied(true);
+    if (copyke == 1) {
+      setCopied(true);
+    } else {
+      setCopied2(true);
+    }
 
     setTimeout(() => {
       setCopied(false);
@@ -27,7 +31,7 @@ export default function WeddingGift({ data, isOpen }: Props) {
     <>
       <div id="wedding-gift" className="relative z-10 w-full min-h-min bg-[url('/images/ronald-dan-vissi/mobile/bg-wedding-gift.png')] bg-cover bg-center bg-no-repeat">
         <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-[#FEF8EF] py-[109px]">
-          <h2 className="font-slight text-[28px] leading-[25px] animate" data-animate="fade-up">Wedding Gift</h2>
+          <h2 className="font-slight font-semibold text-[28px] leading-[25px] animate" data-animate="fade-up">Wedding Gift</h2>
 
           <p className="md:hidden text-[15px] leading-[20px] mt-[42px] animate" data-animate="fade-up">
             Your presence and prayers <br /> are the greatest blessing to us.
@@ -49,7 +53,7 @@ export default function WeddingGift({ data, isOpen }: Props) {
               <span className="mt-0.5">282 082 0846</span> <br />
               <span className="mt-0.5">a/n VISSI</span>
             </p>
-            <button onClick={() => handleCopy('2820820846')} className="border-b border-[#FEF8EF] text-center" data-animate="zoom-in">
+            <button onClick={() => handleCopy('2820820846', 1)} className="border-b border-[#FEF8EF] text-center" data-animate="zoom-in">
               <span className="text-[15px] font-normal leading-[81%] uppercase">{copied ? "Copied" : "Copy"}</span>
             </button>
           </div>
@@ -60,8 +64,8 @@ export default function WeddingGift({ data, isOpen }: Props) {
               <span className="mt-0.5">4372295566</span> <br />
               <span className="mt-0.5">a/n RONALD</span>
             </p>
-            <button onClick={() => handleCopy('437 229 5566')} className="border-b border-[#FEF8EF] text-center" data-animate="zoom-in">
-              <span className="text-[15px] font-normal leading-[81%] uppercase">{copied ? "Copied" : "Copy"}</span>
+            <button onClick={() => handleCopy('437 229 5566', 2)} className="border-b border-[#FEF8EF] text-center" data-animate="zoom-in">
+              <span className="text-[15px] font-normal leading-[81%] uppercase">{copied2 ? "Copied" : "Copy"}</span>
             </button>
           </div>
         </div>

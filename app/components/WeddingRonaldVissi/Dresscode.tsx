@@ -19,7 +19,7 @@ export default function Dresscode({ data, isOpen }: Props) {
 
         <section id="dresscode" className="relative w-full min-h-min">
           <div className="relative text-center h-full font-cormorantgaramond text-black pt-[79px] pb-[104px]">
-            <h2 className="font-slight text-[28px] leading-[25px] animate" data-animate="fade-up">Dress Code</h2>
+            <h2 className="font-slight font-semibold text-[28px] leading-[25px] animate" data-animate="fade-up">Dress Code</h2>
 
             <p className="text-[15px] leading-[20px] mt-[32px] animate" data-animate="fade-up">
               Attire in colors from the suggested palette <br /> is greatly appreciated.

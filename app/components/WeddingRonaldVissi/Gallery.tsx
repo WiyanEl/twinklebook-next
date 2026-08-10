@@ -76,7 +76,7 @@ export default function Gallery({ data, isOpen, isMobile }: Props) {
                       alt={`Gallery ${i}`}
                       width={1531}
                       height={945}
-                      className="w-[398px] h-[598px] object-cover"
+                      className="w-[398px] h-[460px] object-cover"
                     />
                   </div>
                 </SwiperSlide>

@@ -15,7 +15,7 @@ export default function Location({ data, isOpen }: Props) {
       <section id="location" className="relative w-full">
         <div className="relative text-center h-full font-cormorantgaramond py-[80px] px-[25px]">
           <div className="w-full h-full bg-[#EBE8E5] rounded-[30px] py-[80px] text-black">
-            <h2 className="font-slight text-[28px] leading-[25px] animate" data-animate="fade-up">Time & Location</h2>
+            <h2 className="font-slight font-semibold text-[28px] leading-[25px] animate" data-animate="fade-up">Time & Location</h2>
 
             <Image src="/images/ronald-dan-vissi/mobile/img-imah-seniman.png" alt="Picture of Imah seniman" width={331} height={221} className="mx-auto pointer-events-none animate" data-animate="fade-up" />
             <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-1 animate" data-animate="fade-up">imah seniman</p>
@@ -25,13 +25,13 @@ export default function Location({ data, isOpen }: Props) {
             </Link>
 
             <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[40px]" data-animate="fade-up">holy matrimony</p>
-            <p className="text-[15px] leading-[20px] mt-0.5 animate" data-animate="fade-up">12.00 wib</p>
+            <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">12.00 wib</p>
 
             <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[30px] animate" data-animate="fade-up">teapai</p>
-            <p className="text-[15px] leading-[20px] mt-0.5 animate" data-animate="fade-up">16.00 wib</p>
+            <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">16.00 wib</p>
 
             <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[30px] animate" data-animate="fade-up">resepsi</p>
-            <p className="text-[15px] leading-[20px] mt-0.5 animate" data-animate="fade-up">18.00 wib</p>
+            <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">18.00 wib</p>
           </div>
         </div>
       </section>

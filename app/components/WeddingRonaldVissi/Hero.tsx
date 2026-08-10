@@ -40,7 +40,7 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
   return (
     <>
       <section id="hero" className="relative h-screen overflow-hidden">
-        <video autoPlay muted loop playsInline className="fixed inset-0 w-full h-full object-cover -z-10">
+        <video autoPlay muted loop playsInline className={`fixed top-0 bottom-0 w-full h-full object-cover ${isOpen ? "md:left-auto md:right-0 md:w-[390px]" : "left-0"}`}>
           <source src="/images/ronald-dan-vissi/mobile/video-bg-hero.mp4" type="video/mp4" />
         </video>
 

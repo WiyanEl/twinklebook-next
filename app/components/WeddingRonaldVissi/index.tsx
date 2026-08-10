@@ -85,7 +85,7 @@ export default function WeddingRonaldVissi({ data }: Props) {
                 the wedding of
               </p>
               <h1 className={`font-slight font-normal text-[32px] leading-none uppercase mt-8 ${isOpen ? 'opacity-0 fade-right' : ''}`}>
-                cornel & tiara
+                Ronald dan Vissi
               </h1>
             </div>
           </div>

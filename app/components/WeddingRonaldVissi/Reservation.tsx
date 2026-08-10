@@ -23,7 +23,7 @@ export default function Reservation({ data }: Props) {
     <>
       <div id="reservation" className="relative z-10 w-full">
         <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-black pt-[30px] pb-[73px]">
-          <h2 className="font-slight text-[28px] leading-[25px] animate" data-animate="fade-up">Rsvp</h2>
+          <h2 className="font-slight font-semibold text-[28px] leading-[25px] animate" data-animate="fade-up">Rsvp</h2>
 
           <p className="text-[15px] font-normal leading-[15px] mt-[40px] animate" data-animate="zoom-in">Dear,</p>
           <p className="text-[15px] font-normal leading-[15px] mt-[26px] capitalize animate" data-animate="zoom-in">{dataGuest.name ?? '.........'}</p>
@@ -47,14 +47,14 @@ export default function Reservation({ data }: Props) {
           </div>
 
           <p className="md:hidden text-[15px] font-normal leading-[14.96px] mt-[37px] animate" data-animate="zoom-in">Confirm your selection?</p>
-          <p className="hidden md:block text-[22px] font-normal leading-[14.96px] mt-[77px] uppercase animate" data-animate="zoom-in">are you sure?</p>
+          <p className="hidden md:block text-[15px] font-normal leading-[14.96px] mt-[37px] uppercase animate" data-animate="zoom-in">are you sure?</p>
 
           <div className="mt-[28px] animate" data-animate="zoom-in">
             <button onClick={() => {
               setAttendance('not')
               setShowModal(true)
             }} type="button" className="flex justify-center items-center w-[262px] h-[33px] rounded-[6px] bg-[#473B2F] mx-auto">
-              <span className="text-[15px] md font-light leading-[14.96px] text-white uppercase">confirm unable to attend</span>
+              <span className="text-[15px] md font-light leading-[14.96px] text-white uppercase">{attendance == 'attend' ? 'confirm to attend' : 'confirm unable to attend'}</span>
             </button>
           </div>
           <p className="text-xs font-normal leading-[16px] mt-[54px] animate" data-animate="zoom-in">If you need assistance with your RSVP,</p>
