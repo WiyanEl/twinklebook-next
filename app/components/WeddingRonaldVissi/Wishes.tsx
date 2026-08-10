@@ -98,7 +98,7 @@ export default function Wishes({ data, isOpen }: Props) {
         <div className="absolute inset-0 bg-[url('/images/ronald-dan-vissi/mobile/bg-wishes.png')] bg-cover bg-center bg-no-repeat" />
 
         <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-black py-[85px]">
-          <h2 className="font-slight text-[28px] leading-[25px] animate" data-animate="fade-up">Your Wishes</h2>
+          <h2 className="font-slight [-webkit-text-stroke:0.5px_black] text-[28px] leading-[25px] animate" data-animate="fade-up">Your Wishes</h2>
 
           {!seeAllMessages ? (
             <div className="relative text-center">

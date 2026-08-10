@@ -12,7 +12,7 @@ export default function Footer({ data, isOpen }: Props) {
     <>
       <footer id="footer" className="relative w-full min-h-screen bg-[url('/images/ronald-dan-vissi/mobile/bg-footer.png')] bg-cover bg-top bg-no-repeat">
         <div className="relative h-full text-center font-cormorantgaramond text-[#FEF8EF] pt-[109px]">
-          <h2 className="font-slight font-medium text-[28px] leading-[25px] animate" data-animate="fade-up">Thank You</h2>
+          <h2 className="font-slight [-webkit-text-stroke:0.5px_#FEF8EF] text-[28px] leading-[25px] animate" data-animate="fade-up">Thank You</h2>
 
           <p className="text-[15px] leading-[20px] mt-[35px] animate" data-animate="fade-up">
             For being part of our journey. <br /> We look forward to celebrating love, laughter, and <br /> happily ever after with you!
