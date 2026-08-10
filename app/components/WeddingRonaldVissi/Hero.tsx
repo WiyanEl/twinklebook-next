@@ -39,8 +39,8 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
 
   return (
     <>
-      <section id="hero" className="relative h-screen overflow-hidden md:bg-[url('/images/ronald-dan-vissi/desktop/bg-hero.png')] md:bg-cover md:bg-center md:bg-no-repeat">
-        <video autoPlay muted loop playsInline className="fixed inset-0 w-full h-full object-cover -z-10 md:hidden">
+      <section id="hero" className="relative h-screen overflow-hidden">
+        <video autoPlay muted loop playsInline className="fixed inset-0 w-full h-full object-cover -z-10">
           <source src="/images/ronald-dan-vissi/mobile/video-bg-hero.mp4" type="video/mp4" />
         </video>
 
@@ -50,9 +50,9 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
             <div className="relative z-20 flex items-center justify-center h-full">
               <div className="w-[290px] md:w-[416px] min-h-min rounded-[15px] md:rounded-[20px] shadow-[0px_8px_11.6px_0px_#0000008A] zoom-in">
                 <div className="w-full h-[180px] md:h-[220px] rounded-tl-[15px] md:rounded-tl-[20px] rounded-tr-[15px] md:rounded-tr-[20px] bg-center bg-cover bg-no-repeat bg-[url('/images/ronald-dan-vissi/mobile/img-popup-hero.png')] md:bg-[url('/images/ronald-dan-vissi/desktop/img-popup-hero.png')]"></div>
-                <div className="relative w-full pt-[47px] md:pt-[27px] pb-[54px] md:pb-[40px] rounded-bl-[15px] md:rounded-bl-[20px] rounded-br-[15px] md:rounded-br-[20px] font-cormorantgaramond text-black text-center bg-[#EBE8E5]">
+                <div className="relative w-full pt-[28px] md:pt-[27px] pb-[28px] md:pb-[40px] rounded-bl-[15px] md:rounded-bl-[20px] rounded-br-[15px] md:rounded-br-[20px] font-cormorantgaramond text-black text-center bg-[#EBE8E5]">
                   <h6 className="text-xs md:text-lg font-normal leading-none md:uppercase">The Wedding of</h6>
-                  <h2 className="font-slight text-[#A4753A] text-2xl md:text-[32px] leading-none font-normal mt-2.5">Ronald & Vissi</h2>
+                  <h2 className="font-slight text-[#A4753A] text-2xl md:text-[32px] leading-none font-normal mt-3.5">Ronald & Vissi</h2>
                   <h6 className="md:hidden text-xs md:text-base font-medium leading-[25px] md:leading-[31px] mt-2.5">Dear,</h6>
                   <h6 className="hidden md:block text-[14px] font-medium leading-[31px] md:leading-[31px] mt-[22px]">Dear Mr. /Mrs. / Ms.</h6>
                   <h6 className="text-[14px] md:text-lg font-medium leading-[31px] md:leading-[31px] capitalize">{dataGuest.name ?? '.........'}</h6>
@@ -67,10 +67,10 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
           </div>
         )}
 
-        <div className="h-full relative z-10 text-center font-cormorantgaramond text-[#FEF8EF] md:text-[#A4753A] pt-[102px]">
+        <div className="h-full relative z-10 text-center font-cormorantgaramond text-[#FEF8EF] pt-[102px]">
           <h4 className={`text-[15px] md:text-[22px] tracking-wider md:tracking-[0.05em] uppercase ${isOpen ? 'zoom-in' : ''}`}>the wedding of</h4>
-          <h2 className={`font-slight text-[32px] md:text-[96px] mt-[28px] ${isOpen ? 'zoom-in' : ''}`}>Ronald & Vissi</h2>
-          <h4 className={`text-[15px] md:text-[26px] mt-[22px] md:mt-0 ${isOpen ? 'zoom-in' : ''}`}>Sunday, 6 September 2026</h4>
+          <h2 className={`font-slight text-[32px] mt-5 ${isOpen ? 'zoom-in' : ''}`}>Ronald & Vissi</h2>
+          <h4 className={`text-[15px] md:text-[22px] mt-5 ${isOpen ? 'zoom-in' : ''}`}>Sunday, 6 September 2026</h4>
         </div>
       </section>
     </>

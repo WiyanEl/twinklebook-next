@@ -59,8 +59,8 @@ export default function Gallery({ data, isOpen, isMobile }: Props) {
 
   return (
     <>
-      <section id="gallery" className="gallery bg-[#DFD5CC]">
-        <div className="relative w-full md:w-[701px] overflow-hidden px-[25px] pb-[80px] md:mx-auto">
+      <section id="gallery" className="gallery">
+        <div className="relative w-full overflow-hidden px-[25px] pb-[80px]">
           <div
             className="h-full"
           >
@@ -76,7 +76,7 @@ export default function Gallery({ data, isOpen, isMobile }: Props) {
                       alt={`Gallery ${i}`}
                       width={1531}
                       height={945}
-                      className="w-[398px] md:w-full h-[598px] md:h-[949px] object-cover"
+                      className="w-[398px] h-[598px] object-cover"
                     />
                   </div>
                 </SwiperSlide>
