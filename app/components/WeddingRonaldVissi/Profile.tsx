@@ -18,7 +18,7 @@ export default function Profile({ data, isOpen }: Props) {
 
         <div className="relative text-center h-full font-cormorantgaramond text-black pt-[73px] pb-[87px]">
           <p className="text-[15px] leading-[20px] animate" data-animate="fade-up">
-            By the Grace of Our God <br /> We request the honour of your presence <br className="md:hidden" /> of our wedding
+            By the Grace of Our God <br /> We request the honour of your presence <br /> of our wedding
           </p>
 
           <h2 className="font-slight [-webkit-text-stroke:0.5px_#A4753A] text-2xl text-[#A4753A] mt-[54px] animate" data-animate="fade-up">

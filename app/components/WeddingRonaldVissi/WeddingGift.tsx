@@ -18,7 +18,9 @@ export default function WeddingGift({ data, isOpen }: Props) {
     navigator.clipboard.writeText(norek);
     if (copyke == 1) {
       setCopied(true);
+      setCopied2(false);
     } else {
+      setCopied(false);
       setCopied2(true);
     }
 
@@ -31,7 +33,7 @@ export default function WeddingGift({ data, isOpen }: Props) {
     <>
       <div id="wedding-gift" className="relative z-10 w-full min-h-min bg-[url('/images/ronald-dan-vissi/mobile/bg-wedding-gift.png')] bg-cover bg-center bg-no-repeat">
         <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-[#FEF8EF] py-[109px]">
-          <h2 className="font-slight [-webkit-text-stroke:0.5px_#FEF8EF] text-[28px] leading-[25px] animate" data-animate="fade-up">Wedding Gift</h2>
+          <h2 className="font-slight [-webkit-text-stroke:0.5px_#FEF8EF] text-[28px] leading-[25px] mt-4 animate" data-animate="fade-up">Wedding Gift</h2>
 
           <p className="md:hidden text-[15px] leading-[20px] mt-[42px] animate" data-animate="fade-up">
             Your presence and prayers <br /> are the greatest blessing to us.
