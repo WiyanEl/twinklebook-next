@@ -20,10 +20,10 @@ interface Props {
 }
 
 export default function WeddingRonaldVissi({ data }: Props) {
-  const [isOpen, setIsOpen] = useState(false) // default false
+  const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   console.log(data)
-  
+
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768)
     check()
@@ -33,13 +33,20 @@ export default function WeddingRonaldVissi({ data }: Props) {
   
   useEffect(() => {
     if (!isOpen) {
+      document.documentElement.style.overflow = 'hidden'
       document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = 'auto'
+      document.documentElement.style.overflow = ''
+      document.body.style.overflow = ''
     }
 
+    console.log('isOpen:', isOpen)
+    console.log('body:', document.body.style.overflow)
+    console.log('html:', document.documentElement.style.overflow)
+
     return () => {
-      document.body.style.overflow = 'auto'
+      document.documentElement.style.overflow = ''
+      document.body.style.overflow = ''
     }
   }, [isOpen])
 
