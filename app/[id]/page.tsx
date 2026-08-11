@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { cookies } from 'next/headers'
 
 import { getEventData, getContentData, getEventTemplateData, getGuestEventSessionByPinNewData, GetAllPersonalGuestMessagesData } from '@/app/lib/event'
@@ -10,6 +11,16 @@ interface Props {
   params: Promise<{
     id: string
   }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params
+
+  const template = await getEventTemplateData()
+
+  return {
+    title: template?.title ?? 'Wedding Invitation'
+  }
 }
 
 export default async function Page({

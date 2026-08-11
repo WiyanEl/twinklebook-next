@@ -11,6 +11,15 @@ type HeroProps = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
+export function formatWeddingDate(date: string) {
+  return new Intl.DateTimeFormat('en-GB', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date(date))
+}
+
 export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
   const dataGuest = data?.guest
   const dataEvent = data?.event
@@ -52,7 +61,7 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
                 <div className="w-full h-[180px] md:h-[220px] rounded-tl-[15px] md:rounded-tl-[20px] rounded-tr-[15px] md:rounded-tr-[20px] bg-center bg-cover bg-no-repeat bg-[url('/images/ronald-dan-vissi/mobile/img-popup-hero.png')] md:bg-[url('/images/ronald-dan-vissi/desktop/img-popup-hero.png')]"></div>
                 <div className="relative w-full pt-[28px] md:pt-[27px] pb-[28px] md:pb-[40px] rounded-bl-[15px] md:rounded-bl-[20px] rounded-br-[15px] md:rounded-br-[20px] font-cormorantgaramond text-black text-center bg-[#EBE8E5]">
                   <h6 className="text-xs md:text-lg font-normal leading-none md:uppercase">The Wedding of</h6>
-                  <h2 className="font-slight text-[#A4753A] text-2xl md:text-[32px] leading-none font-normal mt-3.5">Ronald & Vissi</h2>
+                  <h2 className="font-slight text-[#A4753A] text-2xl md:text-[32px] leading-none font-normal mt-3.5">{dataEvent?.groomName} & {dataEvent?.brideName}</h2>
                   <h6 className="md:hidden text-xs md:text-base font-medium leading-[25px] md:leading-[31px] mt-2.5">Dear,</h6>
                   <h6 className="hidden md:block text-[14px] font-medium leading-[31px] md:leading-[31px] mt-[22px]">Dear Mr. /Mrs. / Ms.</h6>
                   <h6 className="text-[14px] md:text-lg font-medium leading-[31px] md:leading-[31px] capitalize">{dataGuest.name ?? '.........'}</h6>
@@ -69,8 +78,8 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
 
         <div className="h-full relative z-10 text-center font-cormorantgaramond text-[#FEF8EF] pt-[102px]">
           <h4 className={`text-[15px] md:text-[22px] tracking-wider md:tracking-[0.05em] uppercase ${isOpen ? 'zoom-in' : ''}`}>the wedding of</h4>
-          <h2 className={`font-slight text-[32px] mt-5 ${isOpen ? 'zoom-in' : ''}`}>Ronald & Vissi</h2>
-          <h4 className={`text-[15px] md:text-[22px] mt-5 ${isOpen ? 'zoom-in' : ''}`}>Sunday, 6 September 2026</h4>
+          <h2 className={`font-slight text-[32px] mt-5 ${isOpen ? 'zoom-in' : ''}`}>{dataEvent?.groomName} & {dataEvent?.brideName}</h2>
+          <h4 className={`text-[15px] md:text-[22px] mt-5 ${isOpen ? 'zoom-in' : ''}`}>{formatWeddingDate(dataEvent?.date)}</h4>
         </div>
       </section>
     </>

@@ -10,6 +10,8 @@ type Props = {
 }
 
 export default function Profile({ data, isOpen }: Props) {
+  const dataEvent = data?.event
+
   return (
     <>
       <section id="profile" className="relative w-full min-h-screen">
@@ -22,25 +24,25 @@ export default function Profile({ data, isOpen }: Props) {
           </p>
 
           <h2 className="font-slight [-webkit-text-stroke:0.5px_#A4753A] text-2xl text-[#A4753A] mt-[54px] animate" data-animate="fade-up">
-            Ronald Setyadi
+            {dataEvent?.groomFullName}
           </h2>
           <Image src="/images/ronald-dan-vissi/mobile/img-pengantin-pria.png" alt="Picture of Pengantin pria" width={200} height={200} className="md:w-[204px] mx-auto mt-8 pointer-events-none animate" data-animate="fade-up" />
           <p className="text-[15px] leading-[20px] mt-4 animate" data-animate="fade-up">
             The Son of
           </p>
           <p className="text-[15px] leading-[24px] mt-1.5 animate" data-animate="fade-up">
-            Mr. Suhadi (†) & Mrs. Lili Rumsari
+            {dataEvent?.groomParent}
           </p>
 
           <h2 className="font-slight [-webkit-text-stroke:0.5px_#A4753A] text-2xl text-[#A4753A] mt-[44px] animate" data-animate="fade-up">
-            Vissi El Alexandra
+            {dataEvent?.brideFullName}
           </h2>
           <Image src="/images/ronald-dan-vissi/mobile/img-pengantin-wanita.png" alt="Picture of Pengantin wanita" width={200} height={200} className="md:w-[204px] mx-auto mt-8 pointer-events-none animate" data-animate="fade-up" />
           <p className="text-[15px] leading-[20px] mt-4 animate" data-animate="fade-up">
             The Daughter of
           </p>
           <p className="text-[15px] leading-[24px] mt-1.5 animate" data-animate="fade-up">
-            Mr. Santo Herawan & Mrs. Melan
+            {dataEvent?.brideParent}
           </p>
 
           <p className="text-[15px] leading-[20px] mt-[52px] animate" data-animate="fade-up">

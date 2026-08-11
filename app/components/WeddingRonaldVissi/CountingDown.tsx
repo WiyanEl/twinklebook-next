@@ -9,8 +9,18 @@ type Props = {
   isOpen: boolean
 }
 
+export function formatWeddingDate(date: string) {
+  return new Intl.DateTimeFormat('en-GB', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date(date))
+}
+
 export default function CountingDown({ data, isOpen }: Props) {
-  const targetDate = new Date('2026-09-06T00:00:00')
+  const dataEvent = data?.event
+  const targetDate = new Date(dataEvent?.date)
 
   const [timeLeft, setTimeLeft] = useState({
     days: '00',
@@ -50,7 +60,7 @@ export default function CountingDown({ data, isOpen }: Props) {
       <section id="counting-down" className="counting-down relative w-full min-h-min bg-[url('/images/ronald-dan-vissi/mobile/bg-counting-down.png')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 z-[1] bg-[#0000005C] backdrop-blur-[2px]" />
         <div className="relative z-20 h-full pt-[68px] pb-[68px] text-center font-cormorantgaramond text-white">
-          <h2 className="text-[28px] font-normal leading-[111.00000000000001%]  uppercase animate" data-animate="zoom-in">sunday, 6 september 2026</h2>
+          <h2 className="text-[28px] font-normal leading-[111.00000000000001%]  uppercase animate" data-animate="zoom-in">{formatWeddingDate(dataEvent?.date)}</h2>
           <div className="flex gap-[14px] justify-center mt-[18px]">
             <TimeBox value={timeLeft.days} label="days" />
             <TimeBox value={timeLeft.hours} label="hours" />

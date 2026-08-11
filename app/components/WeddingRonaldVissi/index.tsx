@@ -22,6 +22,7 @@ interface Props {
 export default function WeddingRonaldVissi({ data }: Props) {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const dataEvent = data?.event
   console.log(data)
 
   useEffect(() => {
@@ -39,10 +40,6 @@ export default function WeddingRonaldVissi({ data }: Props) {
       document.documentElement.style.overflow = ''
       document.body.style.overflow = ''
     }
-
-    console.log('isOpen:', isOpen)
-    console.log('body:', document.body.style.overflow)
-    console.log('html:', document.documentElement.style.overflow)
 
     return () => {
       document.documentElement.style.overflow = ''
@@ -92,7 +89,7 @@ export default function WeddingRonaldVissi({ data }: Props) {
                 the wedding of
               </p>
               <h1 className={`font-slight font-normal text-[48px] leading-none mt-8 ${isOpen ? 'opacity-0 fade-right' : ''}`}>
-                Ronald dan Vissi
+                {dataEvent?.groomName} dan {dataEvent?.brideName}
               </h1>
             </div>
           </div>
