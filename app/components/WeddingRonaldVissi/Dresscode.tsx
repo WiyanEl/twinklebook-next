@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Reservation from './Reservation'
+import Rsvp from '../rsvp/RSVPBased'
 
 type Props = {
   data: any
@@ -34,7 +35,7 @@ export default function Dresscode({ data, isOpen }: Props) {
           </div>
         </section>
 
-        <Reservation data={data} />
+        <Rsvp data={data} />
       </div>
     </>
   )

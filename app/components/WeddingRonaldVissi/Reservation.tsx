@@ -69,7 +69,6 @@ export default function Reservation({ data }: Props) {
         </div>
       </div>
 
-
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div
