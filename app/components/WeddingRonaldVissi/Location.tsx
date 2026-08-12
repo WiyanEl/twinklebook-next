@@ -31,12 +31,12 @@ export default function Location({ data, isOpen }: Props) {
 
             <Image src="/images/ronald-dan-vissi/mobile/img-imah-seniman.png" alt="Picture of Imah seniman" width={331} height={221} className="mx-auto pointer-events-none animate" data-animate="fade-up" />
             <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-1 animate" data-animate="fade-up">{dataEventSession[0]?.addressName}</p>
-            <p className="text-[15px] leading-[20px] mt-0.5 animate" data-animate="fade-up">{dataEventSession[0]?.address}</p>
-            <Link href={`https://www.google.com/maps?q=${dataEventSession[0]?.latLong}`} target="_blank" className="relative flex items-center justify-center w-[160px] h-[33px] bg-[#473B2F] mt-[14px] rounded-[6px] mx-auto animate" data-animate="fade-up">
+            <p className="text-[15px] leading-[20px] mt-0.5 animate" data-animate="fade-up">Jl. Kolonel Masturi No. VIII, Bandung</p>
+            <Link href="https://maps.app.goo.gl/64m21hxcrHcmVFYX9" target="_blank" className="relative flex items-center justify-center w-[160px] h-[33px] bg-[#473B2F] mt-[14px] rounded-[6px] mx-auto animate" data-animate="fade-up">
               <span className="text-[15px] leading-[17.16px] text-white uppercase">google maps</span>
             </Link>
 
-            <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[40px]" data-animate="fade-up">{dataEventSession[0]?.addressName}</p>
+            <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[40px]" data-animate="fade-up">{dataEventSession[0]?.name}</p>
             <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">{formatTime(dataEventSession[0]?.date)} wib</p>
 
             <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[30px] animate" data-animate="fade-up">teapai</p>

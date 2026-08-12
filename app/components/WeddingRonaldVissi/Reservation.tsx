@@ -61,7 +61,7 @@ export default function Reservation({ data }: Props) {
           <p className="text-xs font-normal leading-[16px] mt-0.5 animate" data-animate="zoom-in">please contact our support team.</p>
 
           <div className="mt-[33px] animate" data-animate="zoom-in">
-            <Link href="https://wa.me/6289671650843" target="_blank" className="flex justify-center items-center w-[262px] h-[33px] rounded-[6px] bg-[#12877B] mx-auto">
+            <Link href="https://wa.me/6281998478131" target="_blank" className="flex justify-center items-center w-[262px] h-[33px] rounded-[6px] bg-[#12877B] mx-auto">
               <Image src="/images/ronald-dan-vissi/mobile/icon-whatsapp.png"  alt="Picture of Icon WhatsApp" width={16} height={16} className="mr-2" />
               <span className="font-ovo text-[15px] font-light leading-[14.96px] text-white uppercase">chat support</span>
             </Link>
