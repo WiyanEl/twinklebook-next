@@ -63,7 +63,7 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
                   <h6 className="text-xs md:text-lg font-normal leading-none md:uppercase">The Wedding of</h6>
                   <h2 className="font-slight text-[#A4753A] text-2xl md:text-[32px] leading-none font-normal mt-3.5">{dataEvent?.groomName} & {dataEvent?.brideName}</h2>
                   <h6 className="md:hidden text-xs md:text-base font-medium leading-[25px] md:leading-[31px] mt-2.5">Dear,</h6>
-                  <h6 className="hidden md:block text-[14px] font-medium leading-[31px] md:leading-[31px] mt-[22px]">Dear Mr. /Mrs. / Ms.</h6>
+                  <h6 className="hidden md:block text-[14px] font-medium leading-[31px] md:leading-[31px] mt-[22px]">Dear,</h6>
                   <h6 className="text-[14px] md:text-lg font-medium leading-[31px] md:leading-[31px] capitalize">{dataGuest.name ?? '.........'}</h6>
                   <p className="text-[10px] md:text-xs font-medium leading-[13px] md:leading-[16px] mt-5">We sincerely apologize</p>
                   <p className="text-[10px] md:text-xs font-medium leading-[13px] md:leading-[16px]">for any misspelling of names or titles.</p>

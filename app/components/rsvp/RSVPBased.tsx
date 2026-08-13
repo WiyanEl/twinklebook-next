@@ -55,7 +55,7 @@ const RSVPSectionDesign = ({ data }: { data: any }) => {
                         setAttendance('attend')
                         setShowModal(true)
                         }} className={`w-[121px] h-[40px] rounded-[6px] flex justify-center items-center ${attendance == 'attend' ? 'bg-[#473B2F]' : 'bg-transparent border-[1px] border-[#473B2F]'}`}>
-                            <span className={`text-[15px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-black'}`}>confirm attend</span>
+                            <span className={`text-[15px] font-light leading-[14.96px] uppercase ${attendance == 'attend' ? 'text-white' : 'text-black'}`}>attend</span>
                         </button>
                         <button type="button" onClick={() => {
                         setAttendance('not')
