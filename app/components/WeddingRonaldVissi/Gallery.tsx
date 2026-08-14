@@ -24,34 +24,48 @@ type Props = {
   isMobile: boolean
 }
 
+type GalleryImage = {
+  src: string
+  thumb: string
+}
+
 export default function Gallery({ data, isOpen, isMobile }: Props) {
   const galleryRef = useRef<any>(null)
+  const dataContent = data?.content
+  const dataGallery = dataContent?.galleryImageData
 
-  let images = []
+  const images: GalleryImage[] = dataGallery.map((item: any) => {
+    const imageUrl = `https://media.twinklebook.com/${item.url}`
 
-  if (isMobile) {
-    images = [
-      {
-        src: '/images/ronald-dan-vissi/mobile/img-gallery-1.png',
-        thumb: '/images/ronald-dan-vissi/mobile/img-gallery-1.png'
-      },
-      {
-        src: '/images/ronald-dan-vissi/mobile/img-gallery-1.png',
-        thumb: '/images/ronald-dan-vissi/mobile/img-gallery-1.png'
-      },
-    ]
-  } else {
-    images = [
-      {
-        src: '/images/ronald-dan-vissi/mobile/img-gallery-1.png',
-        thumb: '/images/ronald-dan-vissi/mobile/img-gallery-1.png'
-      },
-      {
-        src: '/images/ronald-dan-vissi/mobile/img-gallery-1.png',
-        thumb: '/images/ronald-dan-vissi/mobile/img-gallery-1.png'
-      },
-    ]
-  }
+    return {
+      src: imageUrl,
+      thumb: imageUrl,
+    }
+  })
+
+  // if (isMobile) {
+  //   images = [
+  //     {
+  //       src: '/images/ronald-dan-vissi/mobile/img-gallery-1.png',
+  //       thumb: '/images/ronald-dan-vissi/mobile/img-gallery-1.png'
+  //     },
+  //     {
+  //       src: '/images/ronald-dan-vissi/mobile/img-gallery-1.png',
+  //       thumb: '/images/ronald-dan-vissi/mobile/img-gallery-1.png'
+  //     },
+  //   ]
+  // } else {
+  //   images = [
+  //     {
+  //       src: '/images/ronald-dan-vissi/mobile/img-gallery-1.png',
+  //       thumb: '/images/ronald-dan-vissi/mobile/img-gallery-1.png'
+  //     },
+  //     {
+  //       src: '/images/ronald-dan-vissi/mobile/img-gallery-1.png',
+  //       thumb: '/images/ronald-dan-vissi/mobile/img-gallery-1.png'
+  //     },
+  //   ]
+  // }
 
   const openGallery = (index: number) => {
     galleryRef.current?.openGallery(index)

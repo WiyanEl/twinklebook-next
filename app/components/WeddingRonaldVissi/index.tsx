@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import Header from './Header'
 import Hero from './Hero'
@@ -23,6 +23,8 @@ export default function WeddingRonaldVissi({ data }: Props) {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const dataEvent = data?.event
+  const dataContent = data?.content
+  const audioRef = useRef<HTMLAudioElement>(null)
   console.log(data)
 
   useEffect(() => {
@@ -78,11 +80,30 @@ export default function WeddingRonaldVissi({ data }: Props) {
     return () => observer.disconnect();
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!audioRef.current) return
+
+    if (isOpen) {
+      audioRef.current.play().catch((error) => {
+        console.log('Audio gagal diputar:', error)
+      })
+    } else {
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
+    }
+  }, [isOpen])
+
   return (
     <>
+      <audio
+        ref={audioRef}
+        loop
+        preload="auto"
+        src="https://media.twinklebook.com/Media/File/2026/08/10b0244b-a2a4-485e-bc17-d8d628c05aeb.mp3"
+      />
       <div className="md:flex">
         <div className="hidden md:block fixed left-0 top-0 h-screen w-[calc(100%-390px)]">
-          <div className="w-full h-full relative bg-cover" style={{ backgroundImage: "url('/images/ronald-dan-vissi/desktop/bg-hero.png')" }}>
+          <div className="w-full h-full relative bg-cover" style={{ backgroundImage: `url('https://media.twinklebook.com/${dataContent.primaryImageData[0].url}')` }}>
             <div className={`absolute inset-0 bg-[#000000B5]`} />
             <div className="w-full absolute left-1/2 -translate-x-1/2 bottom-[160px] text-white text-center flex flex-col gap-1">
               <p className={`font-cormorantgaramond font-normal text-[20px] leading-none uppercase ${isOpen ? 'opacity-0 fade-right' : ''}`}>
