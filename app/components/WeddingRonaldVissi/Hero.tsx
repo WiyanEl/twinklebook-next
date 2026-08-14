@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 import { PostOpenInvitation } from '@/app/lib/event'
@@ -24,10 +24,22 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
   const dataGuest = data?.guest
   const dataEvent = data?.event
   const [pin, setPin] = useState<string | null>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     setPin(localStorage.getItem('pin'))
   }, [])
+
+  useEffect(() => {
+    if (!videoRef.current) return;
+
+    if (isOpen) {
+      videoRef.current.play().catch(() => {});
+    } else {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  }, [isOpen])
 
   const handleOpen = async () => {
     const json = {
@@ -49,7 +61,7 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
   return (
     <>
       <section id="hero" className="relative h-screen overflow-hidden">
-        <video autoPlay muted loop playsInline className={`fixed top-0 bottom-0 w-full h-full object-cover ${isOpen ? "md:left-auto md:right-0 md:w-[390px]" : "left-0"}`}>
+        <video ref={videoRef} muted loop playsInline className={`fixed top-0 bottom-0 w-full h-full object-cover ${isOpen ? "md:left-auto md:right-0 md:w-[390px]" : "left-0"}`}>
           <source src="/images/ronald-dan-vissi/mobile/video-bg-hero.mp4" type="video/mp4" />
         </video>
 

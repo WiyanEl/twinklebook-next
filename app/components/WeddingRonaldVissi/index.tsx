@@ -89,7 +89,7 @@ export default function WeddingRonaldVissi({ data }: Props) {
                 the wedding of
               </p>
               <h1 className={`font-slight font-normal text-[48px] leading-none mt-8 ${isOpen ? 'opacity-0 fade-right' : ''}`}>
-                {dataEvent?.groomName} dan {dataEvent?.brideName}
+                {dataEvent?.groomName} & {dataEvent?.brideName}
               </h1>
             </div>
           </div>
