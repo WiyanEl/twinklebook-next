@@ -36,14 +36,14 @@ export default function Location({ data, isOpen }: Props) {
               <span className="text-[15px] leading-[17.16px] text-white uppercase">google maps</span>
             </Link>
 
-            <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[40px]" data-animate="fade-up">{dataEventSession[0]?.name}</p>
+            <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[40px]" data-animate="fade-up">holy matrimony</p>
             <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">{formatTime(dataEventSession[0]?.date)} wib</p>
 
             <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[30px] animate" data-animate="fade-up">teapai</p>
-            <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">16.00 wib</p>
+            <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">{formatTime(dataEventSession[1]?.date)} wib</p>
 
             <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[30px] animate" data-animate="fade-up">resepsi</p>
-            <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">{formatTime(dataEventSession[1]?.date)} wib</p>
+            <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">{formatTime(dataEventSession[2]?.date)} wib</p>
           </div>
         </div>
       </section>
