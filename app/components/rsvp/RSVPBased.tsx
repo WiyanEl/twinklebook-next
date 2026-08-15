@@ -44,7 +44,7 @@ const RSVPSectionDesign = ({ data }: { data: any }) => {
                 <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-black pt-[30px] pb-[73px]">
                     <h2 className="font-slight [-webkit-text-stroke:0.5px_black] text-[28px] leading-[25px] mt-4 animate" data-animate="fade-up">Rsvp</h2>
 
-                    <p className="text-[15px] font-normal leading-[15px] mt-[40px] animate" data-animate="zoom-in">Dear,</p>
+                    <p className="text-[15px] font-normal leading-[15px] mt-[40px] animate" data-animate="zoom-in">Dear Mr./Mrs./Ms.</p>
                     <p className="text-[15px] font-normal leading-[15px] mt-[26px] capitalize animate" data-animate="zoom-in">{dataGuest.name ?? '.........'}</p>
 
                     <p className="text-[15px] font-normal leading-[20px] mt-[24px] animate" data-animate="zoom-in">Kindly confirm your attendance before</p>
