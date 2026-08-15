@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
 
 import LightGallery from 'lightgallery/react'
 import lgZoom from 'lightgallery/plugins/zoom'
@@ -80,7 +80,11 @@ export default function Gallery({ data, isOpen, isMobile }: Props) {
           >
             <Swiper
               pagination={{ dynamicBullets: true, clickable: true }}
-              modules={[Pagination]}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              modules={[Pagination, Autoplay]}
             >
               {images.map((img, i) => (
                 <SwiperSlide key={i}>

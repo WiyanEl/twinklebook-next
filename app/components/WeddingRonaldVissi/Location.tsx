@@ -43,7 +43,8 @@ export default function Location({ data, isOpen }: Props) {
             <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">{formatTime(dataEventSession[1]?.date)} wib</p>
 
             <p className="text-base font-bold leading-[20px] text-[#A4753A] uppercase mt-[30px] animate" data-animate="fade-up">resepsi</p>
-            <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">{formatTime(dataEventSession[2]?.date)} wib</p>
+            {/* <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">{formatTime(dataEventSession[2]?.date)} wib</p> */}
+            <p className="text-[15px] leading-[20px] mt-1.5 uppercase animate" data-animate="fade-up">18.00 wib</p>
           </div>
         </div>
       </section>

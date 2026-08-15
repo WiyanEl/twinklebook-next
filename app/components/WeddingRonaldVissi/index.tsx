@@ -1,6 +1,9 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { useMemo } from 'react'
+import { usePreloader } from '../../hooks/preLoader'
+import SectionLoading from '../Loader/SectionLoading'
 
 import Header from './Header'
 import Hero from './Hero'
@@ -22,18 +25,23 @@ interface Props {
 export default function WeddingRonaldVissi({ data }: Props) {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+
   const dataEvent = data?.event
   const dataContent = data?.content
+  const dataGallery = dataContent?.galleryImageData
+
   const audioRef = useRef<HTMLAudioElement>(null)
-  console.log(data)
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768)
+
     check()
+
     window.addEventListener('resize', check)
+
     return () => window.removeEventListener('resize', check)
   }, [])
-  
+
   useEffect(() => {
     if (!isOpen) {
       document.documentElement.style.overflow = 'hidden'
@@ -58,27 +66,30 @@ export default function WeddingRonaldVissi({ data }: Props) {
   }, [])
 
   useEffect(() => {
-    const elements = document.querySelectorAll('.animate');
+    const elements = document.querySelectorAll('.animate')
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const el = entry.target as HTMLElement;
-          const animation = el.dataset?.animate;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement
+            const animation = el.dataset?.animate
 
-          if (animation) {
-            el.classList.add(animation);
+            if (animation) {
+              el.classList.add(animation)
+            }
           }
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+        })
+      },
+      {
+        threshold: 0.1,
+      }
+    )
 
-    elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => observer.observe(el))
 
-    return () => observer.disconnect();
-  }, [isOpen]);
+    return () => observer.disconnect()
+  }, [isOpen])
 
   useEffect(() => {
     if (!audioRef.current) return
@@ -92,6 +103,39 @@ export default function WeddingRonaldVissi({ data }: Props) {
       audioRef.current.currentTime = 0
     }
   }, [isOpen])
+
+  const mediaUrls = useMemo(() => {
+    if (!data) {
+      return []
+    }
+
+    const galleryImages = (dataGallery ?? []).map(
+      (item: any) =>
+      `https://media.twinklebook.com/${item.url}`
+    )
+
+    return [
+      ...galleryImages,
+      ,`https://media.twinklebook.com/${dataContent.primaryImageData[0].url}`
+    ].filter(Boolean)
+  }, [data, dataGallery])
+
+  const {
+    loaded,
+    progress,
+  } = usePreloader(
+    data !== null
+      ? mediaUrls
+      : null
+  )
+
+  if (!loaded) {
+    return (
+      <SectionLoading
+        progress={progress}
+      />
+    )
+  }
 
   return (
     <>
