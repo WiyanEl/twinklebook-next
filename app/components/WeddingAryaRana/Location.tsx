@@ -5,11 +5,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 type Props = {
+  data: any
   isOpen: boolean
-  isMobile: boolean
 }
 
-export default function Location({ isOpen, isMobile }: Props) {
+export default function Location({ data, isOpen }: Props) {
   return (
     <>
       <div id="location" className="relative z-10 w-full bg-[url('/images/arya-dan-rana/mobile/bg-location.png')] bg-cover bg-no-repeat overflow-hidden">
