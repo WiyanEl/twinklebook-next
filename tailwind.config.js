@@ -36,6 +36,9 @@ module.exports = {
         hello: ['var(--font-hello-bride)'],
         cormorantgaramond: ['var(--font-cormorant-garamond)'],
         slight: ['var(--font-slight)'],
+        bochan: ['var(--font-bochan)'],
+        playfair: ['var(--font-play-fair-display)'],
+        garamond: ['var(--font-garamond)'],
       }
     },
     keyframes: {
