@@ -16,7 +16,116 @@ type Wish = {
   message: string
 }
 
+const DEFAULT_WISHES: Wish[] = [
+  {
+    name: "Lorem ipsum",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    name: "Lorem ipsum",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    name: "Lorem ipsum",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    name: "Lorem ipsum",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    name: "Lorem ipsum",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    name: "Lorem ipsum",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    name: "Lorem ipsum",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    name: "Lorem ipsum",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+]
+
 export default function Wishes({ data, isOpen }: Props) {
+  // const [name, setName] = useState('')
+  // const [message, setMessage] = useState('')
+  // const [wishes, setWishes] = useState<Wish[]>([])
+  // const [seeAllMessages, setSeeAllMessages] = useState(false)
+  // const [search, setSearch] = useState('')
+  // const filtered = wishes.filter((item) => 
+  //   item.name.toLowerCase().includes(search.toLowerCase()) ||
+  //   item.message.toLowerCase().includes(search.toLowerCase())
+  // )
+  // const [selectedWish, setSelectedWish] = useState<Wish | null>(null)
+  // const dataEvent = data?.event
+  // const [showModal, setShowModal] = useState(false)
+
+  // useEffect(() => {
+  //   if (data.messages.length > 0) {
+  //     let arrMessage = []
+  //     for (const element of data.messages) {
+  //       arrMessage.push({
+  //         name: element.guestName,
+  //         message: element.message
+  //       })
+  //     }
+
+  //     setWishes(arrMessage)
+  //   } 
+  // }, [])
+
+  // const fetchMessage = async () => {
+  //   try {
+  //     const res = await GetAllPersonalGuestMessagesData(dataEvent.id)
+  //     let arrMessage = []
+  //     for (const element of res) {
+  //       arrMessage.push({
+  //         name: element.guestName,
+  //         message: element.message
+  //       })
+  //     }
+
+  //     setWishes(arrMessage)
+  //   } catch (error) {
+      
+  //   }
+  // }
+
+  // const save = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault()
+
+  //   if (!name.trim() || !message.trim()) return
+
+  //   const json = {
+  //     eventId: dataEvent.id,
+  //     mediaFileId: null,
+  //     name: name,
+  //     message: message,
+  //     status: 1,
+  //     type: 1
+  //   }
+
+  //   try {
+  //     const res = await PostPersonalGuestMesage(json)
+
+  //     setName('')
+  //     setMessage('')
+
+  //     fetchMessage()
+  //     setShowModal(true)
+  //   } catch (error) {
+      
+  //   } finally {
+
+  //   }
+
+  // }
+
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
   const [wishes, setWishes] = useState<Wish[]>([])
@@ -27,68 +136,35 @@ export default function Wishes({ data, isOpen }: Props) {
     item.message.toLowerCase().includes(search.toLowerCase())
   )
   const [selectedWish, setSelectedWish] = useState<Wish | null>(null)
-  const dataEvent = data?.event
   const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
-    if (data.messages.length > 0) {
-      let arrMessage = []
-      for (const element of data.messages) {
-        arrMessage.push({
-          name: element.guestName,
-          message: element.message
-        })
-      }
+    const saved = localStorage.getItem('wishes')
 
-      setWishes(arrMessage)
-    } 
+    if (saved) {
+      setWishes(JSON.parse(saved))
+    } else {
+      setWishes(DEFAULT_WISHES)
+    }
   }, [])
 
-  const fetchMessage = async () => {
-    try {
-      const res = await GetAllPersonalGuestMessagesData(dataEvent.id)
-      let arrMessage = []
-      for (const element of res) {
-        arrMessage.push({
-          name: element.guestName,
-          message: element.message
-        })
-      }
-
-      setWishes(arrMessage)
-    } catch (error) {
-      
+  useEffect(() => {
+    if (wishes.length) {
+      localStorage.setItem('wishes', JSON.stringify(wishes))
     }
-  }
+  }, [wishes])
 
-  const save = async (e: React.FormEvent<HTMLFormElement>) => {
+  const save = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     if (!name.trim() || !message.trim()) return
 
-    const json = {
-      eventId: dataEvent.id,
-      mediaFileId: null,
-      name: name,
-      message: message,
-      status: 1,
-      type: 1
-    }
+    const newWish = { name, message }
 
-    try {
-      const res = await PostPersonalGuestMesage(json)
+    setWishes(prev => [newWish, ...prev])
 
-      setName('')
-      setMessage('')
-
-      fetchMessage()
-      setShowModal(true)
-    } catch (error) {
-      
-    } finally {
-
-    }
-
+    setName('')
+    setMessage('')
   }
 
   return (

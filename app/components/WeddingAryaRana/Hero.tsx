@@ -100,8 +100,8 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
         <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={193} height={343} className={`w-[150px] absolute z-[3] left-0 top-0 pointer-events-none`} />
         <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-hero.png" alt="Picture of gambar kiri atas hero" width={372} height={457} className={`w-[250px] absolute z-[3] right-0 top-0 pointer-events-none`} />
 
-        <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={363} height={424} className={`w-[200px] absolute z-[3] left-0 -bottom-[20px] pointer-events-none`} />
-        <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={392} height={352} className={`w-[175px] absolute z-[3] right-0 -bottom-[70px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={363} height={424} className={`w-[200px] absolute z-[3] left-0 bottom-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={392} height={352} className={`w-[175px] absolute z-[3] right-0 -bottom-[20px] pointer-events-none`} />
       </section>
     </>
   )

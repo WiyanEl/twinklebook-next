@@ -24,7 +24,7 @@ export default function WeddingGift({ data, isOpen }: Props) {
 
   return (
     <>
-      <section id="wedding-gift" className="relative w-full min-h-min bg-[url('/images/arya-dan-rana/mobile/bg-wedding-gift.png')] bg-cover bg-no-repeat pt-[54px]">
+      <section id="wedding-gift" className="relative w-full min-h-min bg-[url('/images/arya-dan-rana/mobile/bg-wedding-gift.png')] bg-cover bg-no-repeat pt-[24px]">
         <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/10 mix-blend-multiply" />
         <div className="pointer-events-none absolute top-0 left-0 right-0 h-[30vh] z-[2] bg-[linear-gradient(180deg,#FEF7ED_0%,#FEF7ED_50%,rgba(254,247,237,0)_100%)]" />
 
@@ -54,8 +54,8 @@ export default function WeddingGift({ data, isOpen }: Props) {
         </div>
 
         {/* Image Absolute */}
-        <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-wedding-gift.png" alt="Picture of gambar kiri atas wedding gift" width={103} height={141} className={`absolute z-[3] left-0 top-[54px] pointer-events-none`} />
-        <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-wedding-gift.png" alt="Picture of gambar kanan atas wedding gift" width={157} height={157} className={`absolute z-[3] -right-[10px] top-[20px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-wedding-gift.png" alt="Picture of gambar kiri atas wedding gift" width={103} height={141} className={`absolute z-[3] left-0 top-[24px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-wedding-gift.png" alt="Picture of gambar kanan atas wedding gift" width={157} height={157} className={`absolute z-[3] -right-[10px] top-0 pointer-events-none`} />
 
         <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah wedding gift" width={250} height={375} className={`w-[145px] absolute z-[3] left-0 bottom-0 pointer-events-none`} />
         <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah wedding gift" width={177} height={180} className={`w-[157px] absolute z-[3] right-0 bottom-0 pointer-events-none`} />
