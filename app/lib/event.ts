@@ -1,14 +1,12 @@
 import { getCurrentEvent, getEventContent, getEventTemplate, getGuestEventSessionByPinNew, GetAllPersonalGuestMessages, OpenInvitation, SubmitPersonalGuestMessage } from '@/app/services/event.service'
 
 let eventId = ''
-let templateId = ''
 
 export const getEventData = async (url: string) => {
 
   const data = await getCurrentEvent(url)
 
   eventId = data.id
-  templateId = data.templateId
 
   return data
 }
@@ -19,7 +17,7 @@ export const getContentData = async () => {
   return data
 }
 
-export const getEventTemplateData = async () => {
+export const getEventTemplateData = async (templateId: string) => {
   const data = await getEventTemplate(templateId)
 
   return data

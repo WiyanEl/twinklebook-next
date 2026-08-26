@@ -17,7 +17,11 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
 
-  const template = await getEventTemplateData()
+  const event = await getEventData(id)
+
+  const template = await getEventTemplateData(
+    event.templateId
+  )
 
   return {
     title: template?.title ?? 'Wedding Invitation'
@@ -28,12 +32,12 @@ export default async function Page({
     params,
 }: Props) {
 
-  const { id } = { id: 'ronaldvissi' }// await params
-  const pin = '263016' //(await cookies()).get('pin')!.value
+  const { id } = await params
+  const pin = (await cookies()).get('pin')!.value
 
   const event = await getEventData(id)
   const content = await getContentData()
-  const template = await getEventTemplateData()
+  const template = await getEventTemplateData(event.templateId)
   const guest = await getGuestData(id, pin)
   const reservation = await getSmartRSVData(id, pin)
   const eventSession = await getGuestEventSessionByPinNewData(pin)
