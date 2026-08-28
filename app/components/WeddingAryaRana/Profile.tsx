@@ -14,7 +14,7 @@ export default function Profile({ data, isOpen }: Props) {
 
   return (
     <>
-      <section id="profile" className="relative w-full min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-profile.png')] bg-cover bg-no-repeat pt-[20px] pb-[25px]">
+      <section id="profile" className="relative w-full min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-profile.png')] bg-cover bg-no-repeat overflow-hidden pt-[40px] pb-[25px]">
         <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/10 mix-blend-multiply" />
         <div className="pointer-events-none absolute top-0 left-0 right-0 h-[20vh] z-[2] bg-[linear-gradient(180deg,#FEF7ED_0%,#FEF7ED_50%,rgba(254,247,237,0)_100%)]" />
 
@@ -35,8 +35,8 @@ export default function Profile({ data, isOpen }: Props) {
         </div>
 
         {/* Image Absolute */}
-        <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-profile.png" alt="Picture of gambar kiri atas profile" width={214} height={280} className={`absolute z-[2] -left-[20px] -top-[40px] pointer-events-none`} />
-        <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-profile.png" alt="Picture of gambar kanan atas profile" width={125} height={143} className={`absolute z-[3] right-0 top-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-profile.png" alt="Picture of gambar kiri atas profile" width={214} height={280} className={`absolute z-[2] -left-[20px] -top-[20px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-profile.png" alt="Picture of gambar kanan atas profile" width={125} height={143} className={`absolute z-[3] right-0 top-[20px] pointer-events-none`} />
 
         <Image src="/images/arya-dan-rana/mobile/img-kiri-tengah-profile.png" alt="Picture of gambar kiri tengah profile" width={277} height={277} className={`w-[135px] absolute z-[3] left-0 bottom-[236px] pointer-events-none`} />
 

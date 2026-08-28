@@ -126,7 +126,8 @@ export default function Wishes({ data, isOpen }: Props) {
 
   // }
 
-  const [name, setName] = useState('')
+  const dataGuest = data?.guest
+  const [name, setName] = useState(dataGuest?.name ?? '.........')
   const [message, setMessage] = useState('')
   const [wishes, setWishes] = useState<Wish[]>([])
   const [seeAllMessages, setSeeAllMessages] = useState(false)
@@ -176,7 +177,7 @@ export default function Wishes({ data, isOpen }: Props) {
           {!seeAllMessages ? (
             <div className="relative text-center">
               <form onSubmit={save} className="mx-auto mt-[32px] animate zoom-in" data-animate="zoom-in">
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="block w-[285px] h-[30px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] leading-[140%] text-[#152F4E] placeholder:text-[#152F4E80] mx-auto" placeholder="Desy (Tester)" />
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="block w-[285px] h-[30px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] leading-[140%] text-[#152F4E] placeholder:text-[#152F4E80] mx-auto" placeholder={dataGuest.name ?? '.........'} />
                 <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="block w-[285px] h-[106px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] leading-[140%] text-[#152F4E] mx-auto mt-4" placeholder="Leave your wishes here."></textarea>
                 <button type="submit" className="flex justify-center items-center w-[285px] h-[30px] bg-[#152F4E] rounded-[10px] border-[0.49px] border-[#152F4E] mx-auto mt-4">
                   <Image src="/images/arya-dan-rana/mobile/icon-send.png" alt="Picture of Icon Send" width={15} height={19} className="mr-2" />
