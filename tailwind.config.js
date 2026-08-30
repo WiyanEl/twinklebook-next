@@ -39,6 +39,7 @@ module.exports = {
         bochan: ['var(--font-bochan)'],
         playfair: ['var(--font-play-fair-display)'],
         garamond: ['var(--font-garamond)'],
+        times: ['var(--font-times)'],
       }
     },
     keyframes: {

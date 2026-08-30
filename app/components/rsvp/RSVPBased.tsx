@@ -41,48 +41,48 @@ const RSVPSectionDesign = ({ data }: { data: any }) => {
             {/* RSVP Section Design */}
             <section id="reservation" className="relative z-10 w-full">
                 {/* RSVP Content Section Design */}
-                <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-[#001A3B] pt-[75px]">
-                    <h2 className="font-bochan text-2xl animate" data-animate="fade-up">Rsvp</h2>
+                <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-[#001A3B] pt-[75px] md:pt-[152px]">
+                    <h2 className="font-bochan text-2xl md:text-[32px] animate" data-animate="fade-up">Rsvp</h2>
 
-                    <p className="text-[15px] font-normal mt-[30px] animate" data-animate="zoom-in">Dear Mr./Mrs./Ms.</p>
-                    <p className="text-[15px] font-normal mt-[15px] capitalize animate" data-animate="zoom-in">{dataGuest.name ?? '.........'}</p>
+                    <p className="text-[15px] md:text-xl font-normal md:leading-[15px] mt-[30px] md:mt-[60px] animate" data-animate="zoom-in">Dear Mr./Mrs./Ms.</p>
+                    <p className="text-[15px] md:text-[22px] font-normal md:leading-[15px] mt-[15px] md:mt-[22px] capitalize animate" data-animate="zoom-in">{dataGuest.name ?? '.........'}</p>
 
-                    <p className="text-[13px] font-normal mt-[33px] animate" data-animate="zoom-in">Kindly confirm your attendance before</p>
-                    <p className="text-[13px] font-normal leading-[18px] mt-0.5 animate" data-animate="zoom-in">12 October 2026</p>
+                    <p className="text-[13px] md:text-xl font-normal md:leading-[26px] mt-[33px] md:mt-[40px] animate" data-animate="zoom-in">Kindly confirm your attendance before</p>
+                    <p className="text-[13px] md:text-xl font-normal leading-[18px] md:leading-[26px] mt-0.5 animate" data-animate="zoom-in">12 October 2026</p>
 
-                    <div className="flex justify-between w-[302px] mx-auto mt-[34px] animate" data-animate="zoom-in">
+                    <div className="flex justify-between w-[302px] md:w-[435px] mx-auto mt-[34px] md:mt-[40px] animate" data-animate="zoom-in">
                         <button type="button" onClick={() => {
                         setAttendance('attend')
                         setShowModal(true)
-                        }} className={`w-[141px] h-[40px] rounded-[6px] flex justify-center items-center ${attendance == 'attend' ? 'bg-[#001A3B]' : 'bg-transparent border-[1px] border-[#001A3B]'}`}>
-                            <span className={`text-[13px] font-light uppercase ${attendance == 'attend' ? 'text-white' : 'text-black'}`}>attend</span>
+                        }} className={`w-[141px] md:w-[203px] h-[40px] md:h-[42px] rounded-[6px] md:rounded-[50px] flex justify-center items-center ${attendance == 'attend' ? 'bg-[#001A3B]' : 'bg-transparent border-[1px] border-[#001A3B]'}`}>
+                            <span className={`text-[13px] md:text-base md:leading-[14.96px] font-light uppercase ${attendance == 'attend' ? 'text-white' : 'text-black'}`}>attend</span>
                         </button>
                         <button type="button" onClick={() => {
                         setAttendance('not')
                         setShowModal(true)
-                        }} className={`w-[141px] h-[40px] rounded-[6px] flex justify-center items-center ${attendance == 'attend' ? 'bg-transparent border-[1px] border-[#001A3B]' : 'bg-[#001A3B]'}`}>
-                            <span className={`text-[13px] font-light uppercase ${attendance == 'attend' ? 'text-black' : 'text-white'}`}>unable to <br className="md:hidden" /> attend</span>
+                        }} className={`w-[141px] md:w-[203px] h-[40px] md:h-[42px] rounded-[6px] md:rounded-[50px] flex justify-center items-center ${attendance == 'attend' ? 'bg-transparent border-[1px] border-[#001A3B]' : 'bg-[#001A3B]'}`}>
+                            <span className={`text-[13px] md:text-base md:leading-[14.96px] font-light uppercase ${attendance == 'attend' ? 'text-black' : 'text-white'}`}>unable to <br className="md:hidden" /> attend</span>
                         </button>
                     </div>
 
-                    <p className="md:hidden text-[13px] font-normal mt-[81px] animate" data-animate="zoom-in">Confirm Your RSVP</p>
-                    <p className="hidden md:block text-[15px] font-normal mt-[37px] uppercase animate" data-animate="zoom-in">are you sure?</p>
+                    <p className="text-[13px] md:text-xl md:leading-[14.96px] font-normal mt-[81px] md:mt-[102px] animate" data-animate="zoom-in">Confirm Your RSVP</p>
+                    {/* <p className="hidden md:block text-[15px] font-normal mt-[37px] uppercase animate" data-animate="zoom-in">are you sure?</p> */}
 
-                    <div className="mt-[25px] animate" data-animate="zoom-in">
+                    <div className="mt-[25px] md:mt-[38px] animate" data-animate="zoom-in">
                         <button onClick={() => {
                             setAttendance('not')
                             setShowModal(true)
-                            }} type="button" className="flex justify-center items-center w-[161px] h-[36px] rounded-[6px] bg-[#001A3B] mx-auto">
-                            <span className="text-[13px] md font-light leading-[14.96px] text-white uppercase">{attendance == 'attend' ? 'confirm to attend' : 'confirm unable to attend'}</span>
+                            }} type="button" className="flex justify-center items-center w-[161px] md:w-[220px] h-[36px] md:h-[52px] rounded-[6px] md:rounded-[50px] bg-[#001A3B] mx-auto">
+                            <span className="text-[13px] md:text-base md font-light leading-[14.96px] text-white uppercase">{attendance == 'attend' ? 'confirm to attend' : 'confirm unable to attend'}</span>
                         </button>
                     </div>
-                    <p className="text-[11px] font-normal mt-[39px] animate" data-animate="zoom-in">If you need assistance with your RSVP,</p>
-                    <p className="text-[11px] font-normal mt-0.5 animate" data-animate="zoom-in">please contact our support team.</p>
+                    <p className="text-[11px] md:text-xl md:leading-[22px] font-normal mt-[39px] md:mt-[69px] animate" data-animate="zoom-in">If you need assistance with your RSVP,</p>
+                    <p className="text-[11px] md:text-xl md:leading-[22px] font-normal mt-0.5 animate" data-animate="zoom-in">please contact our support team.</p>
 
-                    <div className="mt-[33px] animate" data-animate="zoom-in">
-                        <Link href="https://wa.me/6281998478131" target="_blank" className="flex justify-center items-center w-[161px] h-[30px] rounded-[6px] bg-[#12877B] mx-auto">
-                        <Image src="/images/arya-dan-rana/mobile/icon-whatsapp.png"  alt="Picture of Icon WhatsApp" width={20} height={20} className="mr-2" />
-                        <span className="text-[13px] text-white uppercase">chat support</span>
+                    <div className="mt-[33px] md:mt-[40px] animate" data-animate="zoom-in">
+                        <Link href="https://wa.me/6281998478131" target="_blank" className="flex justify-center items-center w-[161px] md:w-[220px] h-[30px] md:h-[42px] rounded-[6px] md:rounded-[50px] bg-[#12877B] mx-auto">
+                        <Image src="/images/arya-dan-rana/mobile/icon-whatsapp.png"  alt="Picture of Icon WhatsApp" width={25} height={25} className="w-[20px] md:w-[25px] mr-2" />
+                        <span className="text-[13px] md:text-base md:leading-[26px] text-white uppercase">chat support</span>
                         </Link>
                     </div>
                 </div>

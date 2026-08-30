@@ -171,23 +171,23 @@ export default function Wishes({ data, isOpen }: Props) {
   return (
     <>
       <div id="wishes" className="relative z-10 w-full bg-[url('/images/arya-dan-rana/mobile/bg-wishes.png')] bg-cover bg-no-repeat">
-        <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-black py-[80px]">
-          <h2 className="font-bochan text-[26px] animate" data-animate="fade-up">Your Wishes</h2>
+        <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-black py-[80px] md:py-[135px]">
+          <h2 className="font-bochan text-[26px] md:text-[32px] md:uppercase animate" data-animate="fade-up">Your Wishes</h2>
 
           {!seeAllMessages ? (
             <div className="relative text-center">
-              <form onSubmit={save} className="mx-auto mt-[32px] animate zoom-in" data-animate="zoom-in">
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="block w-[285px] h-[30px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] leading-[140%] text-[#152F4E] placeholder:text-[#152F4E80] mx-auto" placeholder={dataGuest.name ?? '.........'} />
-                <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="block w-[285px] h-[106px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] leading-[140%] text-[#152F4E] mx-auto mt-4" placeholder="Leave your wishes here."></textarea>
-                <button type="submit" className="flex justify-center items-center w-[285px] h-[30px] bg-[#152F4E] rounded-[10px] border-[0.49px] border-[#152F4E] mx-auto mt-4">
+              <form onSubmit={save} className="mx-auto mt-[32px] md:mt-[60px] animate zoom-in" data-animate="zoom-in">
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="block w-[285px] md:w-[594px] h-[30px] md:h-[42px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] md:text-xl leading-[140%] text-[#152F4E] placeholder:text-[#152F4E80] mx-auto" placeholder={dataGuest.name ?? '.........'} />
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="block w-[285px] md:w-[594px] h-[106px] md:h-[197px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] md:text-xl leading-[140%] text-[#152F4E] mx-auto mt-4" placeholder="Leave your wishes here."></textarea>
+                <button type="submit" className="flex justify-center items-center w-[285px] md:w-[594px] h-[30px] md:h-[42px] bg-[#152F4E] rounded-[10px] border-[0.49px] border-[#152F4E] mx-auto mt-4">
                   <Image src="/images/arya-dan-rana/mobile/icon-send.png" alt="Picture of Icon Send" width={15} height={19} className="mr-2" />
-                  <span className="text-[15px] text-white font-normal leading-[140%] uppercase">send</span>
+                  <span className="text-[15px] md:text-xl text-white font-normal leading-[140%] uppercase">send</span>
                 </button>
               </form>
-              <div className="w-[285px] h-[332px] rounded-[10px] border-[0.49px] border-[#152F4E] bg-[#152F4E] py-[18px] px-[13px] mx-auto mt-4 animate zoom-in" data-animate="zoom-in">
+              <div className="w-[285px] md:w-[594px] h-[332px] md:h-[527px] rounded-[10px] border-[0.49px] border-[#152F4E] bg-[#152F4E] py-[18px] px-[13px] mx-auto mt-4 animate zoom-in" data-animate="zoom-in">
                 <div className="w-full h-full overflow-y-auto scroll-smooth">
                   {wishes.length === 0 ? (
-                    <p className="text-center text-[14px] text-white">
+                    <p className="text-center text-[14px] md:text-xl text-white">
                       No message yet
                     </p>
                   ) : (
@@ -196,26 +196,26 @@ export default function Wishes({ data, isOpen }: Props) {
                         key={i}
                         className="w-full pb-[13px] border-b-[0.49px] border-b-white text-left text-white mb-[7px]"
                       >
-                        <p className="font-bold text-[14px] leading-[140%]">
+                        <p className="font-bold text-[14px] md:text-[22px] leading-[140%]">
                           {wish.name}
                         </p>
-                        <p className="font-normal text-[14px] leading-[140%] mt-[7px]" dangerouslySetInnerHTML={{ __html: wish.message }} />
+                        <p className="font-normal text-[14px] md:text-xl leading-[140%] mt-[7px]" dangerouslySetInnerHTML={{ __html: wish.message }} />
                       </div>
                     ))
                   )}
                 </div>
               </div>
-              <button type="button" onClick={() => setSeeAllMessages(true)} className="flex justify-center items-center w-[285px] h-[30px] bg-[#152F4E] rounded-[10px] border-[0.49px] border-[#152F4E] mx-auto mt-4 animate zoom-in" data-animate="zoom-in">
+              <button type="button" onClick={() => setSeeAllMessages(true)} className="flex justify-center items-center w-[285px] md:w-[594px] h-[30px] md:h-[42px] bg-[#152F4E] rounded-[10px] border-[0.49px] border-[#152F4E] mx-auto mt-4 animate zoom-in" data-animate="zoom-in">
                   <Image src="/images/arya-dan-rana/mobile/icon-message.png" alt="Picture of Icon Send" width={17} height={22} className="mr-2" />
-                  <span className="text-[15px] text-white font-normal leading-[140%] uppercase">see all message</span>
+                  <span className="text-[15px] md:text-xl text-white font-normal leading-[140%] uppercase">see all message</span>
                 </button>
             </div>
           ) : (
             <div className="relative text-center text-[#3B3B3B] mt-[47px]">
-              <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className="w-[340px] h-[30px] rounded-[10px] border-[0.49px] border-[#152F4E] bg-transparent px-2 py-1 text-[15px] leading-[140%] text-[#152F4E] placeholder:text-[#152F4E80] mx-auto animate zoom-in" data-animate="zoom-in" placeholder="Search" />
-              <div className="grid grid-cols-2 gap-5 mt-[20px] w-[340px] h-[459.87px] overflow-y-auto mx-auto">
+              <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className="w-[340px] md:w-[594px] h-[30px] md:h-[42px] rounded-[10px] border-[0.49px] border-[#152F4E] bg-transparent px-2 py-1 text-[15px] md:text-xl leading-[140%] text-[#152F4E] placeholder:text-[#152F4E80] mx-auto animate zoom-in" data-animate="zoom-in" placeholder="Search" />
+              <div className="grid grid-cols-2 gap-5 mt-[20px] w-[340px] md:w-[594px] h-[459.87px] md:h-[527px] overflow-y-auto mx-auto">
                 {filtered.length === 0 ? (
-                  <p className={`col-span-2 text-center text-sm text-white animate'}`}>
+                  <p className={`col-span-2 text-center text-sm md:text-xl text-white animate'}`}>
                     No message found
                   </p>
                 ) : (
@@ -223,19 +223,19 @@ export default function Wishes({ data, isOpen }: Props) {
                     <div
                       key={i}
                     
-                      className="relative w-[160px] h-[140.87px] rounded-[9.57px] bg-[#152F4E] border-[0.87px] border-white shadow-[5.22px_7.83px_9.74px_2.61px_#0000000F] cursor-pointer zoom-in"
+                      className="relative w-full h-[140.87px] md:h-[180px] rounded-[9.57px] bg-[#152F4E] border-[0.87px] border-white shadow-[5.22px_7.83px_9.74px_2.61px_#0000000F] cursor-pointer zoom-in"
                       onClick={() => setSelectedWish(wish)}
                     >
                       <div className="w-full relative px-[9px]">
                         <p className="absolute top-3 left-3 font-cinzel font-normal text-[64px] leading-none text-[#adadad]">
                           “
                         </p>
-                        <p className="relative top-[34px] font-light text-[15px] leading-none text-white">
+                        <p className="relative top-[34px] font-light text-[15px] md:text-xl leading-none text-white">
                           {wish.message}
                         </p>
                       </div>
                       <div className="bg-[#868686] flex absolute w-full h-[41px] rounded-bl-[9.57px] rounded-br-[9.57px] bottom-0 px-[14px]">
-                        <p className="font-medium text-[15px] leading-none text-[#152F4E] my-auto">
+                        <p className="font-medium text-[15px] md:text-xl leading-none text-[#152F4E] my-auto">
                           {wish.name}
                         </p>
                       </div>
@@ -244,8 +244,8 @@ export default function Wishes({ data, isOpen }: Props) {
                 )}
               </div>
               <span data-animate="zoom-in">
-                <button onClick={() => setSeeAllMessages(false)} className="flex justify-center items-center w-[340px] h-[30px] bg-[#152F4E] rounded-[10px] border-[0.49px] border-[#152F4E] mx-auto mt-5 animate zoom-in" data-animate="zoom-in">
-                  <span className="text-[15px] text-white font-normal leading-[140%] uppercase">back</span>
+                <button onClick={() => setSeeAllMessages(false)} className="flex justify-center items-center w-[340px] md:w-[594px] h-[30px] md:h-[42px] bg-[#152F4E] rounded-[10px] border-[0.49px] border-[#152F4E] mx-auto mt-5 animate zoom-in" data-animate="zoom-in">
+                  <span className="text-[15px] md:text-xl text-white font-normal leading-[140%] uppercase">back</span>
                 </button>
               </span>
             </div>
@@ -265,7 +265,7 @@ export default function Wishes({ data, isOpen }: Props) {
                 </div>
                 <button
                   onClick={() => setSelectedWish(null)}
-                  className="flex justify-center items-center w-[340px] md:w-[691px] h-[30px] md:h-[40px] bg-[#152F4E] rounded-[10px] md:rounded-[20px] border-[0.49px] border-[#152F4E] mx-auto mt-5"
+                  className="flex justify-center items-center w-[340px] md:w-[691px] h-[30px] md:h-[42px] md:h-[40px] bg-[#152F4E] rounded-[10px] md:rounded-[20px] border-[0.49px] border-[#152F4E] mx-auto mt-5"
                 >
                   <span className="text-[15px] md:text-lg text-white font-normal leading-[140%] uppercase">back</span>
                 </button>

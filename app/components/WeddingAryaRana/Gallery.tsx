@@ -59,12 +59,12 @@ export default function Gallery({ data, isOpen, isMobile }: Props) {
   } else {
     images = [
       {
-        src: '/images/arya-dan-rana/mobile/img-gallery-1.png',
-        thumb: '/images/arya-dan-rana/mobile/img-gallery-1.png'
+        src: '/images/arya-dan-rana/dekstop/img-gallery-1.png',
+        thumb: '/images/arya-dan-rana/dekstop/img-gallery-1.png'
       },
       {
-        src: '/images/arya-dan-rana/mobile/img-gallery-1.png',
-        thumb: '/images/arya-dan-rana/mobile/img-gallery-1.png'
+        src: '/images/arya-dan-rana/dekstop/img-gallery-1.png',
+        thumb: '/images/arya-dan-rana/dekstop/img-gallery-1.png'
       },
     ]
   }
