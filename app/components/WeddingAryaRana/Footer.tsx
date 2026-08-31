@@ -10,8 +10,8 @@ type Props = {
 export default function Footer({ data, isOpen }: Props) {
   return (
     <>
-      <footer id="footer" className="relative w-full h-screen bg-[url('/images/arya-dan-rana/mobile/bg-footer.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-footer.png')] bg-cover bg-top bg-no-repeat">
-        <div className="relative h-full text-center font-cormorantgaramond text-[#001A3B] pt-[80px] md:pt-[138px]">
+      <footer id="footer" className="relative w-full h-screen bg-[url('/images/arya-dan-rana/mobile/bg-footer.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-footer.png')] bg-cover bg-[position:center_bottom] bg-no-repeat">
+        <div className="relative h-full text-center font-cormorantgaramond text-[#001A3B] pt-[80px]">
           <h2 className="font-bochan text-[28px] md:text-[32px]">Thank You</h2>
 
           <p className="md:hidden text-[15px] font-medium leading-[20px] mt-8">

@@ -171,7 +171,7 @@ export default function Wishes({ data, isOpen }: Props) {
   return (
     <>
       <div id="wishes" className="relative z-10 w-full bg-[url('/images/arya-dan-rana/mobile/bg-wishes.png')] bg-cover bg-no-repeat">
-        <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-black py-[80px] md:py-[135px]">
+        <div className="relative z-10 text-center h-full font-cormorantgaramond text-black py-[80px] md:py-[135px]">
           <h2 className="font-bochan text-[26px] md:text-[32px] md:uppercase animate" data-animate="fade-up">Your Wishes</h2>
 
           {!seeAllMessages ? (

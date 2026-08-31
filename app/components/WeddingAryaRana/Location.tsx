@@ -12,7 +12,7 @@ type Props = {
 export default function Location({ data, isOpen }: Props) {
   return (
     <>
-      <div id="location" className="relative z-10 w-full md:min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-location.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-location.png')] bg-cover bg-no-repeat overflow-hidden">
+      <div id="location" className="relative z-10 w-full md:min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-location.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-location.png')] bg-cover bg-no-repeat">
         <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/10 mix-blend-multiply" />
 
         <div className="relative z-[3] h-full text-center font-cormorantgaramond text-[#001A3B] pt-[78px] md:mt-[133px] pb-[106px] md:pb-[133px]">

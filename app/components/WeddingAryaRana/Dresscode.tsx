@@ -13,7 +13,7 @@ type Props = {
 export default function Dresscode({ data, isOpen }: Props) {
   return (
     <>
-      <div className="relative w-full min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-dresscode.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-dresscode.png')] bg-cover bg-no-repeat overflow-hidden pb-[209px] md:pb-[269px]">
+      <div className="relative w-full min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-dresscode.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-dresscode.png')] bg-cover bg-no-repeat pb-[209px] md:pb-[269px]">
         <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/10 mix-blend-multiply" />
         <div className="pointer-events-none absolute top-0 left-0 right-0 h-[70vh] z-[2] bg-[linear-gradient(180deg,#FEF7ED_0%,#FEF7ED_50%,rgba(254,247,237,0)_100%)]" />
 
@@ -21,14 +21,22 @@ export default function Dresscode({ data, isOpen }: Props) {
           <div className="relative z-[3] min-h-min text-center font-cormorantgaramond text-[#001A3B] pt-[157px] md:pt-[217px]">
             <h2 className="font-bochan text-2xl md:text-[32px] uppercase animate" data-animate="fade-up">dress code</h2>
 
-            <p className="text-[15px] md:text-[22px] text-[#1B1C1D] leading-[20px] mt-[30px] md:mt-[60px] animate" data-animate="fade-up">We'd love to see you dressed in <br /> Tropical Formal attire.</p>
+            <p className="text-[15px] md:text-[22px] text-[#1B1C1D] leading-[20px] mt-[30px] md:mt-[60px] animate" data-animate="fade-up">We'd love to see you dressed in</p>
+            <p className="text-[15px] md:text-[22px] text-[#1B1C1D] leading-[20px] md:mt-2 animate" data-animate="fade-up">Tropical Formal attire.</p>
 
             <Image src="/images/arya-dan-rana/mobile/img-dresscode.png" alt="Picture of dresscode" width={400} height={252} className="w-[276px] md:w-[400px] mx-auto pointer-events-none mt-[14px] md:mt-[30px] animate" data-animate="fade-up" />
 
             <p className="text-[14px] md:text-[22px] text-[#1B1C1D] italic leading-[20px] md:leading-none md:mt-[32px] animate" data-animate="fade-up">
-              As we'll be celebrating by the beach, <br />
-              comfortable shoes and breathable fabrics <br className="md:hidden" />
+              As we'll be celebrating by the beach,
+            </p>
+            <p className="md:hidden text-[14px] md:text-[22px] text-[#1B1C1D] italic leading-[20px] md:leading-none md:mt-2 animate" data-animate="fade-up">
+              comfortable shoes and breathable fabrics
+            </p>
+            <p className="md:hidden text-[14px] md:text-[22px] text-[#1B1C1D] italic leading-[20px] md:leading-none md:mt-2 animate" data-animate="fade-up">
               are warmly encouraged.
+            </p>
+            <p className="hidden md:block text-[14px] md:text-[22px] text-[#1B1C1D] italic leading-[20px] md:leading-none md:mt-2 animate" data-animate="fade-up">
+              comfortable shoes and breathable fabrics are warmly encouraged.
             </p>
           </div>
 

@@ -19,7 +19,7 @@ export default function Profile({ data, isOpen }: Props) {
           <div className="pointer-events-none absolute left-0 right-0 top-0 bottom-[-25%] z-[1] bg-[#DCCB9F]/20 mix-blend-multiply" />
           <div className="pointer-events-none absolute top-0 left-0 right-0 h-[50vh] z-[2] bg-[linear-gradient(180deg,#FEF7ED_0%,#FEF7ED_50%,rgba(254,247,237,0)_100%)]" />
 
-          <div className="relative z-[3] min-h-screen text-center font-cormorantgaramond text-[#001A3B] bg-[url('/images/arya-dan-rana/mobile/bg-kertas-profile.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-kertas-profile.png')] bg-cover md:bg-contain bg-no-repeat bg-center pt-[120px] md:pt-[285px] md:pb-[241px] mx-auto">
+          <div className="relative z-[3] min-h-screen text-center font-cormorantgaramond text-[#001A3B] bg-[url('/images/arya-dan-rana/mobile/bg-kertas-profile.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-kertas-profile.png')] bg-contain bg-no-repeat bg-center pt-[120px] pb-[150px] md:pt-[285px] md:pb-[241px] mx-auto">
             <p className="text-[15px] md:text-xl font-medium leading-[20px] animate" data-animate="fade-up">We warmly invite you to a special evening <br /> celebrating the love and union we now share.</p>
 
             <h3 className="font-bochan font-medium text-lg md:text-[45px] text-[#6D761C] md:leading-[135%] mt-10 md:mt-[60px] animate" data-animate="fade-up">Arya Narottama <br /> Chaerul Santoso</h3>
@@ -36,10 +36,10 @@ export default function Profile({ data, isOpen }: Props) {
           </div>
 
           {/* Image Absolute */}
-          <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-profile.png" alt="Picture of gambar kiri atas profile" width={214} height={280} className={`md:hidden absolute z-[2] -left-[20px] top-0 pointer-events-none`} />
-          <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-profile.png" alt="Picture of gambar kanan atas profile" width={125} height={143} className={`md:hidden absolute z-[3] right-0 top-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-profile.png" alt="Picture of gambar kiri atas profile" width={214} height={280} className={`md:hidden absolute z-[2] left-[10px] top-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-profile.png" alt="Picture of gambar kanan atas profile" width={125} height={143} className={`md:hidden absolute z-[3] right-[10px] top-[20px] pointer-events-none`} />
 
-          <Image src="/images/arya-dan-rana/mobile/img-kiri-tengah-profile.png" alt="Picture of gambar kiri tengah profile" width={277} height={277} className={`md:hidden w-[135px] absolute z-[3] left-0 bottom-[236px] pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/img-kiri-tengah-profile.png" alt="Picture of gambar kiri tengah profile" width={277} height={277} className={`md:hidden w-[115px] absolute z-[3] left-0 bottom-[286px] pointer-events-none`} />
 
           <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-profile.png" alt="Picture of gambar kiri bawah profile" width={175} height={194} className={`md:hidden w-[145px] absolute z-[3] left-0 bottom-0 pointer-events-none`} />
           <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-profile.png" alt="Picture of gambar kiri bawah profile" width={250} height={375} className={`md:hidden w-[135px] absolute z-[3] right-0 bottom-0 pointer-events-none`} />

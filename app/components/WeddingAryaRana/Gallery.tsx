@@ -76,7 +76,7 @@ export default function Gallery({ data, isOpen, isMobile }: Props) {
   return (
     <>
       <section id="gallery" className="gallery">
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full">
           <div
             className="h-full"
           >

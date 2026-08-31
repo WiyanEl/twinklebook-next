@@ -105,10 +105,10 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
         <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={392} height={352} className={`md:hidden w-[175px] absolute z-[3] right-0 -bottom-[20px] pointer-events-none`} />
 
         {/* Dekstop */}
-        <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={320} height={569} className={`hidden md:block w-[290px] absolute z-[3] left-0 top-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={320} height={569} className={`hidden md:block w-[250px] absolute z-[3] left-0 top-0 pointer-events-none`} />
         <Image src="/images/arya-dan-rana/dekstop/img-kanan-atas-hero.png" alt="Picture of gambar kiri atas hero" width={615} height={697} className={`hidden md:block w-[500px] absolute z-[3] right-0 top-0 pointer-events-none`} />
 
-        <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={642} height={751} className={`hidden md:block w-[400px] absolute z-[3] left-0 -bottom-[100px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={642} height={751} className={`hidden md:block w-[350px] absolute z-[3] left-0 -bottom-[50px] pointer-events-none`} />
         <Image src="/images/arya-dan-rana/dekstop/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={649} height={583} className={`hidden md:block w-[350px] absolute z-[3] right-0 -bottom-[150px] pointer-events-none`} />
       </section>
     </>

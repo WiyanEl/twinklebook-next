@@ -24,7 +24,7 @@ export default function WeddingGift({ data, isOpen }: Props) {
 
   return (
     <>
-      <section id="wedding-gift" className="relative w-full min-h-min bg-[url('/images/arya-dan-rana/mobile/bg-wedding-gift.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-wedding-gift.png')] bg-cover bg-no-repeat overflow-hidden pt-[24px]">
+      <section id="wedding-gift" className="relative w-full min-h-min bg-[url('/images/arya-dan-rana/mobile/bg-wedding-gift.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-wedding-gift.png')] bg-cover bg-no-repeat pt-[24px]">
         <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/10 mix-blend-multiply" />
         <div className="pointer-events-none absolute top-0 left-0 right-0 h-[30vh] md:h-[50vh] z-[2] bg-[linear-gradient(180deg,#FEF7ED_0%,#FEF7ED_50%,rgba(254,247,237,0)_100%)]" />
 
