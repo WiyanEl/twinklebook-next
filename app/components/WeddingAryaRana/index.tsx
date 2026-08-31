@@ -116,9 +116,11 @@ export default function WeddingAryaRana({ data }: Props) {
       `https://media.twinklebook.com/${item.url}`
     )
 
+    const primaryImage = dataContent?.primaryImageData?.[0]?.url ? `https://media.twinklebook.com/${dataContent.primaryImageData[0].url}` : null
+
     return [
       ...galleryImages,
-      ,`https://media.twinklebook.com/${dataContent.primaryImageData[0].url}`
+      , primaryImage
     ].filter(Boolean)
   }, [data, dataGallery])
 

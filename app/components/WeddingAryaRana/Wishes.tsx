@@ -52,82 +52,9 @@ const DEFAULT_WISHES: Wish[] = [
 ]
 
 export default function Wishes({ data, isOpen }: Props) {
-  // const [name, setName] = useState('')
-  // const [message, setMessage] = useState('')
-  // const [wishes, setWishes] = useState<Wish[]>([])
-  // const [seeAllMessages, setSeeAllMessages] = useState(false)
-  // const [search, setSearch] = useState('')
-  // const filtered = wishes.filter((item) => 
-  //   item.name.toLowerCase().includes(search.toLowerCase()) ||
-  //   item.message.toLowerCase().includes(search.toLowerCase())
-  // )
-  // const [selectedWish, setSelectedWish] = useState<Wish | null>(null)
-  // const dataEvent = data?.event
-  // const [showModal, setShowModal] = useState(false)
-
-  // useEffect(() => {
-  //   if (data.messages.length > 0) {
-  //     let arrMessage = []
-  //     for (const element of data.messages) {
-  //       arrMessage.push({
-  //         name: element.guestName,
-  //         message: element.message
-  //       })
-  //     }
-
-  //     setWishes(arrMessage)
-  //   } 
-  // }, [])
-
-  // const fetchMessage = async () => {
-  //   try {
-  //     const res = await GetAllPersonalGuestMessagesData(dataEvent.id)
-  //     let arrMessage = []
-  //     for (const element of res) {
-  //       arrMessage.push({
-  //         name: element.guestName,
-  //         message: element.message
-  //       })
-  //     }
-
-  //     setWishes(arrMessage)
-  //   } catch (error) {
-      
-  //   }
-  // }
-
-  // const save = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault()
-
-  //   if (!name.trim() || !message.trim()) return
-
-  //   const json = {
-  //     eventId: dataEvent.id,
-  //     mediaFileId: null,
-  //     name: name,
-  //     message: message,
-  //     status: 1,
-  //     type: 1
-  //   }
-
-  //   try {
-  //     const res = await PostPersonalGuestMesage(json)
-
-  //     setName('')
-  //     setMessage('')
-
-  //     fetchMessage()
-  //     setShowModal(true)
-  //   } catch (error) {
-      
-  //   } finally {
-
-  //   }
-
-  // }
-
+  const dataEvent = data?.event
   const dataGuest = data?.guest
-  const [name, setName] = useState(dataGuest?.name ?? '.........')
+  const [name, setName] = useState(dataGuest?.name)
   const [message, setMessage] = useState('')
   const [wishes, setWishes] = useState<Wish[]>([])
   const [seeAllMessages, setSeeAllMessages] = useState(false)
@@ -140,32 +67,64 @@ export default function Wishes({ data, isOpen }: Props) {
   const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
-    const saved = localStorage.getItem('wishes')
+    if (data.messages.length > 0) {
+      let arrMessage = []
+      for (const element of data.messages) {
+        arrMessage.push({
+          name: element.guestName,
+          message: element.message
+        })
+      }
 
-    if (saved) {
-      setWishes(JSON.parse(saved))
-    } else {
-      setWishes(DEFAULT_WISHES)
-    }
+      setWishes(arrMessage)
+    } 
   }, [])
 
-  useEffect(() => {
-    if (wishes.length) {
-      localStorage.setItem('wishes', JSON.stringify(wishes))
-    }
-  }, [wishes])
+  const fetchMessage = async () => {
+    try {
+      const res = await GetAllPersonalGuestMessagesData(dataEvent.id)
+      let arrMessage = []
+      for (const element of res) {
+        arrMessage.push({
+          name: element.guestName,
+          message: element.message
+        })
+      }
 
-  const save = (e: React.FormEvent<HTMLFormElement>) => {
+      setWishes(arrMessage)
+    } catch (error) {
+      
+    }
+  }
+
+  const save = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     if (!name.trim() || !message.trim()) return
 
-    const newWish = { name, message }
+    const json = {
+      eventId: dataEvent.id,
+      mediaFileId: null,
+      name: name,
+      message: message,
+      status: 1,
+      type: 1
+    }
 
-    setWishes(prev => [newWish, ...prev])
+    try {
+      const res = await PostPersonalGuestMesage(json)
 
-    setName('')
-    setMessage('')
+      setName('')
+      setMessage('')
+
+      fetchMessage()
+      setShowModal(true)
+    } catch (error) {
+      
+    } finally {
+
+    }
+
   }
 
   return (
