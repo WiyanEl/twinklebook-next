@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import moment from 'moment'
 
 type Props = {
   data: any
@@ -10,6 +11,8 @@ type Props = {
 }
 
 export default function Location({ data, isOpen }: Props) {
+  const dataEventSession = data.eventSession
+
   return (
     <>
       <div id="location" className="relative w-full md:min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-location.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-location.png')] bg-cover bg-no-repeat md:flex md:items-center md:justify-center">
@@ -26,11 +29,11 @@ export default function Location({ data, isOpen }: Props) {
             <span className="text-[14px] md:text-[17px] font-medium leading-[17.16px] md:leading-none text-[#001A3B] uppercase">google maps</span>
           </Link>
 
-          <h6 className="font-bochan text-[15px] md:text-[22px] text-[#6D761C] mt-[38px] md:mt-[60px] animate" data-animate="fade-up">Wedding Party</h6>
-          <p className="font-semibold text-lg md:text-xl uppercase mt-4 md:mt-5 animate" data-animate="fade-up">17:00 wita</p>
+          <h6 className="font-bochan text-[15px] md:text-[22px] text-[#6D761C] mt-[38px] md:mt-[60px] animate" data-animate="fade-up">{dataEventSession[1]?.name || 'Wedding Party'}</h6>
+          <p className="font-semibold text-lg md:text-xl uppercase mt-4 md:mt-5 animate" data-animate="fade-up">{moment(dataEventSession[1]?.date).format('HH:mm')} wita</p>
 
-          <h6 className="font-bochan text-[15px] md:text-[22px] text-[#6D761C] mt-9 md:mt-[40px] animate" data-animate="fade-up">After Party</h6>
-          <p className="font-semibold text-lg md:text-xl uppercase mt-4 md:mt-5 animate" data-animate="fade-up">00:00 wita</p>
+          <h6 className="font-bochan text-[15px] md:text-[22px] text-[#6D761C] mt-9 md:mt-[40px] animate" data-animate="fade-up">{dataEventSession[0]?.name || 'After Party'}</h6>
+          <p className="font-semibold text-lg md:text-xl uppercase mt-4 md:mt-5 animate" data-animate="fade-up">{moment(dataEventSession[0]?.date).format('HH:mm')} wita</p>
         </div>
 
         {/* Image Absolute */}

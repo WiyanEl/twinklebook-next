@@ -22,15 +22,47 @@ export default function Profile({ data, isOpen }: Props) {
           <div className="relative z-[3] min-h-screen text-center font-cormorantgaramond text-[#001A3B] bg-[url('/images/arya-dan-rana/mobile/bg-kertas-profile.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-kertas-profile.png')] bg-contain bg-no-repeat bg-center pt-[140px] pb-[150px] md:pt-[285px] md:pb-[241px] mx-auto">
             <p className="text-[15px] md:text-xl font-medium leading-[20px] animate" data-animate="fade-up">We warmly invite you to a special evening <br /> celebrating the love and union we now share.</p>
 
-            <h3 className="font-bochan font-medium text-lg md:text-[45px] text-[#6D761C] md:leading-[135%] mt-10 md:mt-[60px] animate" data-animate="fade-up">Arya Narottama <br /> Chaerul Santoso</h3>
+            <h3 className="font-bochan font-medium text-lg md:text-[45px] text-[#6D761C] md:leading-[135%] mt-10 md:mt-[60px] animate" data-animate="fade-up">
+              {dataEvent?.groomFullName
+                ?.split(' ')
+                .map((word, index) => (
+                  <span key={index}>
+                    {index > 0 && index % 2 === 0 && <br />}
+                    {word}{' '}
+                  </span>
+                ))}
+            </h3>
             <p className="text-[15px] md:text-xl font-semibold mt-3 md:mt-[40px] animate" data-animate="fade-up">The son of</p>
-            <p className="text-[15px] md:text-xl font-semibold leading-[24px] mt-0.5 animate" data-animate="fade-up">Mr. Rachland Subandhi Nashidik and <br /> Mrs. Nurdiyati Kaplale (Alm.)</p>
+            <p className="text-[15px] md:text-xl font-semibold leading-[24px] mt-0.5 animate" data-animate="fade-up">
+              {dataEvent?.groomParent?.split(/\s+and\s+/).map((text, index) => (
+                <span key={index}>
+                  {index > 0 && <br />}
+                  {text}
+                </span>
+              ))}
+            </p>
 
             <h3 className="font-playfair text-[32px] md:text-[40px] mt-7 md:mt-[60px] animate" data-animate="fade-up">&</h3>
 
-            <h3 className="font-bochan font-medium text-lg md:text-[45px] text-[#6D761C] md:leading-[135%] mt-7 md:mt-[40px] animate" data-animate="fade-up">Rana Cinta <br /> Rahmania</h3>
+            <h3 className="font-bochan font-medium text-lg md:text-[45px] text-[#6D761C] md:leading-[135%] mt-7 md:mt-[40px] animate" data-animate="fade-up">
+              {dataEvent?.brideFullName
+                ?.split(' ')
+                .map((word, index) => (
+                  <span key={index}>
+                    {index > 0 && index > 2 && <br />}
+                    {word}{' '}
+                  </span>
+                ))}
+            </h3>
             <p className="text-[15px] md:text-xl font-semibold mt-3 md:mt-[40px] animate" data-animate="fade-up">The daughter of</p>
-            <p className="text-[15px] md:text-xl font-semibold leading-[24px] mt-0.5 animate" data-animate="fade-up">Mr. Tri Pramudito Santoso (Alm.) and <br /> Mrs. Dara Malia Lengkong</p>
+            <p className="text-[15px] md:text-xl font-semibold leading-[24px] mt-0.5 animate" data-animate="fade-up">
+              {dataEvent?.brideParent?.split(/\s+and\s+/).map((text, index) => (
+                <span key={index}>
+                  {index > 0 && <br />}
+                  {text}
+                </span>
+              ))}
+            </p>
 
             <p className="text-[15px] md:text-xl font-medium leading-[20px] mt-10 md:mt-[60px] animate" data-animate="fade-up">Our joy will be complete with <br /> your presence and blessings.</p>
           </div>

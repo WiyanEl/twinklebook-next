@@ -3,24 +3,16 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import moment from 'moment'
 
 type Props = {
   data: any
   isOpen: boolean
 }
 
-export function formatWeddingDate(date: string) {
-  return new Intl.DateTimeFormat('en-GB', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  }).format(new Date(date))
-}
-
 export default function CountingDown({ data, isOpen }: Props) {
   const dataEvent = data?.event
-  const targetDate = new Date('2026-10-24T00:00:00') //new Date(dataEvent?.date)
+  const targetDate = new Date(dataEvent?.date)
 
   const [timeLeft, setTimeLeft] = useState({
     days: '00',
@@ -59,7 +51,7 @@ export default function CountingDown({ data, isOpen }: Props) {
     <>
       <section id="counting-down" className="counting-down relative z-[4] w-full min-h-min bg-[url('/images/arya-dan-rana/mobile/bg-counting-down.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-counting-down.png')] bg-cover bg-center bg-no-repeat"> 
         <div className="relative z-20 h-full py-[41px] md:py-[80px] text-center font-cormorantgaramond text-[#001A3B]">
-          <h2 className="md:font-times text-[24px] md:text-[40px] font-semibold md:font-normal leading-[20px] md:leading-none md:uppercase animate" data-animate="fade-up">SATURDAY, 24 October 2026</h2>
+          <h2 className="md:font-times text-[24px] md:text-[40px] font-semibold md:font-normal leading-[20px] md:leading-none md:uppercase animate" data-animate="fade-up">{moment(targetDate).format('dddd, DD MMMM YYYY')}</h2>
           <div className="flex gap-[14px] md:gap-[25px] justify-center mt-[27px]">
             <TimeBox value={timeLeft.days} label="days" />
             <TimeBox value={timeLeft.hours} label="hours" />

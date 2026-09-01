@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
+import moment from 'moment'
 
 import { PostOpenInvitation } from '@/app/lib/event'
 
@@ -9,15 +10,6 @@ type HeroProps = {
   data: any
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-export function formatWeddingDate(date: string) {
-  return new Intl.DateTimeFormat('en-GB', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  }).format(new Date(date))
 }
 
 export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
@@ -72,7 +64,7 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
                 <div className="w-full h-[180px] md:h-[220px] rounded-tl-[15px] md:rounded-tl-[20px] rounded-tr-[15px] md:rounded-tr-[20px] bg-center bg-cover bg-no-repeat bg-[url('/images/arya-dan-rana/mobile/img-gallery-1.png')] md:bg-[url('/images/arya-dan-rana/mobile/img-gallery-1.png')]"></div>
                 <div className="relative w-full pt-[28px] md:pt-[27px] pb-[28px] md:pb-[40px] rounded-bl-[15px] md:rounded-bl-[20px] rounded-br-[15px] md:rounded-br-[20px] font-cormorantgaramond text-black text-center bg-[#EBE8E5]">
                   <h6 className="text-xs md:text-lg font-normal leading-none md:uppercase">The Wedding of</h6>
-                  <h2 className="font-bochan text-[#6D761C] text-2xl md:text-[32px] leading-none font-normal mt-3.5">Arya & Rana</h2>
+                  <h2 className="font-bochan text-[#6D761C] text-2xl md:text-[32px] leading-none font-normal mt-3.5">{dataEvent?.groomName} & {dataEvent?.brideName}</h2>
                   <h6 className="md:hidden text-xs md:text-base font-medium leading-[25px] md:leading-[31px] mt-2.5">Dear Mr./Mrs./Ms.</h6>
                   <h6 className="hidden md:block text-[14px] font-medium leading-[31px] md:leading-[31px] mt-[22px]">Dear Mr./Mrs./Ms.</h6>
                   <h6 className="text-[14px] md:text-lg font-medium leading-[31px] md:leading-[31px] capitalize">{dataGuest.name ?? '.........'}</h6>
@@ -92,9 +84,9 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
           <Image src="/images/arya-dan-rana/dekstop/logo-singkatan-pengantin.png" alt="Picture of logo singkatan pengantin" width={221} height={221} className={`hidden md:block pointer-events-none mx-auto ${isOpen ? 'zoom-in' : ''}`} />
           <h4 className={`text-base md:text-[28px] font-medium uppercase mt-[39px] md:mt-[47px] ${isOpen ? 'zoom-in' : ''}`}>the wedding of</h4>
           <div className="w-[222px] md:w-[362px] mt-[11px] md:mt-[21px] mx-auto text-left">
-            <h2 className={`font-bochan text-[#6D761C] text-[48px] md:text-[72px] leading-[62px] md:leading-[105.29px] ${isOpen ? 'zoom-in' : ''}`}>Arya <br /> & Rana</h2>
+            <h2 className={`font-bochan text-[#6D761C] text-[48px] md:text-[72px] leading-[62px] md:leading-[105.29px] ${isOpen ? 'zoom-in' : ''}`}>{dataEvent?.groomName} <br /> & {dataEvent?.brideName}</h2>
           </div>
-          <h4 className={`text-lg md:text-3xl font-medium mt-[9px] md:mt-[21px] ${isOpen ? 'zoom-in' : ''}`}>12 . 09 . 2026</h4>
+          <h4 className={`text-lg md:text-3xl font-medium mt-[9px] md:mt-[21px] ${isOpen ? 'zoom-in' : ''}`}>{moment(dataEvent?.date).format('DD . MM . YYYY')}</h4>
         </div>
 
         {/* Image absolute */}
