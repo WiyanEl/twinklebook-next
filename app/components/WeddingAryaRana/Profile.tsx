@@ -25,7 +25,7 @@ export default function Profile({ data, isOpen }: Props) {
             <h3 className="font-bochan font-medium text-lg md:text-[45px] text-[#6D761C] md:leading-[135%] mt-10 md:mt-[60px] animate" data-animate="fade-up">
               {dataEvent?.groomFullName
                 ?.split(' ')
-                .map((word, index) => (
+                .map((word:string, index:number) => (
                   <span key={index}>
                     {index > 0 && index % 2 === 0 && <br />}
                     {word}{' '}
@@ -34,7 +34,7 @@ export default function Profile({ data, isOpen }: Props) {
             </h3>
             <p className="text-[15px] md:text-xl font-semibold mt-3 md:mt-[40px] animate" data-animate="fade-up">The son of</p>
             <p className="text-[15px] md:text-xl font-semibold leading-[24px] mt-0.5 animate" data-animate="fade-up">
-              {dataEvent?.groomParent?.split(/\s+and\s+/).map((text, index) => (
+              {dataEvent?.groomParent?.split(/\s+and\s+/).map((text:string, index:number) => (
                 <span key={index}>
                   {index > 0 && <br />}
                   {text}
@@ -47,7 +47,7 @@ export default function Profile({ data, isOpen }: Props) {
             <h3 className="font-bochan font-medium text-lg md:text-[45px] text-[#6D761C] md:leading-[135%] mt-7 md:mt-[40px] animate" data-animate="fade-up">
               {dataEvent?.brideFullName
                 ?.split(' ')
-                .map((word, index) => (
+                .map((word:string, index:number) => (
                   <span key={index}>
                     {index > 0 && index > 2 && <br />}
                     {word}{' '}
@@ -56,7 +56,7 @@ export default function Profile({ data, isOpen }: Props) {
             </h3>
             <p className="text-[15px] md:text-xl font-semibold mt-3 md:mt-[40px] animate" data-animate="fade-up">The daughter of</p>
             <p className="text-[15px] md:text-xl font-semibold leading-[24px] mt-0.5 animate" data-animate="fade-up">
-              {dataEvent?.brideParent?.split(/\s+and\s+/).map((text, index) => (
+              {dataEvent?.brideParent?.split(/\s+and\s+/).map((text:string, index:number) => (
                 <span key={index}>
                   {index > 0 && <br />}
                   {text}
