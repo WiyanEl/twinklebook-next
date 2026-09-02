@@ -61,18 +61,21 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
             <div className="absolute inset-0 z-[1] bg-[#00000040] backdrop-blur-[11.1px]" />
             <div className="relative z-20 flex items-center justify-center h-full">
               <div className="w-[290px] md:w-[416px] min-h-min rounded-[15px] md:rounded-[20px] shadow-[0px_8px_11.6px_0px_#0000008A] zoom-in">
-                <div className="w-full h-[180px] md:h-[220px] rounded-tl-[15px] md:rounded-tl-[20px] rounded-tr-[15px] md:rounded-tr-[20px] bg-center bg-cover bg-no-repeat bg-[url('/images/arya-dan-rana/mobile/img-gallery-1.png')] md:bg-[url('/images/arya-dan-rana/mobile/img-gallery-1.png')]"></div>
+                <div className="w-full h-[180px] md:h-[220px] rounded-tl-[15px] md:rounded-tl-[20px] rounded-tr-[15px] md:rounded-tr-[20px] bg-center bg-cover bg-no-repeat bg-[url('/images/arya-dan-rana/mobile/img-popup-hero.png')] md:bg-[url('/images/arya-dan-rana/mobile/img-popup-hero.png')]"></div>
                 <div className="relative w-full pt-[28px] md:pt-[27px] pb-[28px] md:pb-[40px] rounded-bl-[15px] md:rounded-bl-[20px] rounded-br-[15px] md:rounded-br-[20px] font-cormorantgaramond text-black text-center bg-[#EBE8E5]">
                   <h6 className="text-xs md:text-lg font-normal leading-none md:uppercase">The Wedding of</h6>
-                  <h2 className="font-bochan text-[#6D761C] text-2xl md:text-[32px] leading-none font-normal mt-3.5">{dataEvent?.groomName} & {dataEvent?.brideName}</h2>
-                  <h6 className="md:hidden text-xs md:text-base font-medium leading-[25px] md:leading-[31px] mt-2.5">Dear Mr./Mrs./Ms.</h6>
+                  <h2 className="font-bochan text-[#6D761C] text-[28px] md:text-[32px] leading-[36px] font-normal mt-3.5">{dataEvent?.groomName} & {dataEvent?.brideName}</h2>
+                  <h6 className="md:hidden text-[14px] md:text-base font-medium leading-[25px] md:leading-[31px] mt-2.5">Dear Mr./Mrs./Ms.</h6>
                   <h6 className="hidden md:block text-[14px] font-medium leading-[31px] md:leading-[31px] mt-[22px]">Dear Mr./Mrs./Ms.</h6>
-                  <h6 className="text-[14px] md:text-lg font-medium leading-[31px] md:leading-[31px] capitalize">{dataGuest.name ?? '.........'}</h6>
-                  <p className="text-[10px] md:text-xs font-medium leading-[13px] md:leading-[16px] mt-5">We sincerely apologize</p>
-                  <p className="text-[10px] md:text-xs font-medium leading-[13px] md:leading-[16px]">for any misspelling of names or titles.</p>
-                  <button onClick={() => handleOpen()} className="mx-auto mt-[17px] md:mt-[23px] w-[184px] md:w-[220px] h-[33px] md:h-[40px] bg-[#6D761C] rounded-[6px] md:rounded-[40px] flex items-center justify-center">
-                    <span className="text-[14px] md:text-lg leading-none font-medium text-[#F6F6F4] uppercase">view invitation</span>
+                  <h6 className="text-lg md:text-lg font-medium leading-[31px] md:leading-[31px] capitalize">{dataGuest.name ?? '.........'}</h6>
+                  <p className="text-xs font-medium leading-[13px] md:leading-[16px] mt-5">We sincerely apologize</p>
+                  <p className="text-xs font-medium leading-[13px] md:leading-[16px]">for any misspelling of names or titles.</p>
+                  <button onClick={() => handleOpen()} className="mx-auto mt-[17px] md:mt-[23px] w-[154px] md:w-[220px] h-[30px] md:h-[40px] bg-[#001A3B] rounded-[52px] md:rounded-[40px] flex items-center justify-center">
+                    <span className="text-xs md:text-lg leading-[20px] font-medium text-[#F6F6F4] uppercase">view invitation</span>
                   </button>
+
+                  {/* Image Absolute */}
+                  <Image src="/images/arya-dan-rana/mobile/img-kanan-popup-hero.png" alt="Picture of gambar kanan atas popup hero" width={73} height={86} className={`absolute -right-[25px] -top-[28px] pointer-events-none`} />
                 </div>
               </div>
             </div>
