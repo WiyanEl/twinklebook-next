@@ -17,8 +17,9 @@ export default function Location({ data, isOpen }: Props) {
     <>
       <div id="location" className="relative w-full md:min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-location.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-location.png')] bg-cover bg-no-repeat md:flex md:items-center md:justify-center">
         <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/20 mix-blend-multiply" />
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60vh] md:h-[80vh] z-[2] bg-[linear-gradient(180deg,rgba(254,247,237,0)_0%,#FEF7ED_100%)]" />
 
-        <div className="relative z-[3] h-full text-center font-cormorantgaramond text-[#001A3B] pt-[78px] md:pt-0 pb-[106px] md:pb-0">
+        <div className="relative z-[3] h-full text-center font-cormorantgaramond text-[#001A3B] pt-[78px] md:pt-0 pb-[229px] md:pb-0">
           <h2 className="font-bochan text-2xl md:text-[32px] animate" data-animate="fade-up">Event Detail</h2>
 
           <Image src="/images/arya-dan-rana/mobile/img-gelas-location.png" alt="Picture of gelas location" width={109} height={146} className="mx-auto w-[67px] md:w-[109px] pointer-events-none mt-7 md:mt-[56px] animate" data-animate="fade-up" />
@@ -47,8 +48,8 @@ export default function Location({ data, isOpen }: Props) {
         <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-location.png" alt="Picture of gambar kiri atas location" width={613} height={610} className={`hidden md:block absolute z-[3] left-0 top-0 pointer-events-none`} />
         <Image src="/images/arya-dan-rana/dekstop/img-kanan-atas-location.png" alt="Picture of gambar kanan atas location" width={684} height={682} className={`hidden md:block absolute z-[3] right-0 top-0 pointer-events-none`} />
 
-        <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-location.png" alt="Picture of gambar kiri bawah location" width={616} height={872} className={`hidden md:block w-[316px] absolute z-[3] left-0 bottom-0 pointer-events-none`} />
-        <Image src="/images/arya-dan-rana/dekstop/img-kanan-bawah-location.png" alt="Picture of gambar kiri bawah location" width={343} height={610} className={`hidden md:block absolute z-[3] right-0 bottom-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-location.png" alt="Picture of gambar kiri bawah location" width={600} height={821} className={`hidden md:block md:w-[400px] absolute z-[3] left-0 bottom-0 md:-bottom-[400px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/dekstop/img-kanan-bawah-location.png" alt="Picture of gambar kiri bawah location" width={413} height={550} className={`hidden md:block md:w-[275px] absolute z-[3] right-0 bottom-0 md:-bottom-[350px] pointer-events-none`} />
       </div>
     </>
   )

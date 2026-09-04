@@ -10,6 +10,7 @@ import Hero from './Hero'
 import Profile from './Profile'
 import CountingDown from './CountingDown'
 import Location from './Location'
+import PlacesToStay from './PlacesToStay'
 import Gallery from './Gallery'
 import Dresscode from './Dresscode'
 import WeddingGift from './WeddingGift'
@@ -148,6 +149,7 @@ export default function WeddingAryaRana({ data }: Props) {
       <Profile data={data} isOpen={isOpen} />
       <CountingDown data={data} isOpen={isOpen} />
       <Location data={data} isOpen={isOpen} />
+      <PlacesToStay data={data} isOpen={isOpen} />
       <Gallery data={data} isOpen={isOpen} isMobile={isMobile} />
       <Dresscode data={data} isOpen={isOpen} />
       <WeddingGift data={data} isOpen={isOpen} />
