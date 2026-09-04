@@ -18,7 +18,7 @@ export default function Footer({ data, isOpen }: Props) {
             For being part of our journey. <br /> We look forward to celebrating love, laughter, and <br /> happily ever after with you!
           </p>
           <p className="hidden md:block text-xl mt-[61px]">
-            Your presence and blessings have made this celebration more <br /> meaningful, and we are grateful to share it with you.
+            Your presence and blessings have made this <br /> celebration more meaningful, and we are grateful <br /> to share it with you.
           </p>
 
         </div>

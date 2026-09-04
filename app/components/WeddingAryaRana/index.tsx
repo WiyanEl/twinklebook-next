@@ -151,7 +151,7 @@ export default function WeddingAryaRana({ data }: Props) {
       <CountingDown data={data} isOpen={isOpen} />
       <Location data={data} isOpen={isOpen} />
       <PlacesToStay data={data} isOpen={isOpen} />
-      <Gallery data={data} isOpen={isOpen} isMobile={isMobile} />
+      <Gallery data={data} />
       <Dresscode data={data} isOpen={isOpen} />
       <WeddingGift data={data} isOpen={isOpen} />
       <ThingsToDo data={data} isOpen={isOpen} />

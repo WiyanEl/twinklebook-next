@@ -30,11 +30,23 @@ export default function Location({ data, isOpen }: Props) {
             <span className="text-[14px] md:text-[17px] font-medium leading-[17.16px] md:leading-none text-[#001A3B] uppercase">google maps</span>
           </Link>
 
-          <h6 className="font-bochan text-[15px] md:text-[22px] text-[#6D761C] mt-[38px] md:mt-[60px] animate" data-animate="fade-up">{dataEventSession[1]?.name || 'Wedding Party'}</h6>
-          <p className="font-semibold text-lg md:text-xl uppercase mt-4 md:mt-5 animate" data-animate="fade-up">{moment(dataEventSession[1]?.date).format('HH:mm')} wita</p>
+          {dataEventSession?.map((session: any, index: number) => (
+            <div key={session.id}>
+              <h6
+                className="font-bochan text-[15px] md:text-[22px] text-[#6D761C] mt-[38px] md:mt-[60px] animate"
+                data-animate="fade-up"
+              >
+                {session.name || 'Wedding Party'}
+              </h6>
 
-          <h6 className="font-bochan text-[15px] md:text-[22px] text-[#6D761C] mt-9 md:mt-[40px] animate" data-animate="fade-up">{dataEventSession[0]?.name || 'After Party'}</h6>
-          <p className="font-semibold text-lg md:text-xl uppercase mt-4 md:mt-5 animate" data-animate="fade-up">{moment(dataEventSession[0]?.date).format('HH:mm')} wita</p>
+              <p
+                className="font-semibold text-lg md:text-xl uppercase mt-4 md:mt-5 animate"
+                data-animate="fade-up"
+              >
+                {moment(session.date).format('HH:mm')} WITA
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Image Absolute */}
