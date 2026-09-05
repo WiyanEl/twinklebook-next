@@ -107,7 +107,19 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
                     }, 50)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
-                    <span className="text-xs md:text-lg leading-none font-medium">time & location</span>
+                    <span className="text-xs md:text-lg leading-none font-medium">event detail</span>
+                  </Link>
+                </div>
+                <div className="overflow-hidden min-h-min mt-2.5 opacity-0 animate-item-menu-in" style={{ animationDelay: '0.35s' }}>
+                  <Link href="#places-to-stay" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase" onClick={(e) => {
+                    handleScrollDown(e)
+
+                    setTimeout(() => {
+                      handleClose()
+                    }, 50)
+                  }}>
+                    <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
+                    <span className="text-xs md:text-lg leading-none font-medium">place to stay</span>
                   </Link>
                 </div>
                 <div className="overflow-hidden min-h-min mt-2.5 opacity-0 animate-item-menu-in" style={{ animationDelay: '0.45s' }}>
@@ -156,6 +168,18 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">wedding gift</span>
+                  </Link>
+                </div>
+                <div className="overflow-hidden min-h-min mt-2.5 opacity-0 animate-item-menu-in" style={{ animationDelay: '0.65s' }}>
+                  <Link href="#things-to-do" className="flex items-center gap-1 relative left-[-18px] md:left-[-25px] hover:left-0 transition-all duration-300 uppercase" onClick={(e) => {
+                    handleScrollDown(e)
+
+                    setTimeout(() => {
+                      handleClose()
+                    }, 50)
+                  }}>
+                    <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
+                    <span className="text-xs md:text-lg leading-none font-medium">things to do</span>
                   </Link>
                 </div>
                 <div className="overflow-hidden min-h-min mt-2.5 opacity-0 animate-item-menu-in" style={{ animationDelay: '0.75s' }}>
