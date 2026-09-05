@@ -11,6 +11,9 @@ type Props = {
 }
 
 export default function WeddingGift({ data, isOpen }: Props) {
+  const dataContent = data?.content
+  const dataElectronicGiving = dataContent?.electronicGivings
+
   const [copied, setCopied] = useState(false)
 
   const handleCopy = (norek:string, copyke: number) => {
@@ -38,7 +41,7 @@ export default function WeddingGift({ data, isOpen }: Props) {
             Should you wish to honor us with a gift, <br /> please find the details below <br /> for your convenience.
           </p>
 
-          <div className="flex w-[285px] md:w-[480px] h-[66px] md:h-[120px] bg-[#FBF8EC] rounded-[10.92px] md:rounded-[20px] mt-[43px] md:mt-[78px] mx-auto shadow-[0_3px_5.5px_0_#00000040] animate" data-animate="fade-up">
+          {/* <div className="flex w-[285px] md:w-[480px] h-[66px] md:h-[120px] bg-[#FBF8EC] rounded-[10.92px] md:rounded-[20px] mt-[43px] md:mt-[78px] mx-auto shadow-[0_3px_5.5px_0_#00000040] animate" data-animate="fade-up">
             <div className="w-[23%] h-full flex">
               <Image src="/images/arya-dan-rana/mobile/logo-bca.png" alt="Picture of logo bca" width={45} height={45} className="w-[34px] md:w-[45px] mx-auto pointer-events-none m-auto" />
             </div>
@@ -50,7 +53,46 @@ export default function WeddingGift({ data, isOpen }: Props) {
             <div onClick={() => handleCopy('0123456789', 1)} className="w-[23%] h-full flex justify-center items-center">
               <span className="text-xs md:text-xl font-bold leading-[13px] md:leading-[25px]">{copied ? "Copied" : "Copy"}</span>
             </div>
-          </div>
+          </div> */}
+
+          {dataElectronicGiving?.map((item: any, index: number) => {
+            return (
+              <div
+                key={item.id || index}
+                className="flex w-[285px] md:w-[480px] h-[66px] md:h-[120px] bg-[#FBF8EC] rounded-[10.92px] md:rounded-[20px] mt-[43px] md:mt-[78px] mx-auto shadow-[0_3px_5.5px_0_#00000040] animate"
+                data-animate="fade-up"
+              >
+                <div className="w-[23%] h-full flex">
+                  <Image
+                    src="/images/arya-dan-rana/mobile/logo-bca.png"
+                    alt={`Logo ${item.bankName}`}
+                    width={45}
+                    height={45}
+                    className="w-[34px] md:w-[45px] mx-auto pointer-events-none m-auto"
+                  />
+                </div>
+                <div className="w-[54%] h-full flex flex-col text-start justify-center">
+                  <span className="font-garamond text-xs md:text-[22px] font-bold leading-[15px] md:leading-[25px]">
+                    {item.accountNumber}
+                  </span>
+                  <span className="text-xs md:text-[22px] leading-[15px] md:leading-[25px] uppercase">
+                    {item.bankName}
+                  </span>
+                  <span className="text-xs md:text-[22px] leading-[15px] md:leading-[25px]">
+                    {item.accountName}
+                  </span>
+                </div>
+                <div
+                  onClick={() => handleCopy(item.accountNumber, item.id)}
+                  className="w-[23%] h-full flex justify-center items-center cursor-pointer"
+                >
+                  <span className="text-xs md:text-xl font-bold leading-[13px] md:leading-[25px]">
+                    {copied ? "Copied" : "Copy"}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Image Absolute */}
