@@ -26,14 +26,14 @@ export default function Location({ data, isOpen }: Props) {
 
           <h6 className="font-bochan text-base md:text-[22px] text-[#6D761C] mt-4 md:mt-[40px] animate" data-animate="fade-up">Villa Ombak Biru</h6>
           <p className="font-medium text-[14px] md:text-xl animate mt-3.5 md:mt-[25px]" data-animate="fade-up">Jalan Batu Belig Gang Phalosa, Bali</p>
-          <Link href="https://maps.app.goo.gl/WsAG8URLfmrWGi3p8" target="_blank" className="inline-block border-b-[1px] border-[#001A3B] mt-3 animate" data-animate="fade-up">
+          <Link href="https://maps.app.goo.gl/WsAG8URLfmrWGi3p8" target="_blank" className="inline-block border-b-[1px] border-[#001A3B] mt-[2px] animate" data-animate="fade-up">
             <span className="text-[14px] md:text-[17px] font-medium leading-[17.16px] md:leading-none text-[#001A3B] uppercase">google maps</span>
           </Link>
 
           {dataEventSession?.map((session: any, index: number) => (
             <div key={session.id}>
               <h6
-                className="font-bochan text-[15px] md:text-[22px] text-[#6D761C] mt-[38px] md:mt-[60px] animate"
+                className={`font-bochan text-[15px] md:text-[22px] text-[#6D761C] mt-[38px] ${index > 0 ? 'md:mt-[40px]' : 'md:mt-[60px]'} animate`}
                 data-animate="fade-up"
               >
                 {session.name || 'Wedding Party'}

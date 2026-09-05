@@ -163,7 +163,7 @@
     transform: skewX(0deg) scaleX(1);
   }
   50% {
-    transform: skewX(4deg) scaleX(1.04);
+    transform: skewX(-8deg) scaleX(1);
   }
   100% {
     transform: skewX(0deg) scaleX(1);
@@ -195,35 +195,35 @@
 }
 
 .fade-up {
-  animation: fadeUp 1.3s ease forwards;
+  animation: fadeUp 1.5s ease forwards;
 }
 
 .fade-down {
-  animation: fadeDown 1.3s ease forwards;
+  animation: fadeDown 1.5s ease forwards;
 }
 
 .fade-right {
-  animation: fadeRight 1.3s ease forwards;
+  animation: fadeRight 1.5s ease forwards;
 }
 
 .fade-left {
-  animation: fadeLeft 1.3s ease forwards;
+  animation: fadeLeft 1.5s ease forwards;
 }
 
 .fade-up-butterfly {
-  animation: fadeUpButterfly 3s ease forwards;
+  animation: fadeUpButterfly 5s ease forwards;
 }
 
 .fade-left-butterfly {
-  animation: fadeLeftButterfly 3s ease forwards;
+  animation: fadeLeftButterfly 5s ease forwards;
 }
 
 .fade-right-butterfly {
-  animation: fadeRightButterfly 3s ease forwards;
+  animation: fadeRightButterfly 5s ease forwards;
 }
 
 .fade-right-butterfly-with-rotate-y {
-  animation: fadeRightButterflyWithRotateY 3s ease forwards;
+  animation: fadeRightButterflyWithRotateY 5s ease forwards;
 }
 
 .butterfly-flap {
@@ -231,11 +231,11 @@
 }
 
 .fade-left-jek {
-  animation: fadeLeftJek 1.3s ease forwards;
+  animation: fadeLeftJek 1.5s ease forwards;
 }
 
 .fade-right-pengantin {
-  animation: fadeRightPengantin 1.3s ease forwards;
+  animation: fadeRightPengantin 1.5s ease forwards;
 }
 
 .sway-left {
@@ -263,25 +263,4 @@
   transform-origin: left center;
   animation: sway-stretch-right 3s ease-in-out infinite;
   will-change: transform;
-}
-
-.swiper {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-.swiper-pagination {
-  bottom: 25px !important;
-}
-
-.swiper-pagination-bullet {
-  width: 11px !important;
-  height: 11px !important;
-  background: #D9D9D9 !important;
-  opacity: 0.5;
-}
-
-.swiper-pagination-bullet-active {
-  background: #D9D9D9 !important;
-  opacity: 1;
 }

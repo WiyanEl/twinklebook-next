@@ -18,7 +18,7 @@ export default function PlacesToStay({ data, isOpen }: Props) {
           <div className="pointer-events-none absolute top-0 left-0 right-0 h-[30vh] md:h-[80vh] z-[2] bg-[linear-gradient(180deg,#FEF7ED_0%,#FEF7ED_50%,rgba(254,247,237,0)_100%)]" />
 
           <div className="relative z-[3] min-h-min text-center font-cormorantgaramond text-[#001A3B] bg-[url('/images/arya-dan-rana/mobile/bg-kertas-places-to-stay.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-kertas-places-to-stay.png')] bg-contain bg-no-repeat bg-center pt-[153px] pb-[156px] md:pb-[200px] mx-auto">
-            <h2 className="font-bochan text-2xl md:text-[32px] md:mt-[40px] uppercase md:capitalize animate" data-animate="fade-up">places to stay</h2>
+            <h2 className="font-bochan text-2xl md:text-[32px] md:mt-[80px] uppercase md:capitalize animate" data-animate="fade-up">places to stay</h2>
 
             <div className="w-[266px] md:w-[492px] mt-[30px] md:mt-[60px] mx-auto text-center">
               <p className="text-[15px] md:text-[22px] animate" data-animate="fade-up">

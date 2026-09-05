@@ -14,7 +14,7 @@ export default function Dresscode({ data, isOpen }: Props) {
   return (
     <>
       <div className="relative w-full min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-dresscode.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-dresscode.png')] bg-cover bg-no-repeat pb-[209px] md:pb-[269px]">
-        <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/10 mix-blend-multiply" />
+        <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/30 mix-blend-multiply" />
         <div className="pointer-events-none absolute top-0 left-0 right-0 h-[70vh] z-[2] bg-[linear-gradient(180deg,#FEF7ED_0%,#FEF7ED_50%,rgba(254,247,237,0)_100%)]" />
 
         <section id="dresscode" className="relative w-full min-h-min">
@@ -44,7 +44,7 @@ export default function Dresscode({ data, isOpen }: Props) {
           <Image src="/images/arya-dan-rana/mobile/img-atas-dresscode.png" alt="Picture of gambar atas dresscode" width={616} height={389} className={`md:hidden absolute z-[3] left-0 top-0 pointer-events-none`} />
 
           {/* Dekstop */}
-          <Image src="/images/arya-dan-rana/dekstop/img-atas-dresscode.png" alt="Picture of gambar atas dresscode" width={1905} height={879} className={`hidden md:block absolute z-[3] left-0 top-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/dekstop/img-atas-dresscode.png" alt="Picture of gambar atas dresscode" width={1905} height={879} className={`hidden md:block w-full absolute z-[3] left-0 top-0 pointer-events-none`} />
         </section>
 
         <Rsvp data={data} />

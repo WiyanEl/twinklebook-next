@@ -19,13 +19,13 @@ export default function ThingsToDo({ data, isOpen }: Props) {
 
   return (
     <>
-      <section id="things-to-do" className="relative w-full min-h-min bg-[url('/images/arya-dan-rana/mobile/bg-things-to-do.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-things-to-do.png')] bg-cover bg-no-repeat pt-[24px]">
-        <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/10 mix-blend-multiply" />
+      <section id="things-to-do" className="relative w-full min-h-min">
+        <div className="pointer-events-none absolute inset-0 z-[1] bg-[#DCCB9F]/30 mix-blend-multiply" />
 
         <div className="relative z-[3] h-full text-center font-cormorantgaramond text-[#001A3B] pt-[80px] pb-[176px] md:pb-[200px]">
           <h2 className="font-bochan text-2xl md:text-[32px] uppercase animate" data-animate="fade-up">things to do</h2>
 
-          <p className="text-[15px] md:text-[22px] mt-[30px] md:mt-[60px] animate" data-animate="fade-up">
+          <p className="text-[15px] md:text-[22px] md:leading-[26px] mt-[30px] md:mt-[60px] animate" data-animate="fade-up">
             Discover a curated selection of places to explore, <br /> experience, and enjoy during your stay.
           </p>
 
@@ -265,12 +265,12 @@ export default function ThingsToDo({ data, isOpen }: Props) {
                 <li className="text-white text-[15px] md:text-[22px] leading-[153%] font-semibold">
                   Warung Mak Beng
                   <br />
-                  <span className="font-light">* Black Sands Brewery</span> <br />
-                  <span className="font-light">* Rayjin Teppanyaki</span> <br />
-                  <span className="font-light">* BoynCow</span> <br />
-                  <span className="font-light">* room4dessert</span> <br />
-                  <span className="font-light">* Kurasu Ubudssert</span> <br />
-                  <span className="font-light">* Seafood at Jimbaran</span>
+                  <span className="font-light"><span className="inline-block mr-1">*</span> Black Sands Brewery</span> <br />
+                  <span className="font-light"><span className="inline-block mr-1">*</span> Rayjin Teppanyaki</span> <br />
+                  <span className="font-light"><span className="inline-block mr-1">*</span> BoynCow</span> <br />
+                  <span className="font-light"><span className="inline-block mr-1">*</span> room4dessert</span> <br />
+                  <span className="font-light"><span className="inline-block mr-1">*</span> Kurasu Ubudssert</span> <br />
+                  <span className="font-light"><span className="inline-block mr-1">*</span> Seafood at Jimbaran</span>
                 </li>
               </ul>
             </div>
@@ -351,7 +351,7 @@ export default function ThingsToDo({ data, isOpen }: Props) {
           <Image src="/images/arya-dan-rana/mobile/img-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={560} height={344} className={`md:hidden absolute z-[3] left-0 bottom-0 pointer-events-none`} />
 
           {/* Desktop */}
-          <Image src="/images/arya-dan-rana/dekstop/img-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={1874} height={1063} className={`hidden md:block absolute z-[3] left-0 -bottom-[420px] pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/dekstop/img-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={1874} height={1063} className={`hidden md:block w-full absolute z-[3] left-0 -bottom-[420px] pointer-events-none`} />
         </div>
       </section>
     </>

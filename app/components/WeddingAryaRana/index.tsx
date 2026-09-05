@@ -14,7 +14,7 @@ import PlacesToStay from './PlacesToStay'
 import Gallery from './Gallery'
 import Dresscode from './Dresscode'
 import WeddingGift from './WeddingGift'
-import ThingsToDo from './ThingsToDo'
+// import ThingsToDo from './ThingsToDo'
 import Wishes from './Wishes'
 import Footer from './Footer'
 
@@ -160,7 +160,7 @@ export default function WeddingAryaRana({ data }: Props) {
       <Gallery data={data} />
       <Dresscode data={data} isOpen={isOpen} />
       <WeddingGift data={data} isOpen={isOpen} />
-      <ThingsToDo data={data} isOpen={isOpen} />
+      {/* <ThingsToDo data={data} isOpen={isOpen} /> */}
       <Wishes data={data} isOpen={isOpen} />
       <Footer data={data} isOpen={isOpen} />
     </>

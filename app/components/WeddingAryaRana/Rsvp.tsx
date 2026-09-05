@@ -44,13 +44,13 @@ const RSVPSectionDesign = ({ data }: { data: any }) => {
                 <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-[#001A3B] pt-[75px] md:pt-[152px]">
                     <h2 className="font-bochan text-2xl md:text-[32px] animate" data-animate="fade-up">Rsvp</h2>
 
-                    <p className="text-[15px] md:text-xl font-normal md:leading-[15px] mt-[30px] md:mt-[60px] animate" data-animate="zoom-in">Dear Mr./Mrs./Ms.</p>
-                    <p className="text-[15px] md:text-[22px] font-normal md:leading-[15px] mt-[15px] md:mt-[22px] capitalize animate" data-animate="zoom-in">{dataGuest.name ?? '.........'}</p>
+                    <p className="text-[15px] md:text-[22px] font-normal md:leading-[15px] mt-[30px] md:mt-[60px] animate" data-animate="zoom-in">Dear Mr./Mrs./Ms.</p>
+                    <p className="text-[15px] md:text-2xl font-normal md:leading-[15px] mt-[15px] md:mt-[22px] capitalize animate" data-animate="zoom-in">{dataGuest.name ?? '.........'}</p>
 
                     <p className="text-[13px] md:text-xl font-normal md:leading-[26px] mt-[33px] md:mt-[40px] animate" data-animate="zoom-in">Kindly confirm your attendance before</p>
                     <p className="text-[13px] md:text-xl font-normal leading-[18px] md:leading-[26px] mt-0.5 animate" data-animate="zoom-in">12 October 2026</p>
 
-                    <div className="flex justify-between w-[302px] md:w-[435px] mx-auto mt-[34px] md:mt-[40px] animate" data-animate="zoom-in">
+                    <div className="flex justify-between w-[302px] md:w-[435px] mx-auto mt-[34px] md:mt-[25px] animate" data-animate="zoom-in">
                         <button type="button" onClick={() => {
                         setAttendance('attend')
                         setShowModal(true)
@@ -73,7 +73,7 @@ const RSVPSectionDesign = ({ data }: { data: any }) => {
                             setAttendance('not')
                             setShowModal(true)
                             }} type="button" className="flex justify-center items-center w-[161px] md:w-[220px] h-[36px] md:h-[52px] rounded-[6px] md:rounded-[50px] bg-[#001A3B] mx-auto">
-                            <span className="text-[13px] md:text-base md font-light leading-[14.96px] text-white uppercase">{attendance == 'attend' ? 'confirm to attend' : 'confirm unable to attend'}</span>
+                            <span className="text-[13px] md:text-base md:font-light leading-[14.96px] md:leading-none text-white uppercase">{attendance == 'attend' ? 'confirm to attend' : 'confirm unable to attend'}</span>
                         </button>
                     </div>
                     <p className="text-[11px] md:text-xl md:leading-[22px] font-normal mt-[39px] md:mt-[69px] animate" data-animate="zoom-in">If you need assistance with your RSVP,</p>

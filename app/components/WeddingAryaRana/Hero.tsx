@@ -53,7 +53,7 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
   return (
     <>
       <section id="hero" className="relative min-h-[115vh] bg-[url('/images/arya-dan-rana/mobile/bg-hero.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-hero.png')] bg-cover bg-no-repeat bg-center">
-        <div className="pointer-events-none absolute left-0 right-0 top-0 bottom-[-25%] z-[1] bg-[#DCCB9F]/20 mix-blend-multiply" />
+        <div className="pointer-events-none absolute left-0 right-0 top-0 bottom-[-25%] z-[1] bg-[#DCCB9F]/30 mix-blend-multiply" />
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60vh] md:h-[25vh] z-[2] bg-[linear-gradient(180deg,rgba(254,247,237,0)_0%,#FEF7ED_100%)]" />
 
         {!isOpen && (
@@ -102,7 +102,7 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
         <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={392} height={352} className={`md:hidden w-[175px] absolute z-[3] right-0 -bottom-[30px] pointer-events-none`} />
 
         {/* Dekstop */}
-        <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={320} height={569} className={`hidden md:block w-[250px] absolute z-[3] left-0 top-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={320} height={569} className={`hidden md:block w-[250px] absolute z-[3] left-0 top-0 pointer-events-none ${isOpen ? 'sway-stretch' : ''}`} style={{ animationDelay: '0.5s' }} />
         <Image src="/images/arya-dan-rana/dekstop/img-kanan-atas-hero.png" alt="Picture of gambar kiri atas hero" width={615} height={697} className={`hidden md:block w-[500px] absolute z-[3] right-0 top-0 pointer-events-none`} />
 
         <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={642} height={751} className={`hidden md:block w-[350px] absolute z-[3] left-0 -bottom-[50px] pointer-events-none`} />

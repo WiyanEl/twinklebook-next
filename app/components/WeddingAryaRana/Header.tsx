@@ -41,7 +41,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-30 transition-all duration-500
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500
         md:translate-x-0
         ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 pointer-events-none'}`
       }>
