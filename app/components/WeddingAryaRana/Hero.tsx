@@ -95,11 +95,19 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
         </div>
 
         {/* Image absolute */}
-        <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={193} height={343} className={`md:hidden w-[150px] absolute z-[3] left-0 top-0 pointer-events-none`} />
-        <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-hero.png" alt="Picture of gambar kiri atas hero" width={372} height={457} className={`md:hidden w-[250px] absolute z-[3] right-0 top-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={193} height={343} className={`md:hidden w-[150px] absolute z-[3] left-0 top-0 pointer-events-none ${isOpen ? 'sway-stretch' : ''}`} style={{ animationDelay: '0.5s' }} />
 
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-atas-hero-1.png" alt="Picture of gambar kiri atas hero" width={170} height={303} className={`md:hidden absolute z-[3] right-0 top-0 pointer-events-none ${isOpen ? 'sway-stretch-up' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-atas-hero-2.png" alt="Picture of gambar kiri atas hero" width={170} height={303} className={`md:hidden absolute w-[120px] z-[3] right-0 top-0 pointer-events-none ${isOpen ? 'sway-stretch-up' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-hero.png" alt="Picture of gambar kiri atas hero" width={337} height={380} className={`md:hidden w-[220px] absolute z-[3] right-0 top-0 pointer-events-none`} />
+
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kiri-bawah-hero-1.png" alt="Picture of gambar kiri bawah hero" width={170} height={303} className={`md:hidden absolute z-[3] left-0 -bottom-[20px] pointer-events-none ${isOpen ? 'sway-stretch-left' : ''}`} style={{ animationDelay: '0.5s' }} />
         <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={363} height={424} className={`md:hidden w-[200px] absolute z-[3] left-0 -bottom-[20px] pointer-events-none`} />
-        <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={392} height={352} className={`md:hidden w-[175px] absolute z-[3] right-0 -bottom-[30px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={177} height={258} className={`md:hidden absolute z-[3] -left-[50px] bottom-[70px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/mobile/img-jeruk-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={182} height={201} className={`md:hidden absolute w-[110px] z-[3] left-0 bottom-[20px] pointer-events-none`} />
+
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-bawah-hero-1.png" alt="Picture of gambar kiri atas hero" width={193} height={343} className={`md:hidden absolute z-[3] right-0 -bottom-[80px] pointer-events-none ${isOpen ? 'sway-stretch-right' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={177} height={188} className={`md:hidden w-[125px] absolute z-[3] right-0 bottom-[70px] pointer-events-none`} />
 
         {/* Dekstop */}
         <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={320} height={569} className={`hidden md:block w-[250px] absolute z-[3] left-0 top-0 pointer-events-none ${isOpen ? 'sway-stretch' : ''}`} style={{ animationDelay: '0.5s' }} />

@@ -154,7 +154,7 @@
 
 @keyframes sway-bottom {
   0%   { transform: rotate(0deg); }
-  50%  { transform: rotate(5deg); }
+  50%  { transform: rotate(12deg); }
   100% { transform: rotate(0deg); }
 }
 
@@ -163,7 +163,7 @@
     transform: skewX(0deg) scaleX(1);
   }
   50% {
-    transform: skewX(-8deg) scaleX(1);
+    transform: skewX(-8deg) scaleX(1.04);
   }
   100% {
     transform: skewX(0deg) scaleX(1);
@@ -175,7 +175,43 @@
     transform: skewY(0deg) scaleY(1);
   }
   50% {
-    transform: skewY(-4deg) scaleY(1.04);
+    transform: skewY(-8deg) scaleY(1);
+  }
+  100% {
+    transform: skewY(0deg) scaleY(1);
+  }
+}
+
+@keyframes sway-stretch-left {
+  0% {
+    transform: skewY(0deg) scaleY(1);
+  }
+  50% {
+    transform: skewY(8deg) scaleY(1);
+  }
+  100% {
+    transform: skewY(0deg) scaleY(1);
+  }
+}
+
+@keyframes sway-stretch-up {
+  0% {
+    transform: skewY(0deg) scaleY(1);
+  }
+  50% {
+    transform: skewY(-12deg) scaleY(1.04);
+  }
+  100% {
+    transform: skewY(0deg) scaleY(1);
+  }
+}
+
+@keyframes sway-stretch-down {
+  0% {
+    transform: skewY(0deg) scaleY(1);
+  }
+  50% {
+    transform: skewY(12deg) scaleY(1.04);
   }
   100% {
     transform: skewY(0deg) scaleY(1);
@@ -250,7 +286,12 @@
 
 .sway-bottom {
   transform-origin: top center;
-  animation: sway-bottom 2s ease-in-out infinite;
+  animation: sway-bottom 5s ease-in-out infinite;
+}
+
+.sway-up {
+  transform-origin: bottom center;
+  animation: sway-bottom 5s ease-in-out infinite;
 }
 
 .sway-stretch {
@@ -260,7 +301,25 @@
 }
 
 .sway-stretch-right {
-  transform-origin: left center;
+  transform-origin: right center;
   animation: sway-stretch-right 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+.sway-stretch-left {
+  transform-origin: left center;
+  animation: sway-stretch-left 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+.sway-stretch-up {
+  transform-origin: right center;
+  animation: sway-stretch-up 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.sway-stretch-down {
+  transform-origin: right center;
+  animation: sway-stretch-down 4s ease-in-out infinite;
   will-change: transform;
 }
