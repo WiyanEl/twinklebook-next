@@ -189,9 +189,7 @@ export default function Wishes({ data, isOpen }: Props) {
                         <p className="absolute top-3 left-3 font-cinzel font-normal text-[64px] leading-none text-[#adadad]">
                           “
                         </p>
-                        <p className="relative top-[34px] font-light text-[15px] md:text-xl leading-none text-white">
-                          {wish.message}
-                        </p>
+                        <p className="relative top-[34px] font-light text-[15px] md:text-xl leading-none text-white" dangerouslySetInnerHTML={{ __html: wish.message }} ></p>
                       </div>
                       <div className="bg-[#868686] flex absolute w-full h-[41px] rounded-bl-[9.57px] rounded-br-[9.57px] bottom-0 px-[14px]">
                         <p className="font-medium text-[15px] md:text-xl leading-none text-[#152F4E] my-auto">
@@ -218,13 +216,11 @@ export default function Wishes({ data, isOpen }: Props) {
                     {selectedWish.name}
                   </h3>
                   <div className="w-10 h-[1px] bg-[#D6D0C4] mx-auto my-4" />
-                  <p className="font-light text-sm md:text-lg leading-relaxed text-white px-2">
-                    {selectedWish.message}
-                  </p>
+                  <p className="font-light text-sm md:text-lg leading-relaxed text-white px-2" dangerouslySetInnerHTML={{ __html: selectedWish.message }}></p>
                 </div>
                 <button
                   onClick={() => setSelectedWish(null)}
-                  className="flex justify-center items-center w-[340px] md:w-[691px] h-[30px] md:h-[42px] md:h-[40px] bg-[#152F4E] rounded-[10px] md:rounded-[20px] border-[0.49px] border-[#152F4E] mx-auto mt-5"
+                  className="flex justify-center items-center w-[340px] md:w-[691px] h-[30px] md:h-[40px] bg-[#152F4E] rounded-[10px] md:rounded-[20px] border-[0.49px] border-[#152F4E] mx-auto mt-5"
                 >
                   <span className="text-[15px] md:text-lg text-white font-normal leading-[140%] uppercase">back</span>
                 </button>

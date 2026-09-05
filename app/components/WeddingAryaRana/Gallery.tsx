@@ -9,11 +9,22 @@ type GalleryProps = {
 };
 
 const Gallery = forwardRef<HTMLElement, GalleryProps>(({ data }, ref) => {
-  const images: GalleryImage[] = [
-    { src: "/images/arya-dan-rana/mobile/img-gallery-1.png", type: "landscape" },
-    { src: "/images/arya-dan-rana/mobile/img-gallery-1.png", type: "landscape" },
-    { src: "/images/arya-dan-rana/mobile/img-gallery-1.png", type: "landscape" },
-  ];
+  const dataGallery = data?.content?.galleryImageData
+
+  // const images: GalleryImage[] = [
+  //   { src: "/images/arya-dan-rana/mobile/img-gallery-1.png", type: "landscape" },
+  //   { src: "/images/arya-dan-rana/mobile/img-gallery-1.png", type: "landscape" },
+  //   { src: "/images/arya-dan-rana/mobile/img-gallery-1.png", type: "landscape" },
+  // ];
+
+  const images: GalleryImage[] = dataGallery.map((item: any) => {
+    const imageUrl = `https://media.twinklebook.com/${item.url}`
+
+    return {
+      src: imageUrl,
+      type: "landscape"
+    }
+  })
 
   return (
     // lg:min-h-[949px]
