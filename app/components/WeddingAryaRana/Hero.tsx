@@ -107,7 +107,8 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
         <Image src="/images/arya-dan-rana/mobile/img-jeruk-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={182} height={201} className={`md:hidden absolute w-[110px] z-[3] left-0 bottom-[20px] pointer-events-none`} />
 
         <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-bawah-hero-1.png" alt="Picture of gambar kiri atas hero" width={193} height={343} className={`md:hidden absolute z-[3] right-0 -bottom-[80px] pointer-events-none ${isOpen ? 'sway-stretch-right' : ''}`} style={{ animationDelay: '0.5s' }} />
-        <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={177} height={188} className={`md:hidden w-[125px] absolute z-[3] right-0 bottom-[70px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={100} height={100} className={`md:hidden absolute z-[3] right-0 bottom-[50px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/animasi-burung.gif" alt="Picture of animasi burung hero" width={150} height={128} className={`md:hidden absolute z-[3] right-0 bottom-[128px] pointer-events-none scale-x-[-1]`} />
 
         {/* Dekstop */}
         <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={320} height={569} className={`hidden md:block w-[250px] absolute z-[3] left-0 top-0 pointer-events-none ${isOpen ? 'sway-stretch' : ''}`} style={{ animationDelay: '0.5s' }} />
