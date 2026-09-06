@@ -111,10 +111,16 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
 
         {/* Dekstop */}
         <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-hero.png" alt="Picture of gambar kiri atas hero" width={320} height={569} className={`hidden md:block w-[250px] absolute z-[3] left-0 top-0 pointer-events-none ${isOpen ? 'sway-stretch' : ''}`} style={{ animationDelay: '0.5s' }} />
+
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-atas-hero-1.png" alt="Picture of gambar kiri atas hero" width={402} height={502} className={`hidden md:block absolute z-[3] right-0 -top-[80px] pointer-events-none ${isOpen ? 'sway-stretch-up' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-atas-hero-2.png" alt="Picture of gambar kiri atas hero" width={282} height={502} className={`hidden md:block absolute z-[3] right-0 -top-[180px] pointer-events-none ${isOpen ? 'sway-stretch-up' : ''}`} style={{ animationDelay: '0.5s' }} />
         <Image src="/images/arya-dan-rana/dekstop/img-kanan-atas-hero.png" alt="Picture of gambar kiri atas hero" width={615} height={697} className={`hidden md:block w-[500px] absolute z-[3] right-0 top-0 pointer-events-none`} />
 
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kiri-bawah-hero-1.png" alt="Picture of gambar kiri bawah hero" width={369} height={657} className={`hidden md:block absolute z-[3] left-0 -bottom-[100px] pointer-events-none ${isOpen ? 'sway-stretch-left' : ''}`} style={{ animationDelay: '0.5s' }} />
         <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={642} height={751} className={`hidden md:block w-[350px] absolute z-[3] left-0 -bottom-[50px] pointer-events-none`} />
-        <Image src="/images/arya-dan-rana/dekstop/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={649} height={583} className={`hidden md:block w-[350px] absolute z-[3] right-0 -bottom-[150px] pointer-events-none`} />
+
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-bawah-hero-1.png" alt="Picture of gambar kiri atas hero" width={419} height={748} className={`hidden md:block absolute z-[3] right-0 -bottom-[300px] pointer-events-none ${isOpen ? 'sway-stretch-right' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/dekstop/img-kanan-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={294} height={312} className={`hidden md:block absolute z-[3] right-0 bottom-0 pointer-events-none`} />
       </section>
     </>
   )

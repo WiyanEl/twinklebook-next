@@ -145,12 +145,12 @@ export default function WeddingAryaRana({ data }: Props) {
 
   return (
     <>
-      <audio
+      {/* <audio
         ref={audioRef}
         loop
         preload="auto"
         src={`https://media.twinklebook.com/${dataContent?.backgroundSoundData?.url}`}
-      />
+      /> */}
       <Header isOpen={isOpen} />
       <Hero data={data} isOpen={isOpen} setIsOpen={setIsOpen} />
       <Profile data={data} isOpen={isOpen} />
