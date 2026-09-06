@@ -6,9 +6,10 @@ import GalleryCarouselEmbla, { GalleryImage } from "../Gallery/GalleryCarouselem
 
 type GalleryProps = {
   data: any;
+  isMobile: boolean
 };
 
-const Gallery = forwardRef<HTMLElement, GalleryProps>(({ data }, ref) => {
+const Gallery = forwardRef<HTMLElement, GalleryProps>(({ data, isMobile }, ref) => {
   const dataGallery = data?.content?.galleryImageData
 
   // const images: GalleryImage[] = [
@@ -19,10 +20,10 @@ const Gallery = forwardRef<HTMLElement, GalleryProps>(({ data }, ref) => {
 
   const images: GalleryImage[] = dataGallery.map((item: any) => {
     const imageUrl = `https://media.twinklebook.com/${item.url}`
-
+    const type = isMobile ? 'potrait' : 'landscape'
     return {
       src: imageUrl,
-      type: "landscape"
+      type: type
     }
   })
 
