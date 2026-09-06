@@ -73,7 +73,16 @@ const RSVPSectionDesign = ({ data }: { data: any }) => {
                             setAttendance('not')
                             setShowModal(true)
                             }} type="button" className="flex justify-center items-center w-[161px] md:w-[220px] h-[36px] md:h-[52px] rounded-[6px] md:rounded-[50px] bg-[#001A3B] mx-auto">
-                            <span className="text-xs md:text-base md:font-light leading-[14.96px] md:leading-none text-white uppercase">{attendance == 'attend' ? 'confirm to attend' : 'confirm unable to attend'}</span>
+                            <span className="text-xs md:text-base md:font-light leading-[14.96px] md:leading-none text-white uppercase">
+                                {attendance == "attend" ? (
+                                    "confirm to attend"
+                                ) : (
+                                    <>
+                                    confirm unable
+                                    <br /> to attend
+                                    </>
+                                )}
+                            </span>
                         </button>
                     </div>
                     <p className="text-[11px] md:text-xl md:leading-[22px] font-normal mt-[39px] md:mt-[69px] animate" data-animate="zoom-in">If you need assistance with your RSVP,</p>

@@ -27,6 +27,7 @@ interface Props {
 export default function WeddingAryaRana({ data }: Props) {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
 
   console.log(data)
   
@@ -108,6 +109,25 @@ export default function WeddingAryaRana({ data }: Props) {
     }
   }, [isOpen])
 
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      const audio = audioRef.current
+
+      if (!audio) return
+
+      if (document.hidden) {
+        audio.pause()
+        setIsPlaying(false)
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
+  }, [])
+
   const mediaUrls = useMemo(() => {
     if (!data) {
       return []
@@ -145,12 +165,12 @@ export default function WeddingAryaRana({ data }: Props) {
 
   return (
     <>
-      {/* <audio
+      <audio
         ref={audioRef}
         loop
         preload="auto"
         src={`https://media.twinklebook.com/${dataContent?.backgroundSoundData?.url}`}
-      /> */}
+      />
       <Header isOpen={isOpen} />
       <Hero data={data} isOpen={isOpen} setIsOpen={setIsOpen} />
       <Profile data={data} isOpen={isOpen} />
