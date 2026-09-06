@@ -153,9 +153,9 @@
 }
 
 @keyframes sway-bottom {
-  0%   { transform: rotate(0deg); }
+  0%   { transform: rotate(-12deg); }
   50%  { transform: rotate(12deg); }
-  100% { transform: rotate(0deg); }
+  100% { transform: rotate(-12deg); }
 }
 
 @keyframes sway-stretch {

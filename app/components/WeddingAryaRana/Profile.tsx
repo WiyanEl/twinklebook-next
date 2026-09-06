@@ -15,7 +15,7 @@ export default function Profile({ data, isOpen }: Props) {
   return (
     <>
       <div className="relative">
-        <section id="profile" className="relative w-full min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-profile.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-profile.png')] bg-cover bg-no-repeat pt-[30px] md:pt-0 md:pb-[50px] md:overflow-hidden">
+        <section id="profile" className="relative w-full min-h-screen bg-[url('/images/arya-dan-rana/mobile/bg-profile.png')] md:bg-[url('/images/arya-dan-rana/dekstop/bg-profile.png')] bg-cover bg-no-repeat pt-[30px] md:pt-0 md:pb-[50px] overflow-hidden">
           <div className="pointer-events-none absolute left-0 right-0 top-0 bottom-0 z-[1] bg-[#DCCB9F]/20 mix-blend-multiply" />
           <div className="pointer-events-none absolute top-0 left-0 right-0 h-[50vh] md:h-[80vh] z-[2] bg-[linear-gradient(180deg,#FEF7ED_0%,#FEF7ED_50%,rgba(254,247,237,0)_100%)]" />
 
@@ -74,11 +74,17 @@ export default function Profile({ data, isOpen }: Props) {
           <Image src="/images/arya-dan-rana/mobile/img-kiri-tengah-profile.png" alt="Picture of gambar kiri tengah profile" width={277} height={277} className={`md:hidden w-[115px] absolute z-[3] left-0 bottom-[286px] pointer-events-none`} />
 
           <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-profile.png" alt="Picture of gambar kiri bawah profile" width={175} height={194} className={`md:hidden w-[145px] absolute z-[3] left-0 bottom-[20px] pointer-events-none`} />
-          <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-profile.png" alt="Picture of gambar kiri bawah profile" width={250} height={375} className={`md:hidden w-[135px] absolute z-[3] right-0 bottom-0 pointer-events-none`} />
+          <div className={`md:hidden absolute z-[3] -right-[50px] -bottom-[80px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }}>
+            <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah profile" width={150} height={258} className={`scale-x-[-1]`} />
+          </div>
+          <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-bawah-profile.png" alt="Picture of gambar kiri tengah profile" width={175} height={489} className={`md:hidden absolute z-[3] right-0 bottom-0 pointer-events-none`} />
 
           {/* Dekstop */}
           <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-profile.png" alt="Picture of gambar kiri bawah profile" width={411} height={345} className={`hidden md:block absolute z-[3] left-[420px] bottom-[100px] w-[380px] pointer-events-none`} />
-          <Image src="/images/arya-dan-rana/dekstop/img-kanan-bawah-profile.png" alt="Picture of gambar kiri bawah profile" width={425} height={669} className={`hidden md:block absolute z-[3] right-[380px] -bottom-[220px] w-[400px] pointer-events-none`} />
+          <div className={`hidden md:block absolute z-[3] right-[400px] -bottom-[220px] w-[400px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }}>
+            <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah profile" width={425} height={669} className={`scale-x-[-1]`} />
+          </div>
+          <Image src="/images/arya-dan-rana/dekstop/img-daun-kanan-bawah-profile.png" alt="Picture of gambar kiri tengah profile" width={375} height={489} className={`hidden md:block absolute z-[3] right-[400px] -bottom-[200px] pointer-events-none`} />
         </section>
 
         {/* Image Absolute */}
