@@ -233,6 +233,7 @@ export const helloBride = localFont({
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
+  style: ["normal", "italic"],
   variable: '--font-cormorant-garamond',
 })
 
