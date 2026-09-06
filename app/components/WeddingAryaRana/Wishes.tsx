@@ -54,7 +54,8 @@ const DEFAULT_WISHES: Wish[] = [
 export default function Wishes({ data, isOpen }: Props) {
   const dataEvent = data?.event
   const dataGuest = data?.guest
-  const [name, setName] = useState(dataGuest?.name)
+  // const [name, setName] = useState(dataGuest?.name)
+  const [name, setName] = useState('')
   const [message, setMessage] = useState('')
   const [wishes, setWishes] = useState<Wish[]>([])
   const [seeAllMessages, setSeeAllMessages] = useState(false)
@@ -136,7 +137,7 @@ export default function Wishes({ data, isOpen }: Props) {
           {!seeAllMessages ? (
             <div className="relative text-center">
               <form onSubmit={save} className="mx-auto mt-[32px] md:mt-[60px] animate zoom-in" data-animate="zoom-in">
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="block w-[285px] md:w-[594px] h-[30px] md:h-[42px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] md:text-xl leading-[140%] text-[#152F4E] placeholder:text-[#152F4E80] mx-auto" placeholder={dataGuest.name ?? '.........'} required />
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="block w-[285px] md:w-[594px] h-[30px] md:h-[42px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] md:text-xl leading-[140%] text-[#152F4E] placeholder:text-[#152F4E80] mx-auto" placeholder="[Gest Name]" required />
                 <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="block w-[285px] md:w-[594px] h-[106px] md:h-[197px] rounded-[10px] border-[1px] border-[#152F4E] bg-transparent px-[13px] py-1 text-[15px] md:text-xl leading-[140%] text-[#152F4E] mx-auto mt-4" placeholder="Leave your wishes here." required></textarea>
                 <button type="submit" className="flex justify-center items-center w-[285px] md:w-[594px] h-[30px] md:h-[42px] bg-[#152F4E] rounded-[10px] border-[0.49px] border-[#152F4E] mx-auto mt-4">
                   <Image src="/images/arya-dan-rana/mobile/icon-send.png" alt="Picture of Icon Send" width={15} height={19} className="mr-2" />
@@ -166,7 +167,7 @@ export default function Wishes({ data, isOpen }: Props) {
               </div>
               <button type="button" onClick={() => setSeeAllMessages(true)} className="flex justify-center items-center w-[285px] md:w-[594px] h-[30px] md:h-[42px] bg-[#152F4E] rounded-[10px] border-[0.49px] border-[#152F4E] mx-auto mt-4 animate zoom-in" data-animate="zoom-in">
                   <Image src="/images/arya-dan-rana/mobile/icon-message.png" alt="Picture of Icon Send" width={17} height={22} className="mr-2" />
-                  <span className="text-[15px] md:text-xl text-white font-normal leading-[140%] uppercase">see all message</span>
+                  <span className="text-[15px] md:text-xl text-white font-normal leading-[140%] uppercase">see all messages</span>
                 </button>
             </div>
           ) : (

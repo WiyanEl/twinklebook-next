@@ -25,7 +25,7 @@ export default function ThingsToDo({ data, isOpen }: Props) {
         <div className="relative z-[3] h-full text-center font-cormorantgaramond text-[#001A3B] pt-[80px] pb-[176px] md:pb-[200px]">
           <h2 className="font-bochan text-2xl md:text-[32px] uppercase animate" data-animate="fade-up">things to do</h2>
 
-          <p className="text-[15px] md:text-[22px] md:leading-[26px] mt-[30px] md:mt-[60px] animate" data-animate="fade-up">
+          <p className="text-[15px] md:text-[22px] leading-[18px] md:leading-[26px] mt-[30px] md:mt-[60px] animate" data-animate="fade-up">
             Discover a curated selection of places to explore, <br /> experience, and enjoy during your stay.
           </p>
 

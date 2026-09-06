@@ -62,8 +62,8 @@ export default function Hero({ data, isOpen, setIsOpen }: HeroProps) {
             <div className="relative z-20 flex items-center justify-center h-full">
               <div className="w-[290px] md:w-[416px] min-h-min rounded-[15px] md:rounded-[20px] shadow-[0px_8px_11.6px_0px_#0000008A] zoom-in">
                 <div className="w-full h-[180px] md:h-[220px] rounded-tl-[15px] md:rounded-tl-[20px] rounded-tr-[15px] md:rounded-tr-[20px] bg-center bg-cover bg-no-repeat bg-[url('/images/arya-dan-rana/mobile/img-popup-hero.png')] md:bg-[url('/images/arya-dan-rana/mobile/img-popup-hero.png')]"></div>
-                <div className="relative w-full pt-[28px] md:pt-[27px] pb-[28px] md:pb-[40px] rounded-bl-[15px] md:rounded-bl-[20px] rounded-br-[15px] md:rounded-br-[20px] font-cormorantgaramond text-black text-center bg-[#EBE8E5]">
-                  <h6 className="text-xs md:text-lg font-normal leading-none md:uppercase">The Wedding of</h6>
+                <div className="relative w-full pt-[28px] md:pt-[27px] pb-[28px] md:pb-[40px] rounded-bl-[15px] md:rounded-bl-[20px] rounded-br-[15px] md:rounded-br-[20px] font-cormorantgaramond text-black text-center bg-[#FEF7ED]">
+                  <h6 className="text-xs md:text-lg font-normal leading-none uppercase">The Wedding of</h6>
                   <h2 className="font-bochan text-[#6D761C] text-[28px] md:text-[32px] leading-[36px] font-normal mt-3.5">{dataEvent?.groomName} & {dataEvent?.brideName}</h2>
                   <h6 className="md:hidden text-[14px] md:text-base font-medium leading-[25px] md:leading-[31px] mt-2.5">Dear,</h6>
                   <h6 className="hidden md:block text-[14px] font-medium leading-[31px] md:leading-[31px] mt-[22px]">Dear Mr./Mrs./Ms.</h6>

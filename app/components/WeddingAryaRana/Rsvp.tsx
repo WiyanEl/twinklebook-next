@@ -41,7 +41,7 @@ const RSVPSectionDesign = ({ data }: { data: any }) => {
             {/* RSVP Section Design */}
             <section id="reservation" className="relative z-10 w-full">
                 {/* RSVP Content Section Design */}
-                <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-[#001A3B] pt-[75px] md:pt-[152px]">
+                <div className="relative overflow-hidden z-10 text-center h-full font-cormorantgaramond text-[#001A3B] pt-[135px] md:pt-[152px]">
                     <h2 className="font-bochan text-2xl md:text-[32px] animate" data-animate="fade-up">Rsvp</h2>
 
                     <p className="text-[15px] md:text-[22px] font-normal md:leading-[15px] mt-[30px] md:mt-[60px] animate" data-animate="zoom-in">Dear Mr./Mrs./Ms.</p>
@@ -73,11 +73,11 @@ const RSVPSectionDesign = ({ data }: { data: any }) => {
                             setAttendance('not')
                             setShowModal(true)
                             }} type="button" className="flex justify-center items-center w-[161px] md:w-[220px] h-[36px] md:h-[52px] rounded-[6px] md:rounded-[50px] bg-[#001A3B] mx-auto">
-                            <span className="text-[13px] md:text-base md:font-light leading-[14.96px] md:leading-none text-white uppercase">{attendance == 'attend' ? 'confirm to attend' : 'confirm unable to attend'}</span>
+                            <span className="text-xs md:text-base md:font-light leading-[14.96px] md:leading-none text-white uppercase">{attendance == 'attend' ? 'confirm to attend' : 'confirm unable to attend'}</span>
                         </button>
                     </div>
                     <p className="text-[11px] md:text-xl md:leading-[22px] font-normal mt-[39px] md:mt-[69px] animate" data-animate="zoom-in">If you need assistance with your RSVP,</p>
-                    <p className="text-[11px] md:text-xl md:leading-[22px] font-normal mt-0.5 animate" data-animate="zoom-in">please contact our support team.</p>
+                    <p className="text-[11px] md:text-xl md:leading-[22px] font-normal animate" data-animate="zoom-in">please contact our support team.</p>
 
                     <div className="mt-[33px] md:mt-[40px] animate" data-animate="zoom-in">
                         <Link href="https://wa.me/6281998478131" target="_blank" className="flex justify-center items-center w-[161px] md:w-[220px] h-[30px] md:h-[42px] rounded-[6px] md:rounded-[50px] bg-[#12877B] mx-auto">

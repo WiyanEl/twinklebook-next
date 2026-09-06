@@ -68,7 +68,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">home</span>
@@ -80,7 +80,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px]  md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">profile</span>
@@ -92,7 +92,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px]  md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">date</span>
@@ -104,7 +104,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">event detail</span>
@@ -116,7 +116,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">place to stay</span>
@@ -128,7 +128,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">gallery</span>
@@ -140,7 +140,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">dress code</span>
@@ -152,7 +152,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">rsvp</span>
@@ -164,7 +164,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">wedding gift</span>
@@ -176,7 +176,7 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
                     <span className="text-xs md:text-lg leading-none font-medium">things to do</span>
@@ -188,14 +188,14 @@ export default function Header({ isOpen }: {isOpen: boolean}) {
 
                     setTimeout(() => {
                       handleClose()
-                    }, 50)
+                    }, 2000)
                   }}>
                     <img src="/images/arya-dan-rana/mobile/arrow-right.png" className="w-[15px] md:w-[20px]" alt="" />
-                    <span className="text-xs md:text-lg leading-none font-medium">wishes</span>
+                    <span className="text-xs md:text-lg leading-none font-medium">wish</span>
                   </Link>
                 </div>
-                <div className="overflow-hidden min-h-min mt-[34px]">
-                  <p className="text-[8px] md:text-[14px] font-light leading-[106%] opacity-0 animate-item-in" style={{ animationDelay: '0.75s' }}>
+                <div className="overflow-hidden min-h-min mt-[24px]">
+                  <p className="text-[8px] text-gray-200 md:text-[14px] font-light leading-[106%] opacity-0 animate-item-in" style={{ animationDelay: '0.75s' }}>
                     Select a section above to continue
                   </p>
                 </div>

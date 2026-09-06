@@ -33,7 +33,7 @@ export default function Profile({ data, isOpen }: Props) {
                 ))}
             </h3>
             <p className="text-[15px] md:text-xl font-semibold mt-3 md:mt-[40px] animate" data-animate="fade-up">The son of</p>
-            <p className="text-[15px] md:text-xl font-semibold leading-[24px] mt-0.5 animate" data-animate="fade-up">
+            <p className="text-[15px] md:text-xl font-semibold leading-[18px] md:leading-[24px] mt-0.5 animate" data-animate="fade-up">
               {dataEvent?.brideParent?.split(/\s+and\s+/).map((text:string, index:number) => (
                 <span key={index}>
                   {index > 0 && <br />}
@@ -55,7 +55,7 @@ export default function Profile({ data, isOpen }: Props) {
                 ))}
             </h3>
             <p className="text-[15px] md:text-xl font-semibold mt-3 md:mt-[40px] animate" data-animate="fade-up">The daughter of</p>
-            <p className="text-[15px] md:text-xl font-semibold leading-[24px] mt-0.5 animate" data-animate="fade-up">
+            <p className="text-[15px] md:text-xl font-semibold leading-[18px] md:leading-[24px] mt-0.5 animate" data-animate="fade-up">
               {dataEvent?.groomParent?.split(/\s+and\s+/).map((text:string, index:number) => (
                 <span key={index}>
                   {index > 0 && <br />}

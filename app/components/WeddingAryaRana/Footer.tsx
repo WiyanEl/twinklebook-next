@@ -22,7 +22,7 @@ export default function Footer({ data, isOpen }: Props) {
           </p>
 
         </div>
-        <Image src="/images/arya-dan-rana/mobile/logo-provite.png" alt="Picture of logo provite" width={89} height={65} className="md:hidden absolute pointer-events-none bottom-[31px] left-1/2 -translate-x-1/2 mx-auto" />
+        <Image src="/images/arya-dan-rana/mobile/logo-provite.png" alt="Picture of logo provite" width={89} height={65} className="md:hidden absolute pointer-events-none bottom-[10px] left-1/2 -translate-x-1/2 mx-auto" />
         <Image src="/images/arya-dan-rana/dekstop/logo-provite.png" alt="Picture of logo provite" width={127} height={93} className="hidden md:block absolute pointer-events-none bottom-[31px] left-1/2 -translate-x-1/2 mx-auto" />
       </footer>
     </>
