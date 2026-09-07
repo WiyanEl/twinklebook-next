@@ -348,10 +348,24 @@ export default function ThingsToDo({ data, isOpen }: Props) {
           </div>
 
           {/* Image Absolute */}
-          <Image src="/images/arya-dan-rana/mobile/img-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={560} height={344} className={`md:hidden absolute z-[3] left-0 bottom-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/img-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={360} height={308} className={`md:hidden absolute w-[280px] z-[3] left-0 bottom-0 pointer-events-none`} />
+          <div className={`md:hidden absolute z-[3] -right-[50px] -bottom-[50px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }}>
+            <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={142} height={248} className={`scale-x-[-1]`}  />
+          </div>
+          <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-bawah-things-todo.png" alt="Picture of gambar kanan atas location" width={151} height={271} className={`md:hidden absolute w-[100px] z-[3] right-0 bottom-0 pointer-events-none ${isOpen ? 'sway-stretch-right' : ''}`} style={{ animationDelay: '0.5s' }} />
+          <Image src="/images/arya-dan-rana/mobile/img-jeruk-kanan-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={131} height={131} className={`md:hidden absolute z-[3] right-[50px] bottom-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={161} height={143} className={`md:hidden absolute w-[100px] z-[3] right-0 bottom-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/img-anggur-kanan-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={137} height={137} className={`md:hidden absolute z-[3] right-[50px] bottom-0 pointer-events-none`} />
 
           {/* Desktop */}
+          <div className={`hidden md:block absolute z-[3] -left-[120px] bottom-[250px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }}>
+            <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={303} height={530} className={`scale-x-[-1]`}  />
+          </div>
+          <div className={`hidden md:block absolute z-[3] -right-[120px] bottom-[150px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }}>
+            <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={269} height={271} className={`scale-x-[-1]`}  />
+          </div>
           <Image src="/images/arya-dan-rana/dekstop/img-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={1874} height={1063} className={`hidden md:block w-full absolute z-[3] left-0 -bottom-[420px] pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/dekstop/img-anggur-kiri-bawah-things-todo.png" alt="Picture of gambar bawah things to do" width={285} height={285} className={`hidden md:block absolute w-[230px] z-[3] left-0 -bottom-[100px] pointer-events-none`} />
         </div>
       </section>
     </>
