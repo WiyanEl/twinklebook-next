@@ -5,58 +5,182 @@ import { useEffect, useState } from 'react'
 const BREAKPOINT = 1024
 
 const IMAGES_DESKTOP: string[] = [
-    // '/images/arya-dan-rana/desktop/bg-hero.png',
-    // '/images/arya-dan-rana/desktop/img-popup-hero.png',
+    '/images/arya-dan-rana/desktop/bg-counting-down.png',
+    '/images/arya-dan-rana/desktop/bg-dresscode.png',
+    '/images/arya-dan-rana/desktop/bg-footer.png',
+    '/images/arya-dan-rana/desktop/bg-hero.png',
+    '/images/arya-dan-rana/desktop/bg-kertas-places-to-stay.png',
+    '/images/arya-dan-rana/desktop/bg-kertas-profile.png',
+    '/images/arya-dan-rana/desktop/bg-kertas-wedding-gift.png',
+    '/images/arya-dan-rana/desktop/bg-location.png',
+    '/images/arya-dan-rana/desktop/bg-places-to-stay.png',
+    '/images/arya-dan-rana/desktop/bg-profile.png',
+    '/images/arya-dan-rana/desktop/bg-things-to-do.png',
+    '/images/arya-dan-rana/desktop/bg-wedding-gift.png',
+    '/images/arya-dan-rana/desktop/bg-wishes.png',
+
+    '/images/arya-dan-rana/desktop/img-angggur-kiri-bawah-things-to-do.png',
+    '/images/arya-dan-rana/desktop/img-atas-dresscode.png',
+    '/images/arya-dan-rana/desktop/img-bawah-dresscode.png',
+    '/images/arya-dan-rana/desktop/img-bawah-things-to-do.png',
+
+    '/images/arya-dan-rana/desktop/img-daun-bawah-kiri-dresscode.png',
+    '/images/arya-dan-rana/desktop/img-daun-kanan-atas-dresscode.png',
+    '/images/arya-dan-rana/desktop/img-daun-kanan-atas-dresscode-1.png',
+    '/images/arya-dan-rana/desktop/img-daun-kanan-atas-hero-1.png',
+    '/images/arya-dan-rana/desktop/img-daun-kanan-atas-hero-2.png',
+    '/images/arya-dan-rana/desktop/img-daun-kanan-bawah-dresscode.png',
+    '/images/arya-dan-rana/desktop/img-daun-kanan-bawah-hero-1.png',
+    '/images/arya-dan-rana/desktop/img-daun-kanan-bawah-profile.png',
+
+    '/images/arya-dan-rana/desktop/img-daun-kiri-atas-dresscode.png',
+    '/images/arya-dan-rana/desktop/img-daun-kiri-atas-hero-1.png',
+    '/images/arya-dan-rana/desktop/img-daun-kiri-atas-location-1.png',
+    '/images/arya-dan-rana/desktop/img-daun-kiri-bawah-location-2.png',
+    '/images/arya-dan-rana/desktop/img-daun-kiri-bawah-wedding-gift.png',
+
+    '/images/arya-dan-rana/desktop/img-gallery-1.png',
+
+    '/images/arya-dan-rana/desktop/img-kanan-atas-dresscode.png',
+    '/images/arya-dan-rana/desktop/img-kanan-atas-hero.png',
+    '/images/arya-dan-rana/desktop/img-kanan-atas-location.png',
+    '/images/arya-dan-rana/desktop/img-kanan-atas-places-to-stay.png',
+    '/images/arya-dan-rana/desktop/img-kanan-atas-profile.png',
+    '/images/arya-dan-rana/desktop/img-kanan-atas-wedding-gift.png',
+
+    '/images/arya-dan-rana/desktop/img-kanan-bawah-dresscode.png',
+    '/images/arya-dan-rana/desktop/img-kanan-bawah-hero.png',
+    '/images/arya-dan-rana/desktop/img-kanan-bawah-location.png',
+    '/images/arya-dan-rana/desktop/img-kanan-bawah-places-to-stay.png',
+    '/images/arya-dan-rana/desktop/img-kanan-bawah-profile.png',
+    '/images/arya-dan-rana/desktop/img-kanan-bawah-wedding-gift.png',
+
+    '/images/arya-dan-rana/desktop/img-kiri-atas-hero.png',
+    '/images/arya-dan-rana/desktop/img-kiri-atas-location.png',
+    '/images/arya-dan-rana/desktop/img-kiri-atas-places-to-stay.png',
+    '/images/arya-dan-rana/desktop/img-kiri-atas-profile.png',
+    '/images/arya-dan-rana/desktop/img-kiri-atas-wedding-gift.png',
+
+    '/images/arya-dan-rana/desktop/img-kiri-bawah-hero.png',
+    '/images/arya-dan-rana/desktop/img-kiri-bawah-location.png',
+    '/images/arya-dan-rana/desktop/img-kiri-bawah-places-to-stay.png',
+    '/images/arya-dan-rana/desktop/img-kiri-bawah-profile.png',
+    '/images/arya-dan-rana/desktop/img-kiri-bawah-wedding-gift.png',
+
+    '/images/arya-dan-rana/desktop/logo-provite.png',
+    '/images/arya-dan-rana/desktop/logo-singkatan-pengantin.png',
 ]
 
+
 const IMAGES_MOBILE: string[] = [
+    '/images/arya-dan-rana/mobile/animasi-burung.gif',
     '/images/arya-dan-rana/mobile/arrow-right.png',
+
     '/images/arya-dan-rana/mobile/bg-counting-down.png',
+    '/images/arya-dan-rana/mobile/bg-dresscode.png',
     '/images/arya-dan-rana/mobile/bg-footer.png',
     '/images/arya-dan-rana/mobile/bg-hero.png',
+    '/images/arya-dan-rana/mobile/bg-kertas-places-to-stay.png',
     '/images/arya-dan-rana/mobile/bg-kertas-profile.png',
     '/images/arya-dan-rana/mobile/bg-kertas-wedding-gift.png',
     '/images/arya-dan-rana/mobile/bg-location.png',
+    '/images/arya-dan-rana/mobile/bg-places-to-stay.png',
     '/images/arya-dan-rana/mobile/bg-profile.png',
+    '/images/arya-dan-rana/mobile/bg-things-to-do.png',
     '/images/arya-dan-rana/mobile/bg-wedding-gift.png',
     '/images/arya-dan-rana/mobile/bg-wishes.png',
-    '/images/arya-dan-rana/mobile/icon-checked-fill.png',
+
     '/images/arya-dan-rana/mobile/icon-checked.png',
+    '/images/arya-dan-rana/mobile/icon-checked-fill.png',
     '/images/arya-dan-rana/mobile/icon-menu-toggle.png',
     '/images/arya-dan-rana/mobile/icon-message.png',
     '/images/arya-dan-rana/mobile/icon-question.png',
     '/images/arya-dan-rana/mobile/icon-send.png',
     '/images/arya-dan-rana/mobile/icon-warning.png',
     '/images/arya-dan-rana/mobile/icon-whatsapp.png',
+
+    '/images/arya-dan-rana/mobile/img-angggur-kanan-bawah-things-to-do.png',
     '/images/arya-dan-rana/mobile/img-atas-dresscode.png',
     '/images/arya-dan-rana/mobile/img-bawah-dresscode.png',
+    '/images/arya-dan-rana/mobile/img-bawah-things-to-do.png',
+    '/images/arya-dan-rana/mobile/img-bunga-kiri-bawah-location.png',
+
+    '/images/arya-dan-rana/mobile/img-daun-kanan-atas-dresscode.png',
+    '/images/arya-dan-rana/mobile/img-daun-kanan-atas-dresscode-1.png',
+    '/images/arya-dan-rana/mobile/img-daun-kanan-atas-hero-1.png',
+    '/images/arya-dan-rana/mobile/img-daun-kanan-atas-hero-2.png',
+    '/images/arya-dan-rana/mobile/img-daun-kanan-atas-location-1.png',
+
+    '/images/arya-dan-rana/mobile/img-daun-kanan-bawah-dresscode.png',
+    '/images/arya-dan-rana/mobile/img-daun-kanan-bawah-hero-1.png',
+    '/images/arya-dan-rana/mobile/img-daun-kanan-bawah-location-1.png',
+    '/images/arya-dan-rana/mobile/img-daun-kanan-bawah-profile.png',
+    '/images/arya-dan-rana/mobile/img-daun-kanan-bawah-things-to-do.png',
+
+    '/images/arya-dan-rana/mobile/img-daun-kiri-atas-dresscode.png',
+    '/images/arya-dan-rana/mobile/img-daun-kiri-atas-hero-1.png',
+    '/images/arya-dan-rana/mobile/img-daun-kiri-atas-location-1.png',
+
+    '/images/arya-dan-rana/mobile/img-daun-kiri-bawah-hero-1.png',
+    '/images/arya-dan-rana/mobile/img-daun-kiri-bawah-location-1.png',
+    '/images/arya-dan-rana/mobile/img-daun-kiri-bawah-location-2.png',
+    '/images/arya-dan-rana/mobile/img-daun-kiri-bawah-wedding-gift.png',
+
     '/images/arya-dan-rana/mobile/img-dresscode.png',
     '/images/arya-dan-rana/mobile/img-gallery-1.png',
+    '/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png',
     '/images/arya-dan-rana/mobile/img-gelas-location.png',
+
+    '/images/arya-dan-rana/mobile/img-jeruk-kanan-bawah-things-to-do.png',
+    '/images/arya-dan-rana/mobile/img-jeruk-kiri-bawah-hero.png',
+
     '/images/arya-dan-rana/mobile/img-kanan-atas-hero.png',
     '/images/arya-dan-rana/mobile/img-kanan-atas-location.png',
+    '/images/arya-dan-rana/mobile/img-kanan-atas-places-to-stay.png',
     '/images/arya-dan-rana/mobile/img-kanan-atas-profile.png',
     '/images/arya-dan-rana/mobile/img-kanan-atas-wedding-gift.png',
+
+    '/images/arya-dan-rana/mobile/img-kanan-bawah-dresscode.png',
     '/images/arya-dan-rana/mobile/img-kanan-bawah-hero.png',
     '/images/arya-dan-rana/mobile/img-kanan-bawah-location.png',
+    '/images/arya-dan-rana/mobile/img-kanan-bawah-places-to-stay.png',
+    '/images/arya-dan-rana/mobile/img-kanan-bawah-popup-hero.png',
     '/images/arya-dan-rana/mobile/img-kanan-bawah-profile.png',
+    '/images/arya-dan-rana/mobile/img-kanan-bawah-things-to-do.png',
     '/images/arya-dan-rana/mobile/img-kanan-bawah-wedding-gift.png',
+
     '/images/arya-dan-rana/mobile/img-kiri-atas-hero.png',
     '/images/arya-dan-rana/mobile/img-kiri-atas-location.png',
+    '/images/arya-dan-rana/mobile/img-kiri-atas-places-to-stay.png',
+    '/images/arya-dan-rana/mobile/img-kiri-atas-popup-hero.png',
     '/images/arya-dan-rana/mobile/img-kiri-atas-profile.png',
     '/images/arya-dan-rana/mobile/img-kiri-atas-wedding-gift.png',
+
     '/images/arya-dan-rana/mobile/img-kiri-bawah-hero.png',
     '/images/arya-dan-rana/mobile/img-kiri-bawah-location.png',
+    '/images/arya-dan-rana/mobile/img-kiri-bawah-places-to-stay.png',
     '/images/arya-dan-rana/mobile/img-kiri-bawah-profile.png',
     '/images/arya-dan-rana/mobile/img-kiri-bawah-wedding-gift.png',
+
+    '/images/arya-dan-rana/mobile/img-kiri-tengah-places-to-stay.png',
     '/images/arya-dan-rana/mobile/img-kiri-tengah-profile.png',
+
+    '/images/arya-dan-rana/mobile/img-popup-hero.png',
+
+    '/images/arya-dan-rana/mobile/img-todo-1.png',
+    '/images/arya-dan-rana/mobile/img-todo-2.png',
+    '/images/arya-dan-rana/mobile/img-todo-3.png',
+    '/images/arya-dan-rana/mobile/img-todo-4.png',
+    '/images/arya-dan-rana/mobile/img-todo-5.png',
+
     '/images/arya-dan-rana/mobile/logo-bca.png',
     '/images/arya-dan-rana/mobile/logo-provite.png',
     '/images/arya-dan-rana/mobile/logo-singkatan-pengantin.png',
 ]
 
+
 const MEDIA_COMMON: string[] = [
-    // '/images/ronald-dan-vissi/mobile/video-bg-hero.mp4',
+  // '/images/arya-dan-rana/mobile/video-bg-hero.mp4',
 ]
 
 function preloadImage(src: string): Promise<void> {
