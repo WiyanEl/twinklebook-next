@@ -100,16 +100,22 @@ export default function WeddingGift({ data, isOpen }: Props) {
 
           {/* Image Absolute */}
           <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-wedding-gift.png" alt="Picture of gambar kiri atas wedding gift" width={103} height={141} className={`md:hidden absolute z-[3] left-0 top-[24px] pointer-events-none`} />
-          <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-wedding-gift.png" alt="Picture of gambar kanan atas wedding gift" width={157} height={157} className={`md:hidden absolute z-[3] -right-[10px] top-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/animasi-burung.gif" alt="Picture of gambar kiri atas profile" width={162} height={235} className={`md:hidden absolute z-[3] -right-[50px] top-0 pointer-events-none scale-x-[-1]`} />
 
-          <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah wedding gift" width={250} height={375} className={`md:hidden w-[145px] absolute z-[3] left-0 bottom-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={111} height={194} className={`md:hidden absolute z-[3] -left-[20px] bottom-0 pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }} />
+          <Image src="/images/arya-dan-rana/mobile/img-daun-kiri-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah hero" width={132} height={235} className={`md:hidden absolute z-[3] left-0 bottom-0 pointer-events-none ${isOpen ? 'sway-stretch-left' : ''}`} style={{ animationDelay: '0.5s' }} />
+          <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah wedding gift" width={83} height={88} className={`md:hidden absolute z-[3] left-0 bottom-0 pointer-events-none`} />
+
           <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah wedding gift" width={177} height={180} className={`md:hidden w-[157px] absolute z-[3] right-0 bottom-0 pointer-events-none`} />
 
           {/* Dekstop */}
           <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-wedding-gift.png" alt="Picture of gambar kiri atas wedding gift" width={280} height={316} className={`hidden md:block absolute z-[3] left-[450px] top-[24px] pointer-events-none`} />
-          <Image src="/images/arya-dan-rana/dekstop/img-kanan-atas-wedding-gift.png" alt="Picture of gambar kanan atas wedding gift" width={350} height={350} className={`hidden md:block absolute z-[3] right-[470px] top-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/animasi-burung.gif" alt="Picture of gambar kiri atas profile" width={350} height={350} className={`hidden md:block absolute z-[3] right-[470px] top-0 pointer-events-none scale-x-[-1]`} />
 
-          <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah wedding gift" width={458} height={757} className={`hidden md:block absolute z-[3] left-[430px] bottom-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={265} height={464} className={`hidden md:block absolute z-[3] left-[470px] bottom-0 pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }} />
+          <Image src="/images/arya-dan-rana/dekstop/img-daun-kiri-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah hero" width={356} height={303} className={`hidden md:block absolute z-[3] left-[500px] bottom-0 pointer-events-none ${isOpen ? 'sway-stretch-left' : ''}`} style={{ animationDelay: '0.5s' }} />
+          <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah wedding gift" width={199} height={212} className={`hidden md:block absolute z-[3] left-[470px] bottom-0 pointer-events-none`} />
+
           <Image src="/images/arya-dan-rana/dekstop/img-kanan-bawah-wedding-gift.png" alt="Picture of gambar kiri bawah wedding gift" width={396} height={402} className={`hidden md:block absolute z-[3] right-[450px] bottom-0 pointer-events-none`} />
         </section>
         <ThingsToDo data={data} isOpen={isOpen} />
