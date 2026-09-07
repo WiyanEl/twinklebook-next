@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { useMemo } from 'react'
+import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi'
 import { usePreloader } from '../../hooks/preLoader'
 import SectionLoading from '../Loader/SectionLoading'
 
@@ -163,6 +164,22 @@ export default function WeddingAryaRana({ data }: Props) {
     )
   }
 
+  const toggleAudio = async () => {
+    if (!audioRef.current) return
+
+    if (isPlaying) {
+      audioRef.current.pause()
+      setIsPlaying(false)
+    } else {
+      try {
+        await audioRef.current.play()
+        setIsPlaying(true)
+      } catch (error) {
+        console.error('Audio play failed:', error)
+      }
+    }
+  }
+
   return (
     <>
       <audio
@@ -183,6 +200,39 @@ export default function WeddingAryaRana({ data }: Props) {
       {/* <ThingsToDo data={data} isOpen={isOpen} /> */}
       <Wishes data={data} isOpen={isOpen} />
       <Footer data={data} isOpen={isOpen} />
+      <button type="button" onClick={toggleAudio} aria-label={isPlaying ? 'Pause music' : 'Play music'} className="
+          fixed
+          z-[999]
+          right-[20px]
+          bottom-[20px]
+          md:right-[30px]
+          md:bottom-[30px]
+          w-[45px]
+          h-[45px]
+          md:w-[50px]
+          md:h-[50px]
+          rounded-full
+          flex
+          items-center
+          justify-center
+          bg-black/40
+          backdrop-blur-sm
+          border
+          border-white/40
+          text-white
+          shadow-lg
+          transition-all
+          duration-300
+          hover:bg-black/60
+          active:scale-90
+        "
+      >
+        {isPlaying ? (
+          <HiVolumeUp className="text-[21px]" />
+        ) : (
+          <HiVolumeOff className="text-[21px]" />
+        )}
+      </button>
     </>
   )
 }
