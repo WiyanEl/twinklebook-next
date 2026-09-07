@@ -100,6 +100,8 @@ export default function WeddingAryaRana({ data }: Props) {
   useEffect(() => {
     if (!audioRef.current) return
 
+    setIsPlaying(true)
+
     if (isOpen) {
       audioRef.current.play().catch((error) => {
         console.log('Audio gagal diputar:', error)
@@ -200,7 +202,8 @@ export default function WeddingAryaRana({ data }: Props) {
       {/* <ThingsToDo data={data} isOpen={isOpen} /> */}
       <Wishes data={data} isOpen={isOpen} />
       <Footer data={data} isOpen={isOpen} />
-      <button type="button" onClick={toggleAudio} aria-label={isPlaying ? 'Pause music' : 'Play music'} className="
+      {isOpen && (
+        <button type="button" onClick={toggleAudio} aria-label={isPlaying ? 'Pause music' : 'Play music'} className="
           fixed
           z-[999]
           right-[20px]
@@ -225,14 +228,15 @@ export default function WeddingAryaRana({ data }: Props) {
           duration-300
           hover:bg-black/60
           active:scale-90
-        "
-      >
-        {isPlaying ? (
-          <HiVolumeUp className="text-[21px]" />
-        ) : (
-          <HiVolumeOff className="text-[21px]" />
-        )}
-      </button>
+          "
+        >
+          {isPlaying ? (
+            <HiVolumeUp className="text-[21px]" />
+          ) : (
+            <HiVolumeOff className="text-[21px]" />
+          )}
+        </button>
+      )}
     </>
   )
 }

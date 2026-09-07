@@ -50,17 +50,28 @@ export default function Location({ data, isOpen }: Props) {
         </div>
 
         {/* Image Absolute */}
-        <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-location.png" alt="Picture of gambar kiri atas location" width={138} height={245} className={`md:hidden absolute z-[3] left-0 top-0 pointer-events-none`} />
-        <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-location.png" alt="Picture of gambar kanan atas location" width={275} height={274} className={`md:hidden w-[225px] absolute z-[3] right-0 top-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-location.png" alt="Picture of gambar kiri atas location" width={138} height={245} className={`md:hidden absolute z-[3] left-0 top-0 pointer-events-none ${isOpen ? 'sway-stretch' : ''}`} style={{ animationDelay: '0.5s' }} />
 
-        <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-location.png" alt="Picture of gambar kiri bawah location" width={319} height={253} className={`md:hidden w-[205px] absolute z-[3] left-0 bottom-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-location.png" alt="Picture of gambar kanan atas location" width={153} height={273} className={`md:hidden w-[85px] absolute z-[3] right-0 top-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kanan-atas-location-1.png" alt="Picture of gambar kanan atas location" width={173} height={273} className={`md:hidden absolute z-[3] right-0 top-0 pointer-events-none`} />
+
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kiri-bawah-location-1.png" alt="Picture of gambar kiri bawah hero" width={153} height={273} className={`md:hidden absolute z-[3] left-0 -bottom-[30px] pointer-events-none ${isOpen ? 'sway-stretch-left' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/mobile/img-daun-kiri-bawah-location-2.png" alt="Picture of gambar kiri bawah hero" width={183} height={273} className={`md:hidden absolute z-[3] left-0 bottom-0 pointer-events-none ${isOpen ? 'sway-stretch-left' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={157} height={258} className={`md:hidden absolute z-[3] -left-[50px] bottom-[70px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/mobile/img-bunga-kiri-bawah-location.png" alt="Picture of gambar kiri bawah location" width={129} height={142} className={`md:hidden absolute z-[3] left-0 -bottom-[20px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-location.png" alt="Picture of gambar kiri bawah location" width={118} height={159} className={`md:hidden absolute z-[3] left-0 bottom-[50px] pointer-events-none`} />
+
         <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-location.png" alt="Picture of gambar kiri bawah location" width={153} height={273} className={`md:hidden w-[125px] absolute z-[3] right-0 bottom-0 pointer-events-none`} />
 
         {/* Dekstop */}
-        <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-location.png" alt="Picture of gambar kiri atas location" width={613} height={610} className={`hidden md:block absolute z-[3] left-0 top-0 pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-location.png" alt="Picture of gambar kiri atas location" width={613} height={610} className={`hidden md:block absolute z-[3] left-0 top-0 pointer-events-none ${isOpen ? 'sway-stretch' : ''}`} style={{ animationDelay: '0.5s' }} />
         <Image src="/images/arya-dan-rana/dekstop/img-kanan-atas-location.png" alt="Picture of gambar kanan atas location" width={684} height={682} className={`hidden md:block absolute z-[3] right-0 top-0 pointer-events-none`} />
 
-        <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-location.png" alt="Picture of gambar kiri bawah location" width={600} height={821} className={`hidden md:block md:w-[400px] absolute z-[3] left-0 bottom-0 md:-bottom-[400px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/dekstop/img-daun-kiri-bawah-location-1.png" alt="Picture of gambar kiri bawah hero" width={178} height={495} className={`hidden md:block absolute z-[3] left-0 -bottom-[100px] pointer-events-none ${isOpen ? 'sway-stretch-left' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/dekstop/img-daun-kiri-bawah-location-2.png" alt="Picture of gambar kiri bawah hero" width={278} height={495} className={`hidden md:block absolute z-[3] left-0 -bottom-[280px] pointer-events-none ${isOpen ? 'sway-stretch-left' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={271} height={409} className={`hidden md:block absolute z-[3] -left-[70px] -bottom-[50px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }} />
+        <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-location.png" alt="Picture of gambar kiri bawah location" width={205} height={462} className={`hidden md:block absolute z-[3] left-0 -bottom-[250px] pointer-events-none`} />
+
         <Image src="/images/arya-dan-rana/dekstop/img-kanan-bawah-location.png" alt="Picture of gambar kiri bawah location" width={413} height={550} className={`hidden md:block md:w-[275px] absolute z-[3] right-0 bottom-0 md:-bottom-[350px] pointer-events-none`} />
       </div>
     </>

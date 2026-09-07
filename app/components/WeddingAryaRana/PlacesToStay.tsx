@@ -44,22 +44,29 @@ export default function PlacesToStay({ data, isOpen }: Props) {
 
           {/* Image Absolute */}
           <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-places-to-stay.png" alt="Picture of gambar kiri atas places to stay" width={138} height={153} className={`md:hidden w-[120px] absolute z-[3] left-0 top-[20px] pointer-events-none`} />
-          <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-places-to-stay.png" alt="Picture of gambar kiri atas places to stay" width={214} height={280} className={`md:hidden absolute z-[2] -right-[10px] top-0 pointer-events-none`} />
+
+          <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-places-to-stay.png" alt="Picture of gambar kiri atas places to stay" width={214} height={280} className={`md:hidden absolute z-[2] -right-[20px] -top-[15px] pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/animasi-burung.gif" alt="Picture of gambar kiri atas profile" width={203} height={157} className={`md:hidden absolute z-[2] -right-[70px] -top-[30px] pointer-events-none scale-x-[-1]`} />
 
           <Image src="/images/arya-dan-rana/mobile/img-kiri-tengah-places-to-stay.png" alt="Picture of gambar kiri tengah places to stay" width={238} height={238} className={`md:hidden w-[155px] absolute z-[3] left-0 bottom-[212px] pointer-events-none`} />
 
+          <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={125} height={270} className={`md:hidden absolute z-[3] -left-[20px] -bottom-[50px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }} />
           <Image src="/images/arya-dan-rana/mobile/img-kiri-bawah-places-to-stay.png" alt="Picture of gambar kiri bawah places to stay" width={250} height={360} className={`md:hidden w-[120px] absolute z-[3] left-0 -bottom-[20px] pointer-events-none`} />
+
           <Image src="/images/arya-dan-rana/mobile/img-kanan-bawah-places-to-stay.png" alt="Picture of gambar kiri bawah places to stay" width={124} height={163} className={`md:hidden absolute z-[3] right-0 bottom-[40px] pointer-events-none`} />
 
           {/* Dekstop */}
           <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-places-to-stay.png" alt="Picture of gambar kiri atas places to stay" width={313} height={347} className={`hidden md:block absolute z-[3] left-[480px] top-0 pointer-events-none`} />
 
-          <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-places-to-stay.png" alt="Picture of gambar kiri bawah places to stay" width={605} height={630} className={`hidden md:block md:w-[400px] absolute z-[3] left-[480px] -bottom-[200px] pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/img-gelas-kiri-bawah-hero.png" alt="Picture of gambar kiri bawah hero" width={268} height={469} className={`hidden md:block absolute z-[3] left-[520px] -bottom-[100px] pointer-events-none ${isOpen ? 'sway-up' : ''}`} style={{ animationDelay: '0.5s' }} />
+          <Image src="/images/arya-dan-rana/dekstop/img-kiri-bawah-places-to-stay.png" alt="Picture of gambar kiri bawah places to stay" width={605} height={630} className={`hidden md:block md:w-[480px] absolute z-[3] left-[400px] -bottom-[220px] pointer-events-none`} />
+
           <Image src="/images/arya-dan-rana/dekstop/img-kanan-bawah-places-to-stay.png" alt="Picture of gambar kiri bawah places to stay" width={230} height={272} className={`hidden md:block md:w-[275px] absolute z-[3] right-[520px] bottom-[50px] pointer-events-none`} />
         </section>
 
         {/* Image Absolute */}
         <Image src="/images/arya-dan-rana/dekstop/img-kanan-atas-places-to-stay.png" alt="Picture of gambar kiri atas places to stay" width={386} height={506} className={`hidden md:block absolute z-[2] right-[480px] -top-[80px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/animasi-burung.gif" alt="Picture of gambar kiri atas profile" width={291} height={283} className={`hidden md:block absolute z-[2] right-[480px] -top-[60px] pointer-events-none scale-x-[-1]`} />
       </div>
     </>
   )

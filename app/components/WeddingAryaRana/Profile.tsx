@@ -69,6 +69,8 @@ export default function Profile({ data, isOpen }: Props) {
 
           {/* Image Absolute */}
           <Image src="/images/arya-dan-rana/mobile/img-kiri-atas-profile.png" alt="Picture of gambar kiri atas profile" width={214} height={280} className={`md:hidden absolute z-[2] -left-[10px] top-0 pointer-events-none`} />
+          <Image src="/images/arya-dan-rana/mobile/animasi-burung.gif" alt="Picture of gambar kiri atas profile" width={223} height={157} className={`md:hidden absolute z-[2] -left-[70px] top-0 pointer-events-none`} />
+
           <Image src="/images/arya-dan-rana/mobile/img-kanan-atas-profile.png" alt="Picture of gambar kanan atas profile" width={125} height={143} className={`md:hidden absolute z-[3] right-0 top-[45px] pointer-events-none`} />
 
           <Image src="/images/arya-dan-rana/mobile/img-kiri-tengah-profile.png" alt="Picture of gambar kiri tengah profile" width={277} height={277} className={`md:hidden w-[115px] absolute z-[3] left-0 bottom-[286px] pointer-events-none`} />
@@ -88,7 +90,9 @@ export default function Profile({ data, isOpen }: Props) {
         </section>
 
         {/* Image Absolute */}
-        <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-profile.png" alt="Picture of gambar kiri atas profile" width={386} height={506} className={`hidden md:block absolute z-[2] left-[420px] -top-[80px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/dekstop/img-kiri-atas-profile.png" alt="Picture of gambar kiri atas profile" width={386} height={506} className={`hidden md:block absolute z-[2] left-[430px] -top-[80px] pointer-events-none`} />
+        <Image src="/images/arya-dan-rana/mobile/animasi-burung.gif" alt="Picture of gambar kiri atas profile" width={291} height={283} className={`hidden md:block absolute z-[2] left-[420px] -top-[80px] pointer-events-none`} />
+
         <Image src="/images/arya-dan-rana/dekstop/img-kanan-atas-profile.png" alt="Picture of gambar kanan atas profile" width={308} height={246} className={`hidden md:block absolute z-[3] right-[450px] -top-[20px] pointer-events-none`} />
       </div>
     </>
